@@ -1,51 +1,50 @@
-# Zettlr Documentation
+# Zettlrドキュメンテーション
 
 > [Documentación Zettlr en español (mantenido por ScaredCoward)](https://github.com/ScaredCoward/zettlr-docs/blob/master/Menu%20en%20ESPA%C3%91OL.md)
 
-Thank you for choosing Zettlr as your reliable writing companion. On these pages, we help you get started with the app to supercharge your own writing. If you haven't yet gotten your own copy of Zettlr, [head over to the download page](https://www.zettlr.com/download) and get it for your operating system!
+信頼する執筆ツールとして、Zettlrを選んでいただきありがとうございます。以下のページでは、あなたの執筆活動を強力にサポートするこのアプリケーションを、使い始めるための手助けを行います。まだZettlrが手元にないという方は、[ダウンロードページ](https://www.zettlr.com/download)へ行って、自分のOS用のZettlrを入手してください。
 
-## Getting Started
+## 始めに
 
-To see how to install Zettlr on your system, please consult the [setup instructions](install.md). It is also recommended to set up Pandoc and LaTeX right away to enable all importing and exporting functionality of Zettlr. Don't worry, it's really easy!
+Zettlrのインストール方法については、[セットアップ手順](install.md)を参照してください。また、PandocとLaTeXを直ちにインストールし、Zettlrのインポート/エクスポート機能を有効にすることを推奨します。とても簡単ですので、ご心配なく。
 
-Don't want to waste time? Head over to our [very-quick start guide "Zettlr in 5 Minutes"](5-minutes.md)! After five minutes you'll know everything you need to know.
+お急ぎの場合、超クイックスタートガイド[『5分でわかるZettlr』](5-minutes.md)をご覧ください。5分間で、必要なことがすべて理解できるでしょう。
 
-## Guides
+## ユーザーガイド
 
-Have a look at our user guides so that you can learn all workflows. The guides are not focused around features, they are focused around workflows. Here you can read about popular workflows, step by step.
+ユーザーガイドを見れば、すべてのワークフローについて知ることができます。これらのガイドは、個々の機能ではなく、ワークフローに焦点を当てたものです。以下では、一般的なワークフローについて、ステップバイステップで確認することができます。
 
-* [Use Zettlr as a note taking app](guides/guide-notes.md)
-* [Use Zettlr as a Zettelkasten system](guides/guide-zettelkasten.md)
-* [Use Zettlr as a full IDE](guides/guide-ide.md)
+* [Zettlrをノート取りアプリケーションとして使う](guides/guide-notes.md)
+* [ZettlrをZettelkastenシステムとして使う](guides/guide-zettelkasten.md)
+* [Zettlrをフル機能IDEとして使う](guides/guide-ide.md)
 
-## Core
+## 主要機能
 
-Everyone can become very quick and efficient at his or her workflow, but can you really excel without a deep knowledge about how certain features work? Shortcuts to mundane tasks and key combinations for speeding up common tasks as well as hidden features of Zettlr are explained in the rest of the documentation. Learn how to move whole paragraphs around with two clicks or how to link to websites with only one click in this detailed documentation.
+誰でも、自分の使うワークフローに関しては、簡単に身に着けることができるでしょう。しかし、個々の機能の動きについて深く理解しないで、本当に上手く使いこなしていると言えるでしょうか。一般的なショートカットや、よく使われる作業を素早く実行するためのキーの組み合わせ、そして、Zettlrの隠された機能について、以下のドキュメンテーション内で説明されています。
+2クリックで段落全体を移動させる方法や、たった1クリックでウェブサイトへのリンクを張る方法などについて、以下の詳細なドキュメンテーションを開いて学んでください。
 
-* [The Editor](core/editor.md)
-* [Markdown Basics](reference/markdown-basics.md)
-* [The File List](core/file-list.md)
-* [Searching](core/search.md)
-* [Exporting with Zettlr](core/export.md)
-* [Virtual Directories](core/virtual-directories.md)
-* [Custom CSS](core/custom-css.md)
-* [Localisation](core/localisation.md)
-* [The Attachment Sidebar](core/attachments.md)
+* [エディタ](core/editor.md)
+* [Markdownの基礎](reference/markdown-basics.md)
+* [ファイルリスト](core/file-list.md)
+* [検索](core/search.md)
+* [Zettlrからのエクスポート](core/export.md)
+* [仮想ディレクトリ](core/virtual-directories.md)
+* [カスタムCSS](core/custom-css.md)
+* [ローカライゼーション](core/localisation.md)
 
-## Academic Tools
+## 学術ツール
 
-Zettlr has been developed with academic writing in mind. Therefore, it offers a lot of powerful tools to help you write academic texts right out of the box. You can explore the possibilities of Zettlr as an academic editor by browsing this category.
+Zettlrはアカデミックな執筆活動を念頭に置いて開発されました。したがって、学術文書を書く助けになる数多くの強力なツールが、簡単に使えるように用意されています。学術的な執筆を行うツールとしてのZettlrについては、以下のカテゴリを参照してください。
 
-* [Citations](academic/citations.md)
-* [Projects](academic/projects.md)
-* [Presentations](academic/presentations.md)
-* [Pomodoro Timer](academic/pomodoro.md)
-* [Readability-Mode](academic/readability.md)
-* [Zettelkasten Methods](academic/zkn-method.md)
-* [Custom LaTeX Templates](academic/custom-templates.md)
+* [参考文献](academic/citations.md)
+* [プロジェクト](academic/projects.md)
+* [プレゼンテーション](academic/presentations.md)
+* [ポモドーロタイマー](academic/pomodoro.md)
+* [Zettelkastenメソッド](academic/zkn-method.md)
+* [カスタムLaTeXテンプレート](academic/custom-templates.md)
 
-## Get involved!
+## ご協力ください！
 
-Currently, Zettlr is only available in a handful of languages. But according to the internet™, there are [roughly 6,500 spoken languages](https://www.infoplease.com/askeds/how-many-spoken-languages) on the world. So any help is welcome in translating the app. You can download all languages that have already been translated over at our [translation page](https://translate.zettlr.com/) and even get into into translating it yourself! **Do you want to translate the app into a language that is not offered at the page? Simply [drop us a note](mailto:info@zettlr.com), and we'll add it**!
+現在、Zettlrは一握りの言語でのみ利用可能です。しかし、インターネットによると、世界では[およそ6,500の言語が話されている](https://www.infoplease.com/askeds/how-many-spoken-languages)そうです。アプリケーション翻訳への協力を歓迎します。翻訳済みの言語はすべて、[翻訳ページ](https://translate.zettlr.com/)からダウンロードすることができます。自分で翻訳を始めることもできます。**ページ上で提供されていない言語への翻訳を行いたい場合は、追加しますので[お知らせください](mailto:info@zettlr.com)。**
 
-Head over to our [documentation on how to help](get-involved.md) us make the app better by translating!
+[参加方法に関する文章](get-involved.md)を開いてください。翻訳によるアプリケーションの改善を行いましょう。

@@ -1,69 +1,69 @@
-# Zettlr in 5 Minutes
+# 5分で分かるZettlr
 
-Okay, you have downloaded and installed the app, got a clock set and are ready to roll? Then hit that countdown button and let's go!
+アプリケーションのダウンロードとインストールは済みましたね。時計を用意して時間を計る準備はできましたか？それでは、5分間スタート！
 
-## 1. Open directories and files
+## 1. ディレクトリとファイルを開く
 
-To open directories or files, simply drag them anywhere over the app's window. They will be opened automatically. You can also hit `Cmd/Ctrl+O` to open the directory select dialog, if that's faster for where you're going.
+ディレクトリやファイルを開きたい場合は、アプリケーションのウィンドウに対してドラッグ＆ドロップすれば、自動的に開かれます。また、`Cmd/Ctrl+O`を押下することでディレクトリを選択するダイアログを開くことができます。
 
 ![open.png](img/open.png)
 
-## 2. Create files and directories
+## 2. ファイルやディレクトリを作成する
 
-After opening a directory, you need a file. Hit `Cmd/Ctrl+N` to create a new file. Type a file name, hit `Return` and select the editor. Need another directory? `Cmd/Ctrl+Shift+N` will do the job.
+ディレクトリを開いたら、次はファイルが必要です。`Cmd/Ctrl+N`を押下すると新規ファイルを作成します。ファイル名を入力し、`Return`を押下して、エディタを選択します。ディレクトリを追加したいなら`Cmd/Ctrl+Shift+N`を押下すれば作成できます。
 
 ![create.png](img/create.png)
 
-> You can not only add Markdown files! If you do not provide an extension, Zettlr will add the extension `.md` for you. But you can also create `.txt`-files and `.tex`-files, you just need to provide that file extension!
+> Markdownファイルだけではありません。拡張子を付けなければ、Zettlrが`.md`を追加してくれます。しかし、拡張子を自分で入力すれば、`.txt`ファイルや`.tex`ファイルも作成することができます。
 
-## 3. Write!
+## 3. 書く
 
-Writing is up to you, but here's the most important keystrokes to remember:
+書くことについては、あなた次第です。しかし、これらの重要なキー操作を覚えておきましょう：
 
-- `Cmd/Ctrl+I`: Make text \__italic_\_. Works just like in Word.
-- `Cmd/Ctrl+B`: Make text \*\***bold**\*\*. Also works just like in Word.
-- `Cmd+Alt+R` (macOS) `Ctrl+Alt+F` (Windows/Linux): Create a footnote.
-- `Alt/Ctrl+Click` (on a footnote reference): Edit a footnote. Hit `Shift+Enter` to finish editing.
-- `Cmd/Ctrl+K`: Insert a link. (`Alt/Ctrl+Click` it to open the link.)
-- `Cmd/Ctrl+J`: Enter the distraction-free mode.
-- `Cmd/Ctrl+Alt+L`: Toggle the theme between light and dark mode.
+- `Cmd/Ctrl+I`: \__斜体_\_にします。Wordと同じように動作します。
+- `Cmd/Ctrl+B`: \*\***太字**\*\*にします。こちらも、Wordと同じように動作します。
+- `Cmd+Alt+R` (macOS) `Ctrl+Alt+F` (Windows/Linux): 脚注を作成します。
+- `Alt/Ctrl+Click` (脚注の参照の上で): 脚注を編集します。`Shift+Enter`で編集を終了します。
+- `Cmd/Ctrl+K`: リンクを挿入します。(`Alt/Ctrl+クリック`でリンクを開きます)
+- `Cmd/Ctrl+J`: 集中モードに切り替えます。
+- `Cmd/Ctrl+Alt+L`: テーマをlightとdarkの間で切り替えます。
 
 ![markdown.png](img/markdown.png)
 
-Things without keystrokes, but also important:
+キー操作以外だと、次の点も重要です。
 
-- Use `#`-signs to create headings. The number of `#`-symbols equals the level of the heading. Maximum is 6.
-- Use `>`-signs to create blockquotes. You can also nest them using multiple greater-than-signs (e.g. `> >`).
-- Use `#`-signs _not_ followed by a space to create tags. You can use these tags for searching and navigating.
+- `#`記号で見出しを作成します。`#`の文字の数が見出しレベルとなります。最大は6個です。
+- `>`記号で引用を作成します。`> >`のように複数重ねることで、入れ子にすることもできます。
+- `#`記号の直後に半角空白を**入れない**ことで、タグを作成することができます。タグは検索やナビゲーションに使用することができます。
 
-## 4. What else?
+## 4. 他には？
 
-If you use the thin sidebar mode (the default), you will see either the file list or the directory tree. Move the mouse to the top-left corner of the file list and click the arrow to show the directory tree. To toggle between file list and directory tree, you can also hit `Cmd/Ctrl+!`. Choose the extended sidebar mode in the preferences to have both the file list and the directory tree visible at once.
+サイドバーをデフォルトのthinモードで使用している場合、ファイル一覧かディレクトリツリーのどちらかが表示されます。ファイル一覧の左上にマウスカーソルを持っていくとディレクトリツリーを表示するための矢印が表示されます。ファイル一覧とディレクトリツリーの切り替えは、`Cmd/Ctrl+!`で行うこともできます。両方とも表示した状態にしたい場合は、設定から、サイドバーのextendedモードを選択してください。
 
 ![back.png](img/back.png)
 
-Zettlr is strictly context-based. Unless otherwise specified, new files and directories will be created inside the currently selected directory. File-based operations (renaming or deleting) will by default target the current file. Use the context menu by right-clicking any file or directory to select specific files/directories.
+Zettlrは厳密にコンテキストに基づいた動作をします。特に指定しない限り、新規ファイルやディレクトリは、現在選択しているディレクトリ内に作成されます。ファイルの操作(名前変更や削除)は現在選択しているファイルを対象に実行されます。ファイルやディレクトリを指定して操作を行いたい場合は、ファイルやディレクトリを右クリックして表示されるコンテキストメニューを使用してください。
 
-Three simple rules of thumb:
+3つのシンプルな経験則:
 
-1. The `Alt`(ernative) key triggers alternative actions on the same element.
-2. The `Shift` modifier key _shifts_ the target of an action to another element (mostly the directory instead of the file).
-3. All crucial actions are located in the toolbar. Left are general actions, middle are file-based actions, and to the right are other actions.
+1. `Alt`キーは、同じ要素に対して、代替の(Alternative)動作を引き起こします。
+2. `Shift`キーは、ある動作を作用させる対象をシフト(Shift)します。多くの場合、ディレクトリの代わりにファイルに対して動作を行います。
+3. 重要な機能はすべてツールバーに配置されています。左側が汎用的なアクション、真ん中がファイルに対するアクション、右側がその他のアクションです。
 
-## 5. Nice, I've finished writing. How do I share it?
+## 5. よし、書き終わった。ファイルを共有する方法は？
 
-Three easy steps:
+簡単な3ステップです:
 
-1. Make sure Pandoc and LaTeX (only necessary for PDF) are installed.
-2. Click the share button in the toolbar (or hit `Cmd/Ctrl+E`) and select the target format. The aperture reveals the presentations (they are made using reveal.js — get the pun?)
-3. On export, Zettlr opens the exported file automatically in your preferred app. In there, hit `Cmd/Ctrl+Shift+S` (should work in most apps) to save it where ever you want.
+1. PandocとLaTeX(PDFの場合に必要)がインストールされていることを確認してください。
+2. ツールバーの共有ボタンをクリックして(もしくは`Cmd/Ctrl+E`を押下して)対象の形式を選んでください。レンズ絞りのアイコンを選択すると、reveal.jsによるプレゼンテーションを表示します。
+3. エクスポート時に、Zettlrはエクスポートされたファイルを自動的に開きます。その中で`Cmd/Ctrl+Shift+S`を押下して(ほとんどのアプリケーションで有効なはずです)、好きな場所に保存してください。
 
 ![export.png](img/export.png)
 
-## 6. Okay, the 5 mins are over, something else?
+## 6. オーケー、5分経ったけど他に何かある？
 
-Nope, you're good to go. If you want to dive deeper, be sure to check out our guides:
+いいえ。もう行ってもいいですよ。もし、もっと深く知りたければ、以下のガイドをチェックしてください:
 
-- [Zettlr as a note-taking app](guides/guide-notes.md)
-- [Zettlr as a Zettelkasten](guides/guide-zettelkasten.md)
-- [Zettlr as an IDE](guides/guide-ide.md)
+- [Zettlrをノート取りアプリケーションとして使う](guides/guide-notes.md)
+- [ZettlrをZettelkastenシステムとして使う](guides/guide-zettelkasten.md)
+- [Zettlrをフル機能IDEとして使う](guides/guide-ide.md)

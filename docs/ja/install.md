@@ -1,99 +1,99 @@
-# Installation
+# インストール
 
-The installation of Zettlr is very easy and takes only a step on every operating system. Zettlr is cross-platform, so it will run on your system, no matter which one. Zettlr comes pre-built for macOS, Windows and Debian-based and RedHat-based Linux systems (Ubuntu, Gnome, Xubuntu, Kubuntu, Fedora, RedHat and the like).
+Zettlrのインストールは簡単で、どのオペレーションシステムでも、たったの1ステップで完了します。Zettlrはクロスプラットフォームのため、お使いのシステムの種類にかかわらず動作するでしょう。Zettlrは、macOS、Windows、DebianベースとRedHatベースのLinuxシステム(Ubuntu, Gnome, Xubuntu, Kubuntu, Fedora, RedHat and the like)向けに、ビルド済みモジュールを用意しています。
 
-If you want to run Zettlr on other Linux-Systems like Arch or on ARM-devices (such as a Raspberry), you'd have to create a package by yourself. There's plenty of easy tutorials on how to build electron apps on the web. Please refer to the [supported platforms for electron apps](https://github.com/electron/electron/blob/master/docs/tutorial/support.md) to stay up to date which platforms are supported.
+もし、その他のLinuxシステム(例えばArch Linux)やARMデバイス(例えばRaspberry)でZettlrを使いたい場合には、自分でパッケージを作る必要があります。electronアプリの作り方については、web上に簡単なチュートリアルがいくらでもあります。サポートされているプラットフォームについては[supported platforms for electron apps](https://github.com/electron/electron/blob/master/docs/tutorial/support.md)を参照してください。
 
-> There is a community-maintained package for Arch Linux available. [You can find it on the official AUR repositories](https://aur.archlinux.org/packages/zettlr-bin/). Please note that this package is community-maintained and we do not take any responsibility in its stability, safety or offered version.
+> コミュニティにより管理されているArch Linux向けパッケージがあります。[公式のAURリポジトリにて利用可能です](https://aur.archlinux.org/packages/zettlr-bin/)。このパッケージは、コミュニティにより管理されており、安定性、安全性、提供されるバージョンについて、我々は何の責任も持たないことにご注意ください。
 
-## Windows (7 or newer)
+## Windows (7以降)
 
-To install Zettlr on Windows, just download the app from the [download page](https://www.zettlr.com/download) and double click to open it. If you wish to install Zettlr for all users, it is installed to the main `Program Files`-Directory—in this case you'd have to give it elevated rights during setup (it will automatically ask for your permission). You don't need any rights if you install it for yourself.
+ZettlrをWindowsにインストールするには、[download page](https://www.zettlr.com/download)からアプリケーションをダウンロードして、ダブルクリックで開くだけです。すべてのユーザーに対してZettlrをインストールする場合は、`Program Files`ディレクトリにインストールされます。この場合、管理者権限での実行の許可を求めるダイアログが、自動的に表示されます。現在のユーザーのみにインストールする場合は、何の権限も必要ありません。
 
-To uninstall Zettlr, simply run the Uninstall.exe either from the directory itself or use the comfortable option in your system's settings. If you want to completely remove all data associated with the app, also remove the directory `C:\Users\<your-user-name>\AppData\Roaming\Zettlr`.
+Zettlrのアンインストールは、ディレクトリに置かれているUninstall.exeを実行するか、オペレーティングシステムの設定画面から行ってください。アプリケーションに関連するすべての情報を削除したい場合は、次のディレクトリの削除も行ってください。`C:\Users\<your-user-name>\AppData\Roaming\Zettlr`
 
-## macOS (10.10 or newer)
+## macOS (10.10以降)
 
-To install Zettlr on macOS, simply download the dmg-file from the latest release and mount it. Then drag the Zettlr-icon into your Applications directory and you're done!
+ZettlrをmacOSにインストールするには、最新リリースからdmgファイルをダウンロードし、マウントします。その後、Zettlrのアイコンをアプリケーションディレクトリにドラッグしてください。
 
-To uninstall Zettlr, simply remove the Zettlr.app from your Applications directory. If you want to completely remove all data associated with the app, also remove the directory `/Users/<your-user-name>/Library/Application Support/Zettlr`.
+Zettlrをアンインストールするには、Zettlr.zppをアプリケーションディレクトリから削除するだけです。アプリケーションに関連するすべての情報を削除したい場合は、次のディレクトリの削除も行ってください。`/Users/<your-user-name>/Library/Application Support/Zettlr`
 
-> You can also install Zettlr using [Homebrew](https://formulae.brew.sh/cask/zettlr): `$ brew cask install zettlr`
+> [Homebrew](https://formulae.brew.sh/cask/zettlr)を使ってインストールすることもできます: `$ brew cask install zettlr`
 
-## Linux (Debian 8/Ubuntu 12.04/Fedora 21 or newer)
+## Linux (Debian 8/Ubuntu 12.04/Fedora 21 以降)
 
-There are prebuilt `deb`- and `rpm`-packages for linux systems. Simply install the package on your system.
+Linuxシステム向けにビルドされた`deb`パッケージと`rpm`パッケージがあります。単純にパッケージをシステムにインストールしてください。
 
-To uninstall, follow the usual steps it takes to remove a package (usually through the graphical installer application or via `dpkg`). If you also want to remove all data associated with the app, also delete the `/home/<your-user-name>/.config/Zettlr` directory.
+アンインストールするには、パッケージを削除する通常の手順に従ってください。(多くの場合、グラフィカルなインストーラアプリケーションを使用するか、`dpkg`を使用します。)アプリケーションに関連するすべての情報を削除したい場合は、次のディレクトリの削除も行ってください。`/home/<your-user-name>/.config/Zettlr`
 
-## Updating the app
+## アップデート
 
-The application checks for new updates each time you start the app. You can also manually trigger the search for updates by using the respective menu item from the Help-menu. If there is a new version available, Zettlr will show you a dialog that contains both the new version's number, your current version and a changelog with all features and bug fixes the new version contains. You can then open the download page to download the new package. Simply install it over your current installation, it will take care of removing the old version first. All data will be retained and migrated to the new version.
+アプリケーションを起動するたびに、新しいアップデートがないかの確認が行われます。また、ヘルプメニュー内の項目から、手動でアップデートの確認を行うこともできます。新しいバージョンが利用可能な場合はダイアログが表示され、新バージョン番号、現在のバージョン番号、新バージョンに含まれる機能とバグ修正が確認できます。そこから、ダウンロードページを開いて新バージョンをダウンロードすることができます。現在のバージョンに上書きでインストールを行うと、まず、旧バージョンの削除を行ってくれます。すべてのデータは保持されたまま、新バージョンに移行されます。
 
-> If you are interested in cutting-edge releases, make sure to tick the checkbox "Notify me about beta releases" in the advanced tab of the preferences dialog!
+> もし、最先端のリリースに興味があるのなら、設定ダイアログの高度な設定タブにある「ベータ版のリリースを通知する」にチェックを入れてください。
 
-## Installing Pandoc
+## Pandocのインストール
 
-What makes Zettlr interact with other software such as Microsoft Word, Wiki-systems or OpenOffice is an additional software package called `Pandoc`. Pandoc is free and Open Source and it allows you to use all exporting and importing features of Zettlr, making it the ideal choice to be the interface between other programs and co-workers who do not use Markdown.
+Zettlrを他のソフトウェア、例えばMicrosoft Word、Wikiシステム、OpenOfficeと連携させるは、`Pandoc`という追加のソフトウェアパッケージを使用します。`Pandoc`はフリーでオープンソースであり、Zettlrのすべてのエクスポート/インポート機能を有効にしてくれます。それにより、Markdownを使っていない協力者とのやり取りが可能になります。
 
-Installing Pandoc is easy on all platforms.
+どのプラットフォームでもPandocのインストールは簡単です。
 
-> You can install Pandoc at any time. Simply use the menu item from the Help menu to open up the installation instructions.
+> Pandocはいつでもインストールできます。ヘルプメニュー内の項目からインストールの説明を開くことができます。
 
 ### Windows
 
-On Windows, Pandoc can be installed by visiting the [download page](https://github.com/jgm/pandoc/releases/latest) and retrieving the Windows installer. Simply execute it. Afterwards, it should be installed correctly. Try to export something. If it works, you're done!
+Windowsの場合、[ダウンロードページ](https://github.com/jgm/pandoc/releases/latest)からWindows用インストーラーをダウンロードし、実行します。それだけで、正常にインストールされるはずです。何かをエクスポートしてみて動作するなら、それで完了です。
 
-> Please note that due to the fact that Pandoc is a CLI-program (Command Line Interface), it cannot show you whether or not there is an update available. You'll have to do this yourself. Simply visit the download page from time to time.
+> PandocはCLIプログラム(コマンドラインインターフェース)のため、アップデートが利用可能かどうか通知することができません。時々、ダウンロードページを開いて、自分でアップデートの有無を確認してください。
 
 ### macOS
 
-On macOS, Pandoc can be installed in a variety of ways.
+macOSの場合、様々な方法でPandocをインストールできます。
 
-#### Recommended method: Homebrew
+#### おすすめの方法: Homebrew
 
-The preferred method is [Homebrew](https://brew.sh/). Homebrew is a packet manager that makes it easy to install command line programs such as pandoc and makes it easy to maintain it. Make sure to [install Homebrew](https://brew.sh/), and then simply run the following command in the Terminal:
+おすすめの方法は、[Homebrew](https://brew.sh/)です。HomebrewはPandocのようなコマンドラインプログラムを簡単にインストールし、メンテナンスするためのパッケージマネージャです。[Homebrewをインストール](https://brew.sh/)してあることを確認し、ターミナルで次のコマンドを実行してください:
 
 ```bash
 $ brew install pandoc
 ```
 
-To update pandoc from time to time, use this command:
+Pandocをアップデートために、時々次のコマンドを実行してください:
 
 ```bash
 $ brew upgrade
 ```
 
-This will upgrade all installed formulae (as they are called) to the newest version.
+これで、すべてのインストール済みformulaが最新バージョンに更新されます。
 
-> Installing with Homebrew is recommended, as it is not only faster, but also more convenient.
+> 早くて便利なので、Homebrewでのインストールを推奨します。
 
-After pandoc is set up, you may want to install `citeproc` as well, as it provides you with the ability to [cite](academic/citations.md) using Zettlr. On Windows, Citeproc is automatically installed, while on macOS you will have to install Pandoc Citeproc additionally. Simply use Homebrew for this as well:
+Pandocのセットアップが終わったら、`citeproc`もインストールしたくなるかもしれません。`citeproc`は、Zettlrの[参考文献](academic/citations.md)機能を利用するために必要です。Windowsでは、Citeprocは自動的にインストールされます。macOSの場合は、Pandoc Citeprocを追加でインストールします。Homebrewで次のコマンドを実行してください:
 
 ```bash
 $ brew install pandoc-citeproc
 ```
 
-#### Install using the official installer
+#### 公式インストーラーを使ったインストール
 
-To install Pandoc the old way, simply head over to the [download page](https://github.com/jgm/pandoc/releases/latest) and get the macOS installer. Once it is done, pandoc should be available on your system. Try to export something. If it works, you're done!
+Pandocをインストールする従来からの方法は、[ダウンロードページ](https://github.com/jgm/pandoc/releases/latest)に行って、macOS用のインストーラをダウンロードし実行することです。完了すれば、Pandocが使えるようになっているはずです。何かをエクスポートしてみて動作するなら、それで完了です。
 
 ### Linux
 
-On Linux, installing Pandoc is hilariously simple. Simply use your packet manager to search for, and install Pandoc. The provided packages aren't always up-to-date, but they should fit. If you want to install the newest version, you'd have to [download the Linux installer](https://github.com/jgm/pandoc/releases/latest) and follow the [install instructions](https://pandoc.org/installing.html) on the Pandoc site.
+Linuxでのインストールは笑えるほど簡単です。パッケージマネージャでPandocを検索してインストールするだけです。提供されるパッケージは、常に最新とは限りませんが、適切なバージョンのものです。最新バージョンを使用したい場合は、[Linux用インストーラー](https://github.com/jgm/pandoc/releases/latest)を使用して、Pandocのサイトの[インストール手順](https://pandoc.org/installing.html)に従ってください。
 
-> You may need to set up `pandoc-citeproc` manually by installing it using the preferred method on your operating system.
+> `pandoc-citeproc`の手動インストールが必要な場合があります。お使いのオペレーティングシステムで適切な方法でインストールを行ってください。
 
-## Installing LaTeX
+## LaTeXのインストール
 
-Markdown works best if combined with `LaTeX` to create beautiful PDF files. To do so, you'd have to install a `TeX`-distribution along Zettlr. Don't worry: You won't need to learn any `LaTeX` to use it. But you'd have to install it.
+Markdownは、`LaTeX`と組み合わせることで、美しいPDFファイルを生成することができます。そのためには、Zettlrとともに、`TeX`ディストリビューションをインストールする必要があります。`LaTeX`自体については何も知らなくても使うことができますのでご心配なく。必要なのは、インストールすることだけです。
 
-Installing the software works exactly the same as any other software: On Windows and macOS you'll need the installer package, while on Linux you can use your packet manager to install a distribution.
+インストールは、他のソフトウェアと全く同じように行います。WindowsおよびmacOSでは、インストーラパッケージを使用します。Linuxではパッケージマネージャを使用してインストールを行います。
 
-The recommended distributions are:
+おすすめのディストリビューション:
 
 - Windows: [MikTeX](https://miktex.org/download)
-- macOS: [MacTex](https://www.tug.org/mactex/morepackages.html) (_Attention: It suffices to install the Basic Tex, which is much smaller than the full version!_)
-- Linux: [TeX Live](https://www.tug.org/texlive/) (install the texlive-base packet: `sudo apt install texlive-base`)
+- macOS: [MacTex](https://www.tug.org/mactex/morepackages.html) (_注意: フルバージョンよりはるかに小さいBasic Texをインストールするだけで十分です。_)
+- Linux: [TeX Live](https://www.tug.org/texlive/) (texlive-baseパッケージをインストールします。: `sudo apt install texlive-base`)
 
-> You can install LaTeX at a later time. Simply use the menu item from the Help menu to open up the overview page where you can immediately see all available distributions.
+> LaTeXは、後からインストールすることもできます。ヘルプメニュー内の項目から概要ページを開くと、利用可能なディストリビューションの一覧を確認することができます。

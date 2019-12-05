@@ -1,51 +1,51 @@
-# Get involved
+# ご協力ください
 
-Do you want to make Zettlr an even better app? That's great! Whether you are a user, want to provide a new translation, or get into developing, you've come to the right place!
+Zettlrをより良いアプリにしたいとお考えですか？素晴らしい！新たに翻訳を提供したい方、開発に参加したい方は、このページをご覧ください。
 
-## General Resources
+## 全般的なリソース
 
-Zettlr has a vibrant community helping each other all around the net. The following list contains the common places to start for any issue you might have.
+Zettlrは、インターネット中で互いに助け合う活発なコミュニティを有しています。あなたが抱いた疑問を投げかけることができる場所を、以下の一覧に示します。
 
-* [Zettlr user forum](https://forum.zettlr.com) — Go here to ask general questions, discuss workflows and concepts of Zettlr and even share your custom themes!
-* [Zettlr subreddit](https://www.reddit.com/r/Zettlr) — The Zettlr subreddit is meant for the redditors in the community.
-* [The official Twitter account](https://www.twitter.com/Zettlr) — Here you can follow the updates to the app in real time. It's the only place where we regularly announce everything we do. Additionally, we engage in most discussions, so if you have questions, you can drop them here.
-* [The official Facebook page](https://fb.me/Zettlrapp) — Here you can message us, if you don't have a Twitter account. Normally, we receive notifications and answer asap, but can't promise it. We only have this page because, well — one simply has a Facebook page, nowadays 🤷‍♂️
-* [Our YouTube channel](https://www.youtube.com/c/Zettlr) — If you are more like the visual type of person, you can find some introductory videos here.
-* [The GitHub issue tracker](https://github.com/Zettlr/Zettlr/issues) — This is the core of our endeavours to make the app better and better. If you spot a bug, have a suggestion or want to propose a feature, here's the right place. Nevertheless, especially when it comes to questions regarding the user workflow or new features, **it's best to discuss your ideas on the forum or on reddit first**.
+* [Zettlr user forum](https://forum.zettlr.com) — 一般的な質問、ワークフローやZettlrのコンセプトに関する議論、カスタムテーマの共有まで、このサイトで投稿してください。
+* [Zettlr subreddit](https://www.reddit.com/r/Zettlr) — コミュニティ内のRedditorを対象としたサイトです。
+* [公式Twitterアカウント](https://www.twitter.com/Zettlr) — アプリケーションの更新をリアルタイムに確認することができます。これが、私たちの活動を定期的に知らせる唯一の場所です。さらに、ほとんどの議論もここで行われます。質問がある場合は、ここに投げてください。
+* [公式Facebookページ](https://fb.me/Zettlrapp) — ツイッターのアカウントを持っていない場合、ここからメッセージを送ることができます。通常は、通知を受けたらできる限りはやく返信しますが、確約はできません。このページが存在する理由は……最近は、みんなFacebookのページを持っているからということだけです🤷‍♂️
+* [YouTubeチャンネル](https://www.youtube.com/c/Zettlr) — 視覚からの情報を好む方は、こちらで入門用の動画をいくつか見ることができます。
+* [The GitHub issue tracker](https://github.com/Zettlr/Zettlr/issues) — アプリケーションをより良くしようとする私たちの努力の結晶です。バグの指摘や新機能の提案を行うならこちらです。しかしながら、特にユーザのワークフローや新機能に関わる質問については、**まず、フォーラムやRedditで話し合うのが最善です。**
 
-## User Contributions
+## ユーザの貢献
 
-As a user who wants a good-looking, well-working writing app, just keep your eyes open for any error the app might produce and, more importantly, tell us how to make the workflow more efficient! We can only judge for our own workflow, so to make the app better for you as well, we need to know how. Always remember: We cannot build a workflow as-is into the design but have to make concessions to other workflows, but we'll try to make features more accessible or working smoother as long as the trade-offs for the existing workflows and the new suggestion are not too hard.
+かっこよくて、適切に機能するアプリケーションを求めるユーザーとして、エラーが発生したときに見逃さないように、ちゃんと見ていてください。そしてさらに重要なことは、ワークフローをより効率的にする方法を、私たちに教えてください。私たちは、私たち自身のワークフローについて判断することしかできません。あなたにとってもより良いアプリケーションとするために、私たちに、その方法を教えてください。ただし、ワークフローをそのままの形で設計に乗せることはできず、他のワークフローとの折り合いをつける必要があることを記憶に留めておいてください。しかし、既存の機能と新提案の機能とのトレードオフが大きくなければ、可能な限り便利でスムーズに動作する機能となるように努力します。
 
-Please report bugs by opening up issues on the GitHub repository. This way we are able to to quickly respond to the report and directly get to handle the problem.
+バグ報告は、GitHubリポジトリでIssueをオープンしてください。この方法であれば、私たちが報告に素早く対応できて、直接問題に対処できます。
 
-## Translating the App
+## アプリケーションの翻訳
 
-We welcome any help in translating the app in all languages of this planet. Translations are managed on our Translation Server. To translate, you'll need to create an account, which is only used as an anti-spam measure. Additionally — but only if you want to — you will be credited using your username in all generated translations.
+アプリケーションを、地球上に存在するあらゆる言語に翻訳するための協力を歓迎します。翻訳は翻訳サーバにて管理されています。翻訳を行うためには、アカウントの作成が必要です。これは、スパム対策のために行っています。加えて、生成された翻訳データに（あなたが希望するならば）あなたのユーザー名がクレジットされます。
 
-Translating is simple. Just click on any language on the main page to see the list of all identifiers and all existing translations:
+翻訳方法は単純です。メインページで任意の言語をクリックして、現在存在する識別子の一覧を表示します。
 
 ![Translation Keys](img/translations_list.png)
 
-On the left side you'll see all translation IDs. They will mostly be self-explanatory. If you don't know where to start, simply have a look at the English translation and at the app. Then you'll know which translation IDs will correspond to which elements.
+左の列に書いてあるのが翻訳IDです。これらは概ね、自己説明的な名前になっています。どのように始めたら良いか分からない場合は、英語の翻訳文と、実際のアプリケーションを見比べてれば、翻訳IDがどの要素に対応しているかが分かると思います。
 
-We've implemented a user-based quality management system in the service, which consists in you being able to vote on existing translations. So even if you don't want to translate yourself, you can look through all translations and vote for the one you deem correct. Whenever somebody downloads a translation, the system will take the best-rated translation strings to ensure all translations are verified by you, our users!
+ユーザベースの品質マネジメントシステムが実装されていて、これは、みなさんが既存の翻訳文に投票することで機能します。つまり、自分で翻訳をしたいと思わなくても、翻訳文の中から適切だと思うものに投票することができるのです。誰かが翻訳をダウンロードする際には、得票数の最も多い翻訳文がシステムにより自動的に選択されることで、翻訳の検証が反映されます。
 
-[For more information, please see the short guide to our translation service](https://translate.zettlr.com/welcome).
+[詳細は、翻訳サービスのショートガイドをご覧ください。](https://translate.zettlr.com/welcome).
 
-## Developing
+## 開発
 
-To start developing, simply [fork the repository](https://github.com/Zettlr/Zettlr), work on your features, bug fixes, etc. and then open pull-requests. Please remember to **only PR to the develop branch!** The master-branch is only pushed to once a new release is being drafted. So if you are developing a new feature and a new version of Zettlr is released, you can simply pull the `origin master` to be up to date again and continue writing your feature.
+開発を始めるには、[リポジトリをフォークし](https://github.com/Zettlr/Zettlr)、機能の開発やバグ修正などを行います。それから、プルリクエストをオープンします。**developブランチに対してのみプルリクを出す**ということを覚えておいてください。masterブランチへは、新しいリリースが準備されるときのみpushされます。ですので、新機能を開発しているときにZettlrの新バージョンがリリースされたなら、単純に`origin master`をpullして最新化すれば、機能の開発を続けられます。
 
-If you are beginning to develop a feature, it also may be wise to announce that using a new issue to just let the rest know that somebody is already doing it to maximise efficiency!
+機能の開発を始めようと思ったら、新規のissueを作成して他の人に知らせるのが良いでしょう。誰かがすでに取り掛かっていると知らせることで効率を最大化できます。
 
-### Starting to Develop
+### 開発を始める
 
-To set everything up, make sure to start your favourite IDE and spin up your terminal. Zettlr is based on a [NodeJS](https://nodejs.org/)-stack, so you'll need to have the current Node-Server installed on your system, and a Node Package Manager. Zettlr prefers [Yarn](https://yarnpkg.com/), but of course you can also use NPM (this will be installed alongside Node).
+すべて準備ができたら、お好きなIDEとターミナルを起動してください。Zettlrは[NodeJS](https://nodejs.org/)スタックに基づいているので、現行のNodeサーバとNodeパッケージマネージャがシステムにインストールされている必要があります。Zettlrとしては[Yarn](https://yarnpkg.com/)を勧めますが、もちろん（Nodeと一緒にインストールされている）NPMを使うこともできます。
 
-Then make sure to initialise everything.
+続いて、初期化を行います。
 
-**With Yarn**
+**Yarnを使う場合**
 
 ```bash
 $ git clone https://github.com/Zettlr/Zettlr.git
@@ -55,7 +55,7 @@ $ cd source
 $ yarn install
 ```
 
-**With NPM**
+**NPMを使う場合**
 
 ```bash
 $ git clone https://github.com/Zettlr/Zettlr.git
@@ -65,92 +65,92 @@ $ cd source
 $ npm install
 ```
 
-The second `install` in the source-directory is necessary, because we make use of [electron-builder](https://www.electron.build/)'s two-directories-structure.
+sourceディレクトリで行う、2回目の`install`は、[electron-builder](https://www.electron.build/)のtwo-directories-structureを使うために必要です。
 
-### CLI-Commands
+### CLIコマンド
 
-Zettlr ships with a lot of useful commands that you can make use of in your development process. Let's list all of them.
+Zettlrは開発プロセスで使える便利なコマンドも提供しています。以下にすべてを列挙します。
 
-> You can run any of these commands either with `npm run <command>` or `yarn <command>`, depending on your package manager. Make sure to run them from the Zettlr main-directory.
+> いずれのコマンドも、使用するパッケージマネージャに合わせて`npm run <command>`または`yarn <command>`で実行することができます。Zettlrのmainディレクトリで実行してください。
 
-* `start`: Starts the application.
-* `build:quick`: Quickly builds the app for your operating system (if supported by electron-builder) and outputs it to `/release`.
-* `release:this`: The same as `build:quick`, but the app will also be packaged (as a `.dmg`-file on macOS, a `.exe`-installer on Windows, or a Linux package).
-* `release:mac`: Explicitly build a release for macOS.
-* `release:win`: Explicitly build a release for Windows.
-* `release:linux`: Explicitly build a release for Linux.
-* `less`: Runs the LESS converter to convert the source files in `/resources/less` to the final CSS files in `source/common/assets/css`. Whenever you make changes to the styles, you should run this command.
-* `less:extract`: Extracts all CSS IDs and classes from the source files and outputs them to `/resources/css_list.md`, one per line. This is only used to generate our [Custom CSS reference list](https://docs.zettlr.com/core/custom-css/#complete-css-class-and-id-reference).
-* `handlebars`: This starts up the Handlebars precompiler to convert the templates (for dialogs and popups) into those that will be shipped with the app in the directory`/source/common/assets/tpl`. Whenever you change anything in a file in `/resources/templates`, you should run this, lest your changes won't be visible.
-* `lang:refresh`: Downloads the most recent version of the default translations `German (Germany)`, `English (United States)`, `English (United Kingdom)`, and `French (France)` from [translate.zettlr.com](https://translate.zettlr.com/) and places them into the directory `/source/common/lang`.
-* `reveal:build`: Rebuilds the template for generating revealJS-presentations.
+* `start`: アプリケーションを開始します。
+* `build:quick`: 使用中のオペレーティングシステム向けにアプリケーションをビルドし、`/release`フォルダに出力します。
+* `release:this`: `build:quick`と同様ですが、アプリケーションのパッケージ化（macOSの`.dmg`、Windowsの`.exe`インストーラ、Linuxのパッケージ）も行います。
+* `release:mac`: 明示的にmacOS向けにリリースを行います。
+* `release:win`: 明示的にWindows向けにリリースを行います。
+* `release:linux`: 明示的にLinux向けにリリースを行います。
+* `less`: LESSコンバータを実行し、`/resources/less`内のソースを`source/common/assets/css`のCSSファイルに変換します。スタイルの変更を行うたびに、このコマンドの実行が必要です。
+* `less:extract`: ソースファイルから、CSSのすべてのIDとclassを抽出し、`/resources/css_list.md`に一行ごとに出力します。これは、[カスタムCSSリファレンス一覧](https://docs.zettlr.com/core/custom-css/#complete-css-class-and-id-reference)を生成するためだけに使われています。
+* `handlebars`: このコマンドは、Handlebarsプリコンパイラを起動し、ダイアログとポップアップのテンプレートをアプリケーションで使える形に変換し、`/source/common/assets/tpl`に出力します。 `/resources/templates`に含まれるファイルを変更するたびに、このコマンドを実行する必要があります。さもなくば、変更が反映されません。
+* `lang:refresh`: 最新のデフォルト翻訳（`German (Germany)`, `English (United States)`, `English (United Kingdom)`, `French (France)`）を[translate.zettlr.com](https://translate.zettlr.com/)からダウンロードし、`/source/common/lang`に保存します。
+* `reveal:build`: revealJSのプレゼンテーション用テンプレートをリビルドします。
 
-Apart from these commands, there is one "master-command" that we use to run a full release cycle of Zettlr. It resides in `/scripts/make.sh` and is a Shell-command that will run most of the aforementioned commands to generate the installers for Windows, macOS, Debian-based Linux distributions, and Fedora-based Linux distributions. Additionally, it will generate a `SHASUMS.txt`-file containing checksums of all four installers.
+これらのコマンドに加えて、Zettlrのフルリリースサイクルを実行するためのmasterコマンドが存在します。これは、`/scripts/make.sh`の中に書かれたシェルコマンドであり、前述のWindows, macOS, DebianベースLinuxディストリビューション, FedoraベースLinuxディストリビューション向けのインストーラを作成するコマンドを実行します。さらに、これら4つのインストーラのチェックサムを含むファイル`SHASUMS.txt`を出力します。
 
-> Attention: Currently the Make-script requires Yarn and macOS. It does not work with NPM or on any other platform. This is due to the command to generate SHA256 checksums, which differs between macOS and Linux distributions.
+> 注意: 今のところMakeスクリプトはYarnとmacOSを必要とします。NPMを使ったり、他のプラットホーム上では動作しません。これは、SHA256チェックサムを生成するコマンドがmacOSとその他のLinuxディストリビューションで異なることに起因します。
 
-### Project Structure
+### プロジェクト構造
 
-Now to the real technical stuff: The project's structure! In most respects, the structure adheres to the best practices concerning Electron application development. Nevertheless, the application is _huge_, and therefore you'll need some guidance.
+技術的な内容に移ります、プロジェクトの構造です。ほとんどの点において、Electronアプリケーション開発のベストプラクティスに従った構造をしています。しかしながら、このアプリケーションは__巨大__です。それゆえ、いくつかのガイダンスが必要となります。
 
-Let's first cover the directory structure (this is a non-exhaustive list; only the folders and files you'll mostly be working on are covered):
+まずは、ディレクトリ構造を抑えましょう。（これは網羅的なリストではありませんが、必要になるフォルダとファイルはほとんどカバーしています。）
 
 ```
-Zettlr                 // The root directory
+Zettlr                 // ルートディレクトリ
 |
-+ release              // Will be created when you build the app.
++ release              // アプリケーションをビルドすると作成されます。
 |
-+ resources            // Contains everything for dev, but won't be shipped.
++ resources            // 開発用のあらゆる物が格納されています。リリースには含まれません。
 |  |
-|  + less              // Contains the source-files for the CSS
+|  + less              // CSSを生成するソースファイルが格納されています。
 |  |
-|  + templates         // Contains the dialog and popup templates.
+|  + templates         // ダイアログとポップアップ用のテンプレートが格納されています。
 |
-+ scripts               // Contains dev-scripts as mentioned above.
++ scripts               // 上述の開発用スクリプトが格納されています。
 |
-+ source                // Contains the actual application source.
++ source                // 実際のアプリケーションソースが格納されています。
 |  |
-|  + common             // Commonly used files
+|  + common             // 共通的に使われるファイルです。
 |  |  |
-|  |  + assets          // CSS, Fonts, HB-runtime, images, JS, templates.
+|  |  + assets          // CSS, フォント, HBランタイム, 画像, JS, テンプレート。
 |  |  |
-|  |  + lang            // Default languages and the i18n module.
+|  |  + lang            // デフォルト言語とi18nモジュール。
 |  |  |
-|  |  + util            // Utility functions, used around the app.
+|  |  + util            // アプリケーション全体で使われるユーティリティ関数。
 |  |  |
-|  |  + data.json       // Static data for the application.
+|  |  + data.json       // アプリケーション用の静的データ。
 |  |  |
-|  |  + validate.js     // The validation module
+|  |  + validate.js     // バリデーションモジュール
 |  |  |
-|  |  + validation.json // Validation rules.
+|  |  + validation.json // バリデーションルール
 |  |
-|  + main               // The main process files
+|  + main               // メインプロセスのファイル
 |  |  |
-|  |  + assets          // Assets for the main process
+|  |  + assets          // メインプロセス用asset
 |  |  |
-|  |  + commands        // All commands that can be executed reside here.
+|  |  + commands        // 実行可能なすべてのコマンド
 |  |  |
-|  |  + providers       // Contains service providers for the app.
+|  |  + providers       // アプリケーション用のサービスプロバイダー
 |  |
-|  + print              // Source code for the print window
+|  + print              // 印刷ウィンドウのソースコード
 |  |
-|  + quicklook          // Source code for the QuickLooks.
+|  + quicklook          // QuickLookのソースコード
 |  |
-|  + renderer           // The main window code.
+|  + renderer           // メインウィンドウのコード
 |  |  |
-|  |  + assets          // Some assets used only in the renderer process.
+|  |  + assets          // 描画処理でのみ使われるasset
 |  |  |  |
-|  |  |  + codemirror   // Contains all CodeMirror plugins
+|  |  |  + codemirror   // CodeMirrorプラグイン
 |  |  |  |
-|  |  |  + context      // All files needed for the context menu
+|  |  |  + context      // コンテキストメニューで必要なすべてのファイル
 |  |  |  |
-|  |  |  + toolbar      // Contains the toolbar template.
+|  |  |  + toolbar      // ツールバーのテンプレート
 |  |  |
-|  |  + dialog          // The modules for all dialogs in the app
+|  |  + dialog          // アプリケーションのすべてのダイアログ用のモジュール
 |  |  |
-|  |  + util            // Utility functions solely used in the renderer.
+|  |  + util            // 描画処理でのみ使われるユーティリティ関数
 |  |
-|  + main.js            // Entry point of the application.
+|  + main.js            // アプリケーションのエントリーポイント
 |
-+ CHANGELOG.md          // Contains a detailed list of all changes.
++ CHANGELOG.md          // すべての変更の詳細履歴
 ```

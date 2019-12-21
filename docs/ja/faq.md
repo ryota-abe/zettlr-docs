@@ -1,90 +1,90 @@
-# Frequently Asked Questions
+# よくある質問
 
-## I tried to install Zettlr on Windows/macOS, but there's a security warning saying I shouldn't install the app!
+## ZettlrをWindows/macOSにインストールしようとしたところ、アプリケーションをインストールしないようにというセキュリティ警告が出ました。
 
-Both Windows and macOS require so-called "code-signing" in order to be able to trust the application. While this is a great technique of keeping malicious code from harming your system, it requires an annual subscription fee. This is why Zettlr builds are _not_ code-signed and therefore produce warnings. You can safely ignore these warnings and install Zettlr, as long as you download it from our official page.
+WindowsおよびmacOSでアプリケーションが信頼を得るためには、コード署名と呼ばれるものが必要となります。これは、不正なコードがシステムを害することを防ぐための素晴らしい技術なのですが、年間登録費用が必要となります。そのため、Zettlrのビルドはコード署名を含まず、警告が表示されてしまいます。我々の公式ページからダウンロードする限りは、この警告を無視してZettlrを安全にインストールすることができます。
 
-## Are there any plans of porting Zettlr to mobile phones and tables, for Android or iOS?
+## Zettlrをモバイル端末やタブレット端末(AndroidまたはiOS)に移植する予定はありますか。
 
-We are getting more and more requests for mobile versions of Zettlr. We are very happy that you like Zettlr enough to want it on all your devices, and we would love to fulfil your wish! Unfortunately, though, our resources are just enough to keep the development of Zettlr up and running, and adding more work is just not possible at the moment. Of course, as soon as this changes, we will get to it!
+Zettlrのモバイルバージョンに対する要望が増えてきています。Zettlrを気に入っていただいて、あらゆるデバイスで使いたいと思ってくれることを嬉しく思います。しかし、残念ながら、私たちのリソースはZettlrの開発を続けていくのに精一杯で、現段階では追加の作業を行うことは不可能です。もちろん、この状況が変わればすぐに取り掛かります。
 
-## Do you consider supporting more Linux platforms except Debian and Fedora based ones?
+## Debian、Fedoraベース以外のLinuxをサポートする予定はありますか。
 
-Due to our limited resources we cannot support more platforms out of the box. Debian- and Fedora-based distributions are by far the most popular platforms, which is why we support them officially. If you would like to take upon yourself the responsibility of building Zettlr for other platforms, please get in contact with us so that we can list the additional repository on our download page!
+私たちのリソースの制限により、追加のプラットフォームですぐに使えるようにサポートすることはできません。Debian、Fedoraベースのディストリビューションは、広く普及しているプラットフォームであるため、公式にサポートしています。もし、Zettlrを他のプラットフォーム向けにビルドする責任を引き受けてくださる方がいれば、ダウンロードページに追加のリポジトリを記載することができるように、私たちに連絡してください。
 
-## What is Markdown?
+## Markdownとは何ですか。
 
-Markdown is a simple markup language that enables you to write text just as complex as using standard office software, but with much less clutter. Instead of having to manually select all formatting options, in Markdown, typing a `#` suffices to indicate a heading! Want to hear more? Then head over to the [documentation on Markdown](reference/markdown-basics.md)!
+Markdownはシンプルなマークアップ言語であり、普通のオフィスソフトウェアを使うのと同程度の複雑さを持ったテキストを、取り散らかさずに書くことを可能とします。見出しを表現するのに、書式設定を手動で選択するのではなく、Markdownでは`#`を入力するだけで事足ります。もっと知りたいのなら、[Markdownのドキュメンテーション](reference/markdown-basics.md)を見てください。
 
-## If I don't want to use Zettlr anymore, what would I need to do to switch programs?
+## Zettlrを使わなくなった場合、どうやって他のプログラムに乗り換えればよいですか。
 
-Simply uninstall Zettlr and begin using another program of your choice. Zettlr does not mess with your files. If you have been using Virtual Directories or Projects, there will be small files named `.ztr-directory` and `.ztr-projects` present in some folders. To remove them, simply delete any virtual directories, reset the sorting of directories to default, and remove all projects prior to uninstalling the app (or manually remove these files afterwards).
+単純にZettlrをアンインストールして、他のプログラムを使い始めてください。Zettlrは余計なファイルに干渉しません。仮想ディレクトリやプロジェクト機能を使っていた場合は、`.ztr-directory`と`.ztr-projects`という名前の小さなファイルがいくつかのディレクトリに作成されています。これらを取り除くには、アンインストールを行う前に、すべての仮想ディレクトリを削除し、すべてのディレクトリのソート順をデフォルトに戻し、すべてのプロジェクトを削除してください。(もしくは、後から手動でこれらのファイルを削除してください)
 
-## I'm using Linux and deleting files doesn't move them to the trash!
+## Linuxを使っていますが、削除したファイルがゴミ箱に移動しません。
 
-Zettlr never completely removes your files. It always only moves them to the trash so in case you accidentally remove a file you need, you can always restore it. On macOS and Windows systems, the trash is activated by default, but on some Linux distributions, you need to activate the trash functionality manually. On Linux, Zettlr (to be more precise: the underlying Electron framework) makes use of the binary `gvfs-trash` to move files to the trash. To avoid shock moments it'll never try to "fall back" to removing files completely. Therefore, to make use of this functionality, please make sure you have `gvfs-trash` installed! On Debian/Ubuntu you can do so by running the following code in a terminal:
+Zettlrがファイルを完全に削除することはありません。常にゴミ箱に移動するので、もし必要なファイルを誤って削除した場合は元に戻すことができます。macOSとWindowsでは、ごみ箱がデフォルトで有効になっていますが、いくつかのLinuxディストリビューションではゴミ箱機能を手動で有効化する必要があります。LinuxにおいてZettlrは(より正確に言うならElectronフレームワーク上で動作するアプリケーションは)、ファイルをゴミ箱に移動するのに`gvfs-trash`のバイナリを利用しています。ショックを避けるため、ファイルを完全に削除するようにフォールバックするようなことはしません。それゆえ、この機能を使うために`gvfs-trash`がインストールされていることを確認してください。DebianまたはUbuntoでは、以下のコマンドを実行してください:
 
 ```bash
 $ sudo apt install gvfs-bin
 ```
 
-## The internal links do not open the respective file!
+## 内部リンクが対応するファイルを開いてくれません。
 
-In case the internal links used to interlink files don't work as expected, please make sure you've done the following things:
+ファイルの相互リンクに使用される内部リンクが期待通りに動作しない場合、以下のことを確認してください:
 
-1. Is the link recognised? Zettlr enables you to define what internal links look like. By default, they are encapsulated by `[[` and `]]`. When Zettlr recognises an internal link, it will colour it and if you hover over it with your mouse, the contained text should become underlined. If it does not, Zettlr doesn't think that what you've written is a link. You can change this in the settings.
-2. Did you press the `Alt`- or `Ctrl`-key while clicking on the link? As clicking with your mouse somewhere in the text normally means that you intend to change something, you have to tell Zettlr that you actually want to follow the link.
-3. Did you use a valid filename or ID? Zettlr only opens files, if they report they _exactly_ have the given ID or the given filename. If nothing happens while clicking on the link, this surely means that a file with the given ID or filename does not exist in the system. Note that you must omit the file extension when creating a link. For example, to link to `my-file.md`, you only need to put `my-file` inside the brackets.
-4. Is the file currently loaded into Zettlr? Internal linking obviously only works if Zettlr has read the file.
+1. リンクは認識されていますか？Zettlrでは、内部リンクがどのような見た目かを定義することができます。デフォルトでは`[[`と`]]`に囲まれた部分です。Zettlrが内部リンクを認識すると、色が着けられ、マウスホバーしたときにテキストにアンダーラインが引かれます。もし、そうなっていなければ、Zettlrは、それをリンクだと認識していません。この動作は設定で変更することができます。
+2. リンクをクリックするときに`Alt`または`Ctrl`キーを押していますか？テキスト内を普通にクリックすると、テキストを変更する操作になります。そうではなく、リンク先に移動したいということを、Zettlrに伝える必要があります。
+3. 裕応なファイル名またはIDを使っていますか？Zettlrは、指定のIDまたはファイル名に_完全に_一致した場合のみ、ファイルを開きます。リンクをクリックしても何も起こらない場合、指定のIDまたはファイル名がシステム上に存在しないということを意味すると思われます。また、リンクを作る際に、ファイルの拡張子を省略することに注意してください。例えば、`my-file.md`にリンクを張る場合、括弧内に`my-file`とだけ入力する必要があります。
+4. ファイルは、現在Zettlrにロードされていますか？内部リンクはZettlrがファイルを読み込んでいる場合のみ動作します。
 
-## I know LaTeX and want to use it inside my Markdown files as well. Is this possible?
+## 私はLaTeXを知っていて、Markdown中でも使いたいのですが、可能ですか？
 
-Yes. Simply write your `LaTeX`-statements where you want them. As soon as you export to PDF, Pandoc will take care of the rest and the statements will be interpreted by the PDF engine. Unfortunately, `LaTeX` syntax highlighting is not supported. Also, please note that Pandoc will clear all `LaTeX`-blocks prior to exporting to anything other than PDF, which means that blocks within `\begin` and `\end`, for instance, will be missing completely from the final Office file. On HTML-export, all `LaTeX`-blocks will be retained, but not converted to something else.
+可能です。単純に、好きな箇所に`LaTeX`ステートメントを書いてください。PDFにエクスポートすると、Pandocが残りの面倒を見てくれて、PDFエンジンにより処理されます。残念ながら`LaTeX`のシンタックスハイライトはサポートしていません。また、PDF以外にエクスポートする場合、Pandocは事前にすべての`LaTeX`ブロックを取り除いてしまいます。つまり、例えば`\begin`と`\end`に挟まれたようなブロックは、最終的なオフィスファイルでは見えなくなってしまいます。HTMLエクスポートの場合、すべての`LaTeX`ブロックはそのまま残りますが、他の何かに変換されることはありません。
 
-## I can't seem to align the text just or right!
+## テキストを均等割り付けや右揃えすることができません。
 
-It's not a bug, it's a feature: Markdown does not have the respective formatting signs because text should always be justified or aligned left and therefore it does not belong to the set of necessary block formats Markdown offers. Yet, you can still use `LaTeX`-commands to render them left or right. Simply enclose the text you want to align right or justify in `\begin{<option>}` and `\end{<option>}`, where `<option>` may either refer to `flushleft`, `flushright` or  put a `\justify` in front of a paragraph you want to be justified. [Learn more at sharelatex.com](https://www.sharelatex.com/learn/Text_alignment).
+これは、バグではなく仕様です。Markdownには、それらのフォーマット用の記号がありません。なぜなら、テキストは常に均等割り付けされるか、左揃えされるべきだからです。それゆえ、Markdownが必要とするブロックフォーマットには、それらは含まれません。それでも、`LaTeX`コマンドを使って、左揃えまたは右揃えにすることは可能です。その場合、テキストを`\begin{<option>}`と`\end{<option>}`で囲んでください。`<option>`には`flushleft`か`flushright`が入ります。また、均等割り付けしたい段落の最初には`\justify`を置いてください。詳細は[sharelatex.com](https://www.sharelatex.com/learn/Text_alignment)をご覧ください。
 
-## I want to use single line breaks and not create new paragraphs. When I simply hit Enter once, it removes the single line break!
+## 改行をしたいのですが、段落を変えたくありません。エンターを1回押しただけだと、改行が取り除かれてしまいます。
 
-To force Pandoc to render single line breaks as such, end your line with a backslash (`\`) or two spaces. The backslash as well as the two spaces will not be rendered in the resulting file.
+Pandocに改行をそのように出力させるためには、行末にバックスラッシュ(`\`)を置くか、2つの半角スペースを置いてください。バックスラッシュも2つの半角スペースも出力結果のファイルには反映されません。
 
-## Do I really need Pandoc or LaTeX?
+## PandocやLaTeXは本当に必要ですか。
 
-For plain HTML export, no. For all other export formats, yes. Zettlr depends on those programs to enable exporting of files. But don't worry: They are Open Source and therefore completely free of charge, and available on all operating systems!
+HTMLエクスポートだけなら不要です。その他の形式へのエクスポートを行うためには必要です。Zettlrはファイルのエクスポートを行うためにこれらのプログラムを必要とします。しかし、ご心配なく。これらはオープンソースで無料です。そして、あらゆるオペレーティングシステムで利用可能です。
 
-## How do I install Pandoc or LaTeX?
+## PandocやLaTeXはどのようにインストールしますか。
 
-Please refer to the [setup guide](install.md) for instructions on how to set up Pandoc and LaTeX on your system.
+[セットアップガイド](install.md)を参照して、PandocとLaTeXをインストールする方法の指示に従ってください。
 
-## Zettlr does not seem to find Pandoc and LaTeX, which are nonetheless installed!
+## ZettlrがPandocとLaTeXをインストール済みにもかかわらず、見つけられないようです。
 
-This can happen in case your computer decided to install the software in a non-standard directory. Zettlr will try its best to locate the applications but may fail if they are buried somewhere. That's where the path-options in the preferences come into play. In case Zettlr does not find any of the binaries, you can enter the **full path** to them in the appropriate text fields in the `Advanced`-tab.
+これは、ソフトウェアを標準のディレクトリではない場所にインストールした場合に起こりえます。Zettlrはアプリケーションを見つけようと最善を尽くしますが、どこかに埋もれている場合には失敗する可能性があります。ここで、設定ダイアログのパス設定を使います。Zettlrがいずれかのバイナリを見つけられない場合、`高度な設定`タブの適切なテキストフィールドに**フルパス**を入力することができます。
 
-On Windows, you should never encounter this issue, as long as you leave the default installation path during install set to the default `Program Files` directory of Windows. If you wanted to install the programs to different locations, rendering Zettlr unable to find them, simply search your system using the Explorer for two files, the first being `pandoc.exe` and the second being `xelatex.exe`. Copy the full path (including the executable's name!) to the appropriate text field in the Zettlr preferences.
+Windowsでは、インストール中にデフォルトのインストール先をWindowsのデフォルトである`Program Files`にしておく限り、この問題が発生することはないでしょう。もし他のパスにプログラムをインストールして、Zettlrが見つけることができないのなら、エクスプローラーで2つのファイル`pandoc.exe`と`xelatex.exe`を検索してください。フルパス(実行ファイル名も含む)をZettlrの設定の適切なテキストフィールドにコピーしてください。
 
-On macOS you can easily find the path by opening up `Terminal.app` (it's in your Applications folder under `Other`) and then type `which pandoc` _or_ `which xelatex`, depending on which software Zettlr does not find. Terminal will simply output the full path to the program.
+macOSでは、Zettlrが見つけられないプログラムがある場合、`Terminal.app`(`その他`アプリケーションフォルダ内の'ターミナル')を起動して、`which pandoc`または`which xelatex`と入力すると簡単にパスを調べることができます。ターミナルはプログラムのフルパスを出力します。
 
-On Linux distributions, you also need to open up a Command Line/Terminal and use the same commands as on macOS: `which pandoc` for Pandoc and `which xelatex` for LaTeX.
+Linuxディストリビューションでは、同様にコマンドラインまたはターミナルを起動し、macOSと同じコマンド、Pandocなら`which pandoc`、LaTeXなら`which xelatex`を入力してください。
 
-## On Export, Zettlr says the PDF-Engine wasn't recognised!
+## エクスポート時、PDFエンジンが認識されていないというエラーが出ます。
 
-This is a common Pandoc error, indicating that your Pandoc version is pre-2.x. When Zettlr presents you the following error message, it means you need to update to Pandoc 2.x:
+これは、Pandocのバージョンが2.x以前であることを示す一般的なエラーです。Zettlrが表示する次のエラーメッセージは、Pandocを2.xにアップデートする必要があることを示しています:
 
 `pandoc: unrecognized option '--pdf-engine=xelatex' Try pandoc --help for more information.`
 
-The reason is that with Pandoc 2.0, the older option `--latex-engine` was renamed to `--pdf-engine`. [See more in Pandoc's changelog](https://github.com/jgm/pandoc/blob/master/changelog#L4349).
+これは、Pandoc 2.0以前のオプション`--latex-engine`が`--pdf-engine`にリネームされているためです。[詳細はPandocのchangelogを参照](https://github.com/jgm/pandoc/blob/master/changelog#l4349)。
 
-## I found a bug!
+## バグを見つけました。
 
-That's great news! Well, not great, but it's good that you found it! In this case please head over to [GitHub](https://github.com/Zettlr/Zettlr/) and open up an issue so that we know what's up and can work to resolve the bug.
+それは良い知らせです。いえ、悪い知らせですが、発見したのはいいことです。この場合、[GitHub](https://github.com/Zettlr/Zettlr/)に行って、issueを作成すれば、私たちが問題を認識してバグを修正することができます。
 
-## I have a feature request! / I have a suggestion for making a feature more efficient!
+## 新機能の要望があります。/ 機能の改善提案があります。
 
-That's good to hear! We always depend on other people's experience with the app to improve its efficiency and its suitability for different situations. In this case, please head over to [GitHub](https://github.com/Zettlr/Zettlr/) and open up an issue so that we can get right to it.
+ぜひお聞かせください。アプリケーションの効率と様々なシチュエーションにおける使いやすさを改善するため、私たちはいつも、他の人がアプリケーションを使う経験を頼っています。この場合、[GitHub](https://github.com/Zettlr/Zettlr/)に行って、issueを作成すれば、私たちにすぐに伝えることができます。
 
-## What about my privacy? Does Zettlr transfer any data, or don't I have to worry?
+## プライバシーはどうなっていますか。Zettlrは何らかのデータを送信しますか、それとも心配ありませんか。
 
-Zettlr is privacy-first. It does not send any data, and it is fully functional offline. Yet, there is one instance where Zettlr sends data over the web: The update check. Whenever you open Zettlr, or use the menu item, Zettlr will connect to the Zettlr-API to retrieve a list of all releases. This list is then used to determine whether or not you are using the newest release, or not. During the connection, Zettlr will receive your IP-address and will know that an Electron app is accessing the API. The app will also transmit your operating system type and the application ID.
+Zettlrはプライバシーを第一に考えています。一切のデータを送信せず、完全にオフラインで動作します。しかし、Zettlrがデータをウェブに送信する場合が1つあります。それは、アップデートの確認です。Zettlrを起動するたびに、または、メニューの項目から選択したとき、ZettlrはZettlr APIに接続し、リリースの一覧を取得します。次に、この一覧を使って、最新版を使っているかどうかを確認します。接続中に、Zettlrは、あなたのIPアドレスを受け取り、ElectronアプリケーションがAPIにアクセスしているという情報を得ます。また、使用中のOSの種類とアプリケーションIDも送信されます。
 
-This data will never be sold to third parties. It's just because we like statistics and we are always interested in finding out who's using the app. Nevertheless, we can't identify anyone based on that data, it's much too coarse for this. We're Open Source, not Facebook.
+これらの情報は、決して第三者に販売されることはありません。私たちは統計を好み、誰がアプリケーションを使っているのかということに、いつも興味があります。それでも、このデータは粗すぎて、これに基づいて個人を特定することはできません。私たちはオープンソースです。Facebookではありません。

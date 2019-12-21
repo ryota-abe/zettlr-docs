@@ -11,37 +11,37 @@ edit_uri: edit/master/docs/ja
 extra_css:
   - assets/app.css
 nav:
-  - Welcome: index.md
-  - Setup: install.md
-  - Quick Start: 5-minutes.md
-  - Guides:
-    - Zettlr as a note taking app: guides/guide-notes.md
-    - Zettlr as a Zettelkasten: guides/guide-zettelkasten.md
-    - Zettlr as an IDE: guides/guide-ide.md
-  - Core:
-    - The Editor: core/editor.md
-    - The File List: core/file-list.md
-    - Searching: core/search.md
-    - Exporting: core/export.md
-    - Table Editor: core/tables.md
-    - Virtual Directories: core/virtual-directories.md
-    - Custom CSS: core/custom-css.md
-    - Localisation: core/localisation.md
-    - Attachment Sidebar: core/attachments.md
-  - Academic Tools:
-    - Citations: academic/citations.md
-    - Projects: academic/projects.md
-    - Presentations: academic/presentations.md
-    - Pomodoro Timer: academic/pomodoro.md
-    - Readability: academic/readability.md
-    - Zettelkasten Methods: academic/zkn-method.md
-    - Custom Templates: academic/custom-templates.md
-  - References:
-    - Shortcuts: reference/shortcuts.md
-    - Markdown Basics: reference/markdown-basics.md
-    - Settings: reference/settings.md
-    - Spell Checking: reference/spell-checking.md
-  - Get involved: get-involved.md
+  - はじめに: index.md
+  - インストール: install.md
+  - クイックスタート: 5-minutes.md
+  - ユーザーガイド:
+    - Zettlrでノートを取る: guides/guide-notes.md
+    - ZettlrをZettelkastenシステムとして使う: guides/guide-zettelkasten.md
+    - ZettlrをIDEとして使う: guides/guide-ide.md
+  - 主要機能:
+    - エディタ: core/editor.md
+    - ファイルリスト: core/file-list.md
+    - 検索: core/search.md
+    - エクスポート: core/export.md
+    - テーブル編集: core/tables.md
+    - 仮想ディレクトリ: core/virtual-directories.md
+    - カスタムCSS: core/custom-css.md
+    - ローカライゼーション: core/localisation.md
+    - 添付サイドバー: core/attachments.md
+  - 学術ツール:
+    - 参考文献: academic/citations.md
+    - プロジェクト: academic/projects.md
+    - プレゼンテーション: academic/presentations.md
+    - ポモドーロタイマー: academic/pomodoro.md
+    - 可読性: academic/readability.md
+    - Zettelkastenメソッド: academic/zkn-method.md
+    - カスタムテンプレート: academic/custom-templates.md
+  - 参考資料:
+    - ショートカット: reference/shortcuts.md
+    - マークダウンの基本: reference/markdown-basics.md
+    - 設定: reference/settings.md
+    - スペルチェック: reference/spell-checking.md
+  - ご協力ください: get-involved.md
   - FAQ: faq.md
 theme:
   name: readthedocs

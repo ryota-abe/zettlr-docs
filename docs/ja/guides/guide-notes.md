@@ -1,63 +1,63 @@
-# Guide: Zettlr as a note-taking app
+# ガイド:ノート取りアプリケーションとしてのZettlr
 
-![Zettlr as a Note-Taking app](../img/zettlr_notes.png)
+![ノート取りアプリケーションとしてのZettlr](../img/zettlr_notes.png)
 
-You want to use Zettlr as a means to take notes with. Although Zettlr has a lot more features, it is designed as a slim and minimal app, so configuring Zettlr as a note-taking app is easy. This guide shows you what settings you should use and how to actually take notes.
+Zettlrをノートを取るために使います。Zettlrは、とてもたくさんの機能を持っていますが、スリムでミニマルなアプリケーションとなるように設計されています。そのため、Zettlrをノート取りアプリケーションとして設定するのは簡単です。このガイドでは、設定すべき項目と実際のノートの取り方について説明します。
 
-> Using this guide, you can set up Zettlr to be a replacement for apps such as OneNote, Evernote, or nvALT.
+> このガイドにしたがうと、ZettlrをOneNote、Evernote、nvALTなどの代わりとして使えるように設定できます。
 
-## Step 1: Set up Zettlr to look as minimal as possible.
+## ステップ1: Zettlrの見た目を最小限に設定する
 
-First, head over to the settings tab (press `Cmd/Ctrl+,` or click the cog in the toolbar). In the settings, make sure you set the settings according to this list:
+まず、設定ダイアログを開きます(`Cmd/Ctrl+,`を押すか、ツールバーの歯車をクリック)。以下の一覧の項目を設定してください:
 
-- General tab
-    - Snippets: Off
-    - Sidebar: Thin
-- Editor tab
-    - Dictionaries: Select none (they slow down the app start and aren't necessary for simple notes)
-    - Mute lines: Off
+- 一般タブ
+    - ファイル情報を表示: Off
+    - サイドバーモード: Thin
+- エディタタブ
+    - 集中モード時にフォーカスされていない行の表示を薄くする: Off
+- スペルチェックタブ
+    - すべての辞書をOff (この機能はアプリケーションの起動を遅くしますが、単純なノート取りには不要です。)
 
-The other settings aren't needed for a note taking app and can therefore be ignored.
+これら以外の設定は、ノートを取るためには不要なので無視してください。
 
-## Step 2: Create a folder for your notes
+## ステップ2: ノート用のフォルダを作る
 
-Now it's time to create a folder for your notes. Ideally, you'd want to place it inside a cloud-synchronised folder so that you can access them everywhere, not just on your current computer. The name of this folder is completely up to you, but "Notes" may be a good, simple start. If you want to use different categories for notes, you can create additional root folders and keep them open. That way, you may name your categories according to what you store in them:
+さて、ここでノート用のフォルダを作成します。理想的には、クラウドに同期されたフォルダ内に作成して、今使っているコンピュータ以外にも、どこからでもアクセスできるようにするのが良いでしょう。フォルダ名は全く自由ですが、"Notes"などがシンプルでよいでしょう。もし、ノートを複数のカテゴリーに分けたいなら、さらに追加のルートフォルダを作って、それらを開いてください。このようにして、フォルダに入れるものに応じてカテゴリー名を付けることができます。
 
-- Students: "University", "Lectures", "Private"
-- Teachers: "School"/"University", "Courses"
-- Researcher: "University", "Research", "My Research Project"
-- Journalist: "Topic 1", "Topic 2", "Topic 3", "Press Conferences"
-- Writer: "My Novel", "Thoughts and Ideas", "Characters"
-- Administrative Worker: "ToDo", "Meetings"
+- 学生: "University", "Lectures", "Private"
+- 教員: "School"/"University", "Courses"
+- 研究員: "University", "Research", "My Research Project"
+- ジャーナリスト: "Topic 1", "Topic 2", "Topic 3", "Press Conferences"
+- 作家: "My Novel", "Thoughts and Ideas", "Characters"
+- 管理職: "ToDo", "Meetings"
 - etc. …
 
-Choose directories using categories you personally need. Don't forget that you can always re-organise this and drag the files around if your workflow changes. The benefit of using different _root_ folders is that each folder is independent of each other. Thereby you can always keep the directory list hidden and only pull it up if you need to switch "notebooks".
+自分のニーズに応じたカテゴリーを使って、ディレクトリを選択します。もし、ワークフローが変わったなら、ファイルをドラッグアンドドロップすることで、これらをいつでも再編成できるということをお忘れなく。_ルート_フォルダを分けることの利点は、それぞれのフォルダが独立していることにあります。これにより、ディレクトリ一覧を普段は隠しておいて、「ノートブック」を切り替えるために必要な時だけ表示させることができます。
 
-**Alternative**: Instead of using multiple root folders, you can also go with the subdirectories-approach. This way the directory list doesn't look like a collection of categories, or "notebooks", but resembles an actual directory (I'm talking about how it _looks_ to you, as visuals are also an important aspect for efficient writing). But the benefit of this approach is, that you never need to pull up the directories list, but you can switch "notebooks" by first `ALT`- or `Ctrl`-clicking the current "notebook"/directory and then clicking another notebook. Zettlr will then use that as the current directory in which you can store notes.
+**代替手法**: 複数のルートフォルダを使う代わりに、サブディレクトリを使うアプローチも可能です。この方法では、ディレクトリ一覧はカテゴリの一覧や「ノートブック」のようには見えず、実際のディレクトリのように見えます(効率的なライティングのためには、ビジュアルも重要な側面であるため、ここでは_見た目_について述べています)。しかし、このアプローチの利点として、ディレクトリ一覧を表示する必要がないということが挙げられます。「ノートブック」を切り替えるには、まず、現在のノートブック(ディレクトリ)を`ALT`を押しながらクリックし、その後、他のノートブックをクリックします。そうすれば、Zettlrは選択したフォルダをノートを保存するカレントディレクトリとして使用するようになります。
 
-## Step 3: Think of a system for naming your notes
+## ステップ3: ノートの命名システムを考える
 
-Over time, your notebooks _will_ become full with notes. Each seminar, each meeting and each workshop will contribute to your notebook. And if you have sudden thoughts that you want to write down before you lose them, a new note is also recommended. So what to do to not lose the order of your system?
+時間とともに、ノートブックにノートが貯まっていくと思います。セミナーごとに、会議ごとに、ワークショップごとに、ノートブックにノートが追加されるでしょう。そして、突然のひらめきを忘れてしまうまえに書き残しておきたいときにも、新しいノートを追加すると良いでしょう。それでは、システムを整理しておくにはどうすればよいでしょうか。
 
-Zettlr offers several ways to order, sort, and find your files. If you know the filename, then it's easy to get to it: Simply start typing the filename in the global search bar. Zettlr will autocomplete the name for you. It takes the first file that contains what you've already written, so keep writing the filename until Zettlr autocompletes the correct file. Then hit `Return` and it will open the file.
+Zettlrはファイルを整理し、並べ替える方法をいくつか提供しています。もしファイル名がわかるなら、それを取得するのは簡単です。グローバル検索バーにファイル名を入力してください。Zettlrはファイル名のオートコンプリートを行います。入力した文字列を含む最初のファイル名が表示されるので、正しいファイル名が表示されるまで入力し続けてください。それから、Enterを押せばファイルが開かれます。
 
-Generally, your files should follow a certain system. For instance, if time matters (such as for workshops, congresses, or lectures), it is best to use the date in the international standard format (YYYY-MM-DD, e.g. 2018-10-12) as the first part of your file names. This way Zettlr will automatically sort the files in the default way (where a 2 is greater than a 1, e.g.), so that newer files are at the bottom by default. To pull them to the top, simply switch the sorting from A-Z to Z-A. By using this approach it becomes easy to find older notes, because you normally remember the rough date at which a workshop or a meeting has happened and can scroll through the list until you find it.
+一般的に言えば、ファイル名は何らかのシステムに沿って付けるべきです。例えば、(ワークショップ、会議、授業のように)日時が問題となるなら、国際規格フォーマットの日付(YYYY-MM-DD、例: 2018-10-12)をファイル名の頭に付けます。この方法では、Zettlrはファイルを自動的にデフォルトの方法(例えば2は1よりも大きい)で並べ替えます。なので、新しいファイルがデフォルトで一番下に来ます。一番上に持ってきたい場合は、ソート順のA-ZをZ-Aにするだけです。普通、ワークショップや会議のあった大まかな日付を覚えているので、目的のものが見つかるまで一覧をスクロールすることで、古いノートを簡単に見つけることができます。
 
-If time is not important, another approach is necessary. If you keep note files for different concepts, processes, or as some kind of manual, it may be better to use categories as the first part of the file name. For instance, if you take notes on how software in your office works, it may be good to sort them by processes. Then, filenames would look like this:
-
+日時が重要でない場合には、他のアプローチが必要となります。コンセプト、プロセス、ある種のマニュアルのようなもののためにノートを取っている場合、ファイル名の最初にカテゴリーを付けるのがいいかもしれません。例えば、オフィス内のソフトウェアがどのように動作しているかについてノートを取る場合、プロセスごとに並べると良いでしょう。そうすると、ファイル名は次のようになります:
 - HowTo - Finance - Excel
 - HowTo - Finance - Company Database
 - HowTo - Meetings - Beamer
 - HowTo - Meetings - Conference Call
 
-This way you can easily find what you are looking for by first searching for the files that begin with "HowTo" and then scroll until you find the process (Finance, Meetings, Mail guidelines, etc).
+この方法では、まず"HowTo"で始まるファイルを探し、それから、目的のプロセス(Finance、Meetings、Mail guidelines…)までスクロールすれば、簡単にノートを探すことができます。
 
-You can even use a combination of that. The bottom line is: Always keep in mind that Zettlr sorts by filename, so name your files accordingly to minimise the amount of time to spend until you find a file.
+また、これらを組み合わせて使うこともできます。結論としては、Zettlrは常にファイル名で並べ替えるということです。つまり、ファイルを見つけるまでの時間を最小化できるようなファイル名を付けてください。
 
-## Step 4: Write!
+## ステップ4: 書きましょう
 
-Now that all your folders are set and you have a general idea of how your filenames should look like, you can create notes by simply hitting `Cmd/Ctrl+N`. Type in your name (you don't need to add any file name extension) and press `Return` to create the file. It will be automatically opened. Zettlr will always create the files in your currently selected notebook. If you want to move files between notebooks, simply drag the file and drop it onto the notebook you want to move it to.
+フォルダがすべて準備できて、ファイル名の付け方がある程度決まったら、`Cmd/Ctrl+N`を入力すればノートを作ることができます。ファイル名を入力し(ファイル名に拡張子を入力する必要はありません)、それから`Enter`を押せば、新しいファイルが作られ、それが、自動的に開かれます。Zettlrは常に、現在選択しているノートブックに新しいファイルを作ります。もし、ノートブック間でファイルを移動したいなら、単純にファイルを他のノートブックにドラッグアンドドロップすれば、移動することができます。
 
-## Next: Markdown Tutorial
+## 次に: Markdownのチュートリアル
 
-Now you may be interested in knowing how to write fast and efficiently using Zettlr. Head over to our [Markdown tutorial](../reference/markdown-basics.md)!
+Zettlrを使って素早く効率的に書く方法を知りたくはないでしょうか。[Markdownのチュートリアル](../reference/markdown-basics.md)を参照してください。

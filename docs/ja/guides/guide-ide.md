@@ -1,40 +1,40 @@
-# Guide: Zettlr as an Integrated Development Environment (IDE)
+# ガイド: 統合開発環境(IDE)としてのZettlr
 
-![Zettlr as an IDE](../img/zettlr_ide.png)
+![IDEとしてのZettlr](../img/zettlr_ide.png)
 
-Zettlr is full with functions that help your workflow. You can use it as a small note-taking app, as a Zettelkasten, or, as explained in this guide, as a fully loaded integrated development (read: writing) environment. So let's get started!
+Zettlrはあなたのワークフローの全幅にわたる機能を有しています。小さなノート取りアプリとして使うことも、Zettelkastenシステムとして使うことも、このガイドで説明するように、フル機能の統合開発(読み書き)環境として使うこともできます。さあ、始めましょう。
 
-> Using this guide, you can set up Zettlr to be a replacement for apps such as Ulysses, Atom, or Sublime Text.
+> このガイドにしたがうと、ZettlrをUlysses、Atom、Sublime Textなどの代わりとして使えるように設定できます。
 
-## Step 1: Adjust the Settings
+## ステップ1: 設定を調節する
 
-The first step is to adjust some of the parameters of Zettlr. So hit `Cmd/Ctrl+,` or press the cog in the toolbar to open the settings dialog. Adjust the following settings:
+最初のステップはZettlrの設定をいくつか調整します。`Cmd/Ctrl+,`を押すか、ツールバーの歯車をクリックして設定ダイアログを開きます。以下の設定を行ってください:
 
-- General Tab
-    - File Information: On
-    - Sidebar mode: Expanded
-- Editor Tab
-    - Select all dictionaries for languages in which you will write (e.g., en-UK, de-DE, and fr-FR)
-- Export Tab
-    - Select the Current Working Directory as the export directory
-    - Remove internal links completely
-- Zettelkasten Tab
-    - Adjust the settings according to the Zettelkasten-Guide
-- Attachments Tab
-    - Enter all file extensions of the files you are likely to be using. This way all of these files will show up in the attachment bar to the right of the app
+- 一般タブ
+    - ファイル情報を表示する: on
+    - サイドバーモード: Expanded
+- スペルチェックタブ
+    - 書く予定のすべての言語(en-UK、de-DE、fr-FRなど)を選択
+- エクスポートタブ
+    - エクスポート先ディレクトリとして、現在の作業ディレクトリを選択
+    - すべての内部リンクを取り除くを選択
+- Zettelkastenタブ
+    - Zettelkastenのガイドにしたがって項目を設定
+- 高度な設定タブ
+    - 使う予定の添付ファイルの拡張子をすべて入力します。ここで入力したすべてのファイルがアプリ右側の添付バーに表示されます。
 
-After you are finished setting Zettlr up, hit "Save". Now Zettlr should look like a real IDE with three segments (directory tree, file list, and editor) and all settings active.
+Zettlrの設定が終わったら「保存」を押してください。これで、Zettlrは本当のIDEのように、3つの部分(ディレクトリツリー、ファイル一覧、エディタ)が表示された状態になり、すべての設定が有効化されます。
 
-## Step 2: Write!
+## ステップ2: 書く
 
-This guide is rather short, because it only shows you how you can set up Zettlr to create a fully loaded IDE. What you are then doing with it is completely up to you. A good point to start is to read the two guides on Zettelkästen and note-taking, because you will likely be using some concepts from these guides.
+このガイドは、Zettlrをフル機能のIDEとして設定する方法を示すだけなので、かなり短いです。この後、どのように作業するかは、あなた次第です。まずは、Zettelkästenのガイドとノート取りのガイドを見ると良いでしょう。これらのガイドに書いてある概念を使う可能性があります。
 
-Here are all resources that may be interesting for you:
+興味を持つかもしれないリソースを列挙します:
 
-- [Guide: Zettlr as Zettelkasten](guide-zettelkasten.md)
-- [Guide: Zettlr as Note-Taking App](guide-notes.md)
-- [Zettlr Projects](../academic/projects.md)
-- [Virtual Directories](../core/virtual-directories.md)
-- [Create Presentations with Zettlr](../academic/presentations.md)
-- [Markdown for Zettlr](../reference/markdown-basics.md)
-- [Exporting to PDF](../core/export.md)
+- [ガイド: ZettelkastenシステムとしてのZettlr](guide-zettelkasten.md)
+- [ガイド: ノート取りアプリとしてのZettlr](guide-notes.md)
+- [Zettlrのプロジェクト](../academic/projects.md)
+- [仮想ディレクトリ](../core/virtual-directories.md)
+- [Zettlrでプレゼンを作る](../academic/presentations.md)
+- [Zettlrのマークダウン](../reference/markdown-basics.md)
+- [PDFにエクスポートする](../core/export.md)

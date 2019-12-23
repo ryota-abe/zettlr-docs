@@ -1,33 +1,34 @@
-# Guide: Zettlr as Zettelkasten
+# ガイド: ZettelkastenシステムとしてのZettlr
 
-![Zettlr as a Zettelkasten](../img/zettlr_zettelkasten.png)
+![ZettelkastenシステムとしてのZettlr](../img/zettlr_zettelkasten.png)
 
-Zettlr can be used as a sophisticated Zettelkasten system implementing a lot of features to organise and structure your files. To begin creating your own Zettelkasten, follow the following steps.
+Zettlrは、ファイルを整理し、構造化するための多くの機能を備えた、洗練されたZettelkastenシステムとして使うことができます。Zettelkastenを作り始めるには、以下のステップに従ってください。
 
-> Using this guide, you can set up Zettlr to be a replacement for apps such as nvALT, zkn, or The Archive.
+> このガイドにしたがうと、ZettlrをnvALT、zkn、The Archiveなどの代わりとして使えるように設定できます。
 
-**Are you new to the concept of a Zettelkasten? Then we recommend you [read our post on how a successful Zettelkasten works](https://www.zettlr.com/post/what-is-a-zettelkasten) and [watch our accompanying video](https://youtu.be/c5Tst3-zcWI)!**
+**Zettelkastenという概念は初めてですか？それなら、[上手くいくZettelkastenの仕組みに関する投稿](https://www.zettlr.com/post/what-is-a-zettelkasten)と、[それに付随する動画](https://youtu.be/c5Tst3-zcWI)を見ることをお勧めします。**
 
-## Step 1: Adjust the settings
+## ステップ1: 設定を調整する
 
-The first thing you want to do to create your Zettelkasten is to have a look at your preferences. The following settings convert Zettlr into a supercharged Zettelkasten:
+Zettelkastenを作り始めるのにまず必要なのは、設定を確認することです。以下の設定で、ZettlrをZettelkastenに適したものに変えることができます。
 
-- General tab
-    - Turn the file information on
-    - Sidebar: Thin mode.
-- Editor tab
-    - Turn off all dictionaries
-- Export tab
-    - Turn off the removal of Zettelkasten IDs and select to keep internal links untouched
-- Zettelkasten tab
-    - This is the most important tab for a Zettelkasten installation, because here you can adjust the settings of how Zettlr interacts with your Zettelkasten. Please refer to the section on the Zettelkasten tab [in the settings chapter ](../reference/settings.md)to learn about these options in detail.
+- 一般タブ
+    - ファイル情報を表示: on
+    - サイドバー: Thin mode
+- スペルチェックタブ
+    - すべての辞書をoff
+- エクスポートタブ
+    - ファイルからZKN IDを取り除く: off
+    - 「内部リンクを保持する」を選択
+- Zettelkastenタブ
+    - Zettelkastenを導入するのに最も重要なタブです。ここでは、ZettlrがZettelkastenとやり取りする方法を設定します。[設定についての章](../reference/settings.md)を読んで、Zettelkastenタブの設定項目についてよく理解してください。
 
-## Step 2: Create a Directory
+## ステップ2: ディレクトリを作る
 
-After you have set up the basic variables that Zettlr uses for its Zettelkasten functionality, it is time to create a directory. It is common to only have one big directory in which you can throw everything and work with this, therefore one root directory should suffice. Then you'll have a huge list of all your files on every application start and can immediately begin to work.
+ZettlrがZettelkasten機能で使うための基本的な値を設定し終わったら、次にディレクトリを作ります。基本的には、一つの大きなディレクトリにすべてのものを放り込んでいきます、なので、ルートディレクトリがひとつあれば十分です。その後、アプリケーションを開くたびに、すべてのファイルを含む長い一覧が作られて、すぐに作業を始められます。
 
-To add a new directory to Zettlr, hit `Cmd/Ctrl+O`, click the first toolbar button or drag the directory from Finder or Explorer onto the app.
+Zettlrに新しいディレクトリを追加するには、`Cmd/Ctrl+O`を押すか、ツールバーの最初のボタンをクリックするか、ファインダーまたはエクスプローラーからアプリ上にディレクトリをドラッグします。
 
-## Step 3: Write!
+## ステップ3: 書く
 
-Now you'll be set to use Zettlr as your Zettelkasten management system. If you want to dig deeper into how a Zettelkasten should work and what it should look like, consult the immense amount of resources on Zettelkästen, available on the web. A good starting point is [Zettelkasten.de](https://www.zettelkasten.de/). The authors have assembled a large list of (english) blog posts on how to supercharge your writing using a Zettelkasten.
+これで、ZettlrをZettelkasten管理システムとして使う準備ができました。Zettelkastenの機能や見え方について深く掘り下げたい場合は、ウェブ上でZettelkästenに関する膨大なリソースが入手可能です。手始めに、[Zettelkasten.de](https://www.zettelkasten.de/)を見るのが良いでしょう。この作者は、Zettelkastenを使ってライティングを後押しする方法について、大量の（英語の）ブログを投稿しています。

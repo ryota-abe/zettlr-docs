@@ -1,40 +1,40 @@
-# Custom CSS
+# カスタムCSS
 
-Since Zettlr version `1.1` it is possible to use custom CSS ([Cascading Style Sheets](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)) to modify the complete appearance of the app. It's been a long requested feature, and it will open up many possibilities to customising the app (and maybe even the first truly user-generated content of the app?)
+Zettlrバージョン`1.1`以降では、カスタムCSS([Cascading Style Sheets](https://ja.wikipedia.org/wiki/Cascading_Style_Sheets))を使って、アプリケーションの見た目を完全に変えられるようになりました。これは、長らく要望されていた機能で、アプリケーションをカスタマイズする多くの可能性を拓きました。(そして、このアプリケーションでおそらく初めてのユーザー生成コンテンツでもあります。)
 
-You can find the Custom CSS editor under `Zettlr->Custom CSS…` (macOS) or under `File->Custom CSS…` (Windows and Linux)
+カスタムCSSエディタは、`Zettlr->カスタムCSS...`(macOSの場合)、または`ファイル->カスタムCSS...`(WindowsとLinuxの場合)にあります。
 
-If you are unfamiliar with CSS, but don't want to simply copy & paste the guides on this page, you may choose to follow a short [tutorial on CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)! There are many on the internet, so a quick Google search can also provide you with video tutorials, if you prefer those!
+CSSはよくわからないけれど、このページのガイドをただコピー＆ペーストするだけでは嫌だという場合は、簡単な[CSSチュートリアル](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)を見てみるという選択肢もあります。インターネット上には多くのチュートリアルがあり、ちょっとGoogleで検索すればチュートリアル動画なども見つかります。
 
-Below you can first find a general introduction in writing CSS, before I will list some examples that you can easily copy & paste to adapt your app to look differently. At the end of the page you may find a **complete class reference**.
+以下では、まず、CSS作成についての一般的な導入を示します。次に、簡単にコピー＆ペーストしてアプリケーションの見た目を変更できるいくつかの例を挙げます。最後に、**classの完全な一覧**があります。
 
-## Writing CSS for Zettlr
+## Zettlr向けにCSSを書く
 
-If you don't want to write CSS for yourself and are only looking to **change the font**, head over to the next section!
+自分でCSSを書くのではなくて、ただ**フォントを変えようとしている**のであれば、ここは飛ばして次のセクションに行ってください。
 
-Zettlr comes with a lot of predefined classes and IDs. It follows the generally-acknowledged wisdom not to make use of `style`-tags to directly define properties. Therefore, you can use classes for literally anything.
+Zettlrは、多くの定義済みclassとIDを持っています。これは、`style`を使って直接プロパティを設定するべきではないという、良く知られた知見にしたがったものです。したがって、何をするにしてもclassを使います。
 
-The styles of Zettlr are divided into both geometry and the actual theme, so you may want to stick with only changing the design of elements _without_ changing **any** geometry. Playing around with the geometry may be fun, but it may yield completely random behaviour, as some parts of the app depend upon the correct sizes of elements. In case you made a mistake, don't worry: Simply remove the `custom.css`-file from the data directory of Zettlr. You can find the data directory of your own system by looking at the paths provided in [the install documentation](../install.md).
+Zettlrのスタイルは、形状と実際のテーマの2つに分けられます。変更する場合は、要素のデザインのみを変更し、**決して**形状を変更**しないで**ください。形をいじりまわすのは楽しいかもしれませんが、予想できない振る舞いをもたらす可能性があります。これは、アプリケーションの一部で、要素のサイズが正しいことに依存しているためです。もし間違えてしまった場合も安心してください。Zettlrのデータディレクトリから`custom.css`を取り除くだけです。[インストール手順のドキュメント](../install.md)に書かれているパスを調べると、お使いのシステムでのデータディレクトリを見つけることができます。
 
-Classes and IDs in Zettlr are always namespaced to the respective components (unless they're global), so to really override a rule you will have to use the complete namespace (or, if you don't want to add many rules and are lazy, use the `!important` override rule).
+ZettlrにおけるすべてのclassとIDは、それぞれのコンポーネントごとに名前空間が付けられています(グローバルのものを除く)。なので、本当にルールを上書きするには、完全な名前空間を使う必要があります。(もしくは、多くのルールを追加していて面倒な場合は、`!important`を使ってルールを上書きしてください。)
 
-Everything is always namespaced to the `body`, which has a class `.dark` if the app is currently in dark mode. So to make sure a certain rule only applies while the app is in dark mode, make sure to prefix it with `body.dark`!
+すべての要素が常に`body`の名前空間に属していて、アプリケーションがダークモードの場合には、`.dark`のクラスが付きます。なので、ダークモードの時のみに適用したいルールがある場合は、`body.dark`のプレフィックスを付けるようにしてください。
 
-At the bottom of this page you may find a full class and ID reference so that you don't have to poke around in the app forever! (I already apologise, for it is only a simple dump generated from Zettlr's precompiled CSS files.)
+このページの下の方に、すべてのclassとID参照の一覧があるので、アプリケーションをつつきまわす必要はありません。(これは、ZettlrのCSSプリコンパイルで作られた、ただのダンプであることを、先に謝っておきます。)
 
-## CSS Code Snippets
+## CSSコードスニペット
 
-### Using a Custom Font with Zettlr
+### Zettlrでカスタムフォントを使う
 
-In case you do not like the default font delivered with Zettlr, or need to change it, simply paste the following code snippet into the custom CSS editor. Replace `your-font-name` with the **full name** of the font you want to use for Zettlr. Please replace `placeholder` according to the font:
+Zettlrのデフォルトフォントが気に入らない、もしくは変更の必要がある場合は、カスタムCSSエディタに以下のスニペットをペーストしてください。`your-font-name`はZettlrで使いたいフォントの**完全な名称**に置き換えてください。`placeholder`は、使用したいフォントによって変えてください:
 
-- In case you want to use a **serif** font, such as Times New Roman, or Georgia, please use `serif`
-- In case your font is **sans serif**, such as Arial or Helvetica, please use `sans-serif`
-- In case you want to switch to the classic **monospace**, please use the placeholder `monospace`
+- New Roman、Georgiaなどの**セリフ体**フォントを使いたい場合は、`serif`を使います。
+- Arial、Helveticaなどの**サンセリフ体**フォントを使いたい場合は、`sans-serif`を使います。
+- クラシックな**等幅フォント**を使いたい場合は、`monospace`を使います。
 
-The placeholder will make sure that even if your font cannot be found, an equivalent font will be used. It serves as a fallback.
+placeholderは、設定したフォントが見つからない場合に、同等のフォントを表示する、フォールバックとして機能します。
 
-Zettlr already ships a serif font, a sans-serif font and a monospace font! To use the bundled fonts, you can use `Crimson` for a modern serif font or `Liberation Mono` for a nice looking monospace font. (Lato is the default, so you probably don't want to put it there.)
+Zettlrには、セリフ体フォント、サンセリフ体フォント、等幅フォントが同梱されています。現代的なセリフ体フォントの`Crimson`、もしくは美しい等幅フォントの`Liberation Mono`を使うことができます。(デフォルトは`Lato`ですが、これを指定することはないでしょう。)
 
 ```css
 #editor {
@@ -42,9 +42,9 @@ Zettlr already ships a serif font, a sans-serif font and a monospace font! To us
 }
 ```
 
-### Random Unsplash Background Images
+### ランダムなUnsplash画像を背景にする
 
-With the following code, you can make your editor have a different background image everytime you start it. The images are taken from Unsplash.com, a nice site with free photos. It uses the `Source API`, which will simply spit out a different image every time the URL is visited. You can test it out by simply [visiting the page and refreshing a few times](https://source.unsplash.com/random)! Please refer to the [Unsplash Source API reference](https://source.unsplash.com/) for more options (such as using an image of the day).
+以下のコードにしたがうと、起動するたびに異なる画像をエディタの背景にすることができます。画像は、素晴らしいフリー写真サイトであるUnsplash.comから取ってきます。これには、URLにアクセスするたびに異なる画像を返す`Source API`を使用します。[ページを表示して、何回かリロードする](https://source.unsplash.com/random)と試すことができます。追加のオプション(例えば、本日の画像を表示するなど)については、[Unsplash Source API reference](https://source.unsplash.com/)を参照してください。
 
 ```css
 /* Enter your custom CSS here */
@@ -70,11 +70,11 @@ body.dark #editor .CodeMirror-sizer, body.dark #editor .CodeMirror-gutter {
 }
 ```
 
-![A preview of a Zettlr installation using above snippet](../img/custom_css_unsplash.png)
+![上記スニペットを使ったZettlrのプレビュー](../img/custom_css_unsplash.png)
 
-### Visualising Line Endings
+### 改行を可視化する
 
-In case you want to see where your linefeeds are, you can display the pilcrow symbol (¶) at the end of your lines by using the following Custom CSS:
+改行がどこにあるのか見えるようにしたい場合は、次のカスタムCSSを使えば、行末に段落記号(¶)を表示することができます。
 
 ```css
 .CodeMirror-line:not(:last-child)::after {
@@ -83,29 +83,29 @@ In case you want to see where your linefeeds are, you can display the pilcrow sy
 }
 ```
 
-![A preview of Zettlr using above snippet](../img/custom_css_pilcrow.png)
+![上記スニペットを使ったZettlrのプレビュー](../img/custom_css_pilcrow.png)
 
-### Hide the Toolbar in Distraction Free
+### 集中モードでツールバーを隠す
 
-Some people prefer the distraction free mode to be _really_ distraction-free. Zettlr does not hide the toolbar by default, because most people want to have access to all the tools and buttons even when writing distraction free. Still, if you belong to the group of people who prefer distraction free to be only the editor itself, rejoice! Hiding the toolbar in distraction free mode is as easy as one single line of CSS!
+集中モードを、_すごく_集中できるモードにしたい人がいるかもしれません。ほとんどの人は書くことに集中するときも、すべてのツールとボタンにアクセスしたいだろうと思うので、Zettlrはデフォルトではツールバーを隠しません。それでも、集中モードでエディタのみを表示したいなら、以下のたった一行のCSSで、集中モード中のツールバーを隠すことができます。
 
-Simply paste the following line of CSS into the Custom CSS dialog, and from then on the toolbar will always be hidden:
+次のCSSの1行をカスタムCSSにペーストするだけで、ツールバーが非表示になります:
 
 ```css
 #editor.fullscreen, .CodeMirror-fullscreen { top: 0px; }
 ```
 
-### Your Ideas
+### 独自のアイディア
 
-Do you have nice ideas for how to style Zettlr even more? If you have a good CSS snippet that works out of the box, feel free to [share it with us](mailto:info@zettlr.com) so that we can feature it here!
+他にもZettlrの見た目を変えるアイディアがありますか？もし、そのまま使えそうなCSSスニペットがあれば、ここで紹介できるように、[私たちに共有](mailto:info@zettlr.com)してください。
 
-## Complete CSS Class and ID Reference
+## CSS classとID参照の完全なリスト
 
-Below you can find the full and non-abbreviated list of *all* CSS classes and IDs. We've counted, it's over 300 at the moment.
+以下に、*すべての*CSS classとIDを網羅したリストがあります。今数えてみたところ、300個を超えています。
 
-Please note that we used an external package to extract the class names. We have already removed most of non-classes (such as colours and "dot-noted" values such as `.5%`) but we do not give any guarantee that we found all.
+classの名前を抽出するのに、外部パッケージを使っていることにご注意ください。クラス以外のもの(例えば、色や、ドットで始まる`.5%`のような値)は、ほとんど取り除いてありますが、すべて見つけられたかどうかは保証しません。
 
-**Warning: The following list of reference may change in the future! So a class that has worked in one version of Zettlr may stop to work in another, because of changes to either the DOM or the class/ID name.**
+**注意: 以下の参照一覧は将来的に変更される可能性があります。DOMやclass/ID名の変更により、Zettlrのあるバージョンで使えたclassが、他のバージョンでは使えないかもしれません。
 
 ```css
 .eot

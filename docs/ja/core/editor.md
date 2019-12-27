@@ -1,70 +1,69 @@
-# The Editor
+# エディタ
 
-At the heart of Zettlr sits a powerful Markdown editor. It uses a highly sophisticated software called **[CodeMirror](https://codemirror.net/)** and therefore offers a lot of features out of the box.
+Zettlrの心臓部は、パワフルなMarkdownエディタに置かれています。これには、**[CodeMirror]()**という非常に洗練されたソフトウェアを使っているので、多くの機能がすぐに使えるようになっています。
 
-In this document, you will learn about writing Markdown, available commands, some special features of CodeMirror and how spellchecking works.
+このドキュメントでは、Markdownの書き方、利用可能なコマンド、CodeMirrorの特別な機能をいくつか、それと、スペルチェックの機能について説明します。
 
-## Writing Markdown
+## Markdownを書く
 
-The idea behind Zettlr is to remove unnecessary markup and styling from your writing process. During the writing process, what matters is the _content_ you produce, not the form in which it is presented. A little bit of formatting is provided, of course. But if it comes to colours and text align, nobody really needs plenty of options to get writing. The formatting is what happens _afterwards_.
+Zettlrの背後にあるアイディアは、文書を書くプロセスから、不要なマークアップとスタイリングを取り除くというものです。文書を書くプロセスで問題となるのは、書かれる**内容**であって、その見た目ではありません。もちろん、ある程度の書式は提供されます。しかし、文字の色や左右揃えとなると、文書を書くのに、そのように多くの設定項目を本当に必要としている人はいません。書式設定は、**後で**やることです。
 
-Therefore Zettlr lets you write `Markdown`-files. Markdown is a very simple markup language that only contains a small amount of formatting symbols that you may already know! In recent years, more and more apps have discovered the power of Markdown, and even WhatsApp uses it to enable simple formatting of messages.
+なので、Zettlrでは**Markdown**ファイルを使って書きます。Markdownは、あなたがすでに知っているような、少数の書式記号のみを含んでいる、非常にシンプルなマークアップ言語です。近年では、Markdownのパワーに気づくアプリケーションが増え、WattsAppでもMarkdownを使ってメッセージに簡単な書式を設定することができるようになっています。
 
-A Markdown-Document only consists of pure text and comes with a lot of benefits:
+Markdown文書は、純粋なテキストのみで構成され、これには多くの利点があります:
 
-* Markdown is **platform independent**. Any Markdown file written on macOS can—without any conversion—be edited on Windows and Linux alike. All you need is a text editor. And with "Notepad" (Windows), "TextEdit" (macOS) or "GEdit" (Ubuntu) every operating system already has one built-in.
-* Markdown's syntax is designed in such a way that **even without any syntax highlighting, you get the idea of a Markdown document**. Even without styling, it is easy to spot all headings, because they have leading hash signs (#), lists are indicated with bullets or numbers and emphasised text is encapsulated in underscores or asterisks.
-* Markdown is an **open source standard**, meaning everybody can implement it into software (just as we did!) and begin building upon it. This also means that you can **expect most apps to understand it**.
-* As Markdown is so simple and does not add any formatting by itself, any app can introduce a different way of previewing. **There are tons of Markdown apps that use different approaches to writing**. If Zettlr doesn't fit you, you can always choose from a plethora of different free, open source apps.
-* Markdown documents only contain the bare necessity of formatting to help apps understand it. Therefore **Markdown documents are approximately ten times smaller than conventional word processor formats**!
-* And many more …
+* Markdownは**プラットフォームに依存しません**。macOSで作ったMarkdownファイルを(変換することなく)、WindowsやLinuxでも同様に編集することができます。必要なものはテキストエディタだけです。そして、各OSごとに、「メモ帳」(Windows)、「テキストエディット」(macOS)、「GEdit」(Ubuntu)という組み込みのものが用意されています。
+* Markdownの文法は、**シンタックスハイライトがなくても文章が理解できる**ようにデザインされています。見出しは、たとえ書式が設定されていなくても、ハッシュ記号(#)で始まっているので容易に見つけることができます。リストは点か番号で示され、テキストの強調は、アンダーバーかアスタリスクで挟むことで示されます。
+* Markdownは**オープンソース標準**です、つまり、誰でも(私たちがやったように)ソフトウェアに組み込んで、それを元に開発することができます。言い換えると、**多くのアプリケーションでMarkdownを使えることが期待できる**ということです。
+* Markdownは、とてもシンプルで、それ自身は何の書式も与えてくれません、なので、アプリケーションごとに異なった見た目を導入することができます。**世の中には膨大なMarkdownアプリケーションがあり、それぞれ異なったアプローチを持っています。**Zettlrがお気に召さなければ、いつでも、フリーでオープンソースな多くのアプリケーションから選択することができます。
+* Markdown文書は、アプリケーションが理解すべき書式情報を、最低限だけ含んでいます。それゆえ、**Markdown文書は、従来のワードプロセッサフォーマットに比べて、およそ10分の1のサイズです。**
+* 等々……
 
-> If you want to know exactly what Markdown can do and what it can't, refer to the [**Markdown** section](../reference/markdown-basics.md).
+> Markdownができること、できないことを正確に知りたい場合は、[**Markdown**の章](../reference/markdown-basics.md)を参照してください。
 
-## Editing text
+## テキストを編集する
 
-Editing text with Zettlr is simple. Just create a new file or select an existing one, click inside the editor and begin writing. Use Markdown formatting as you need it and make use of some shortcuts that make it even simpler to add formatting:
+Zettlrでテキストを編集するのは簡単です。新しいファイルを作るか、既存のものを選択して、エディタ内部をクリックして書き始めるだけです。必要に応じてMarkdownの書式を使います。また、より簡単に書式を追加するためのショートカットが利用できます:
 
-* `Cmd/Ctrl+B`: Make text **bold**
-* `Cmd/Ctrl+I`: _Emphasize_ text
-* `Cmd/Ctrl+K`: Create a new `[link](https://www.zettlr.com)`. Selected text will become the description—you only need to add the URL. And if there is a valid URL in the clipboard, Zettlr even takes it as a URL, meaning you don't have to do anything on your own!
-* `Cmd/Ctrl+Shift+I`: Insert an image. If you selected text, it will become the description of the image. Just add a path to your image, or copy a path to an image before. Then, Zettlr will automatically add the clipped path!
-* `Tab`: Indent any given list one level.
-* `Shift-Tab`: Un-indent a list one level.
+* `Cmd/Ctrl+B`: テキストを**太字**にします
+* `Cmd/Ctrl+I`: テキストを_強調_します
+* `Cmd/Ctrl+K`: 新規の`[リンク](https://www.zettlr.com)`を作成します。選択中のテキストがリンクの説明となるので、URLを記述するだけです。加えて、クリップボードに有効なURLがコピーされている状態であれば、ZettlrはこのURLを使用します。つまり、自分では何もする必要がありません。
+* `Cmd/Ctrl+Shift+I`: 画像を追加します。テキストを選択中であれば、それが画像の説明となります。画像ファイルのパスを入力するか、事前に画像ファイルのパスをコピーしておいてください。すると、Zettlrが自動的にクリップボードのパスを入力します。
+* `Tab`: リストのインデントレベルを1つ増やします。
 
-Of course, all other default shortcuts that work on any text editor will also work by default: Copy text with `Cmd/Ctrl+C`, insert it with `Cmd/Ctrl+V` or cut it by pressing `Cmd/Ctrl+X`. Undo and redo is also supported just as removing whole words or lines. Just write as you are used to writing.
+もちろん、他のどんなテキストエディタでも使えるような、デフォルトのショートカットキーも使うことができます: `Cmd/Ctrl+C`でコピー、`Cmd/Ctrl+V`で貼り付け、`Cmd/Ctrl+X`で切り取りです。元に戻す/やり直し、単語や行の削除もサポートしています。あなたが書きなれた方法で書くことができます。
 
-## Preserving Formats During Copy & Paste
+## 書式を維持してコピー＆ペーストする
 
-Of course it's mandatory that you can also work with formatted text. For instance, you might want to paste formatted text from a Word document or a webpage. To do so, simply copy such text and paste it. Zettlr will automatically detect that it's formatted text and convert it before inserting it. If you don't want to paste the text with formattings but as plain text, hold down `Shift` when pasting. This will tell Zettlr not to convert the text to Markdown.
+もちろん、フォーマットされたテキストを扱えることも必要な機能です。例えば、WordドキュメントやWebページから、フォーマット付きのテキストをペーストしたいかもしれません。それなら、ただコピー＆ペーストするだけです。Zettlrは、フォーマット付きテキストを検出すると、それらを自動的に変換してから貼り付けます。もし、フォーマットを取り除いてプレーンテキストで貼り付けたいのなら、`Shift`キーを押ししながらペーストしてください、。そうすれば、テキストのフォーマット情報をMarkdownに変換しないことをZettlrに伝えることができます。
 
-Next, at some point you want to copy some text from Zettlr but in a way that other apps can understand its format. To copy the text not as Markdown, but with a common format, you need to select `Copy as HTML`. The shortcut is `Cmd/Ctrl+Alt+C`.
+次に、ある時、Zettlrのテキストをフォーマット付きで他のアプリケーションにコピーしたくなったとします。Markdownとしてではなく、共通のフォーマットでコピーするには、`HTMLとしてコピー`を選択します。ショートカットは、`Cmd/Ctrl+Alt+C`です。
 
-> Refer to the section on [Shortcuts](../reference/shortcuts.md), to get a list of all available shortcuts.
+> 利用可能なすべてのショートカットは、[ショートカット](../reference/shortcuts.md)の章を参照してください。
 
-## Special features of CodeMirror
+## CodeMirrorの特別な機能
 
-Because CodeMirror is so powerful, there are also other great options that you can make use of (if you need them).
+CodeMirrorは非常に強力なので、他にも強力な機能が(必要に応じて)利用できます。
 
-* Press `Cmd` (macOS) or `Alt` (Windows/Linux) and click somewhere in the text. Now you will have **two cursors** at your disposal! This is mostly useful if you are about to write some text several times to save time. To leave that multi-cursor-mode, just click anywhere in the text without the modifier keys pressed.
-* Press `Cmd` (macOS) or `Alt` (Windows/Linux) and select some text. Now you can **select several portions of text** at once. This is useful if you want to create two or more links at once: Just select the portions of text that should serve as the description of these links and press `Cmd/Ctrl+K` to transform all the selections into links — at once! This works with all other commands like making text bold or italic, or creating quotes.
-* If you have nothing selected, pressing `Cmd/Ctrl+X` will **cut the full line**. Pressing `Cmd/Ctrl+V` afterwards will **insert this whole line above the line, in which your cursor is**.
-* CodeMirror **auto-closes quotes and brackets** to save you time! Whenever you type a "- or a (-character, it will present you with the closing character automatically. And when you are done with your quote, just type " or ), it will _not add the character a second time_ but just "jump" over it! This also works with selected text. If you have something selected and press one of these characters, it will encapsulate your selection with the character pair.
+* `Cmd`(macOS)または`Alt`(Windows/Linux)を押しながらテキストをクリックすると、使えるカーソルが`2つ`になります。これにより、同じテキストを何回か書く場合に時間を節約して書くことができます。このマルチカーソルモードを終了するには、エディタの任意の個所を普通にクリックしてください。
+* `Cmd`(macOS)または`Alt`(Windows/Linux)を押しながらテキストを選択すると、同時に**複数のテキスト範囲を選択**することができます。これは、2つ以上のリンクを一度に作るときに便利です: リンクの説明として使いたいテキストの範囲を選択し、`Cmd/Ctrl+K`を押すと、すべての選択範囲が一発でリンクに変換されます。これは、太字や斜体の設定、引用の作成など、他のコマンドに対しても有効です。
+* 何も選択していない状態で`Cmd/Ctrl+X`を押すと、**行をまるごと切り取ります**。それから`Cmd/Ctrl+V`を押すと、切り取った行が、現在カーソルのある行の上に貼り付けられます。
+* CodeMirrorは、時間の節約のため**クォーテーションと括弧を自動的に閉じます**。`"`または`(`の文字を入力すると、それに対応して閉じる文字が自動的に入力されます。それから、クォーテーションの最後まで入力したら、`"`や`)`を入力します。すると、それらは_重複して入力されるのではなく_カーソルだけが移動します。この機能は選択中のテキストに対しても有効です。テキストを選択した状態で、これらの文字を入力すると、入力した文字に対応するペアで選択範囲を挟みます。
 
-## Spellchecking
+## スペルチェック
 
-Zettlr also features spellchecking. In your Preferences, you can select all languages, that your text should be checked for. The dictionaries are loaded on app start and your editor content is checked against it. Zettlr will move through all dictionaries to check a word, and only if none of the loaded dictionaries can find it, it will be marked as wrong with a small dashed line.
+Zettlrにはスペルチェックの機能があります。設定ダイアログで、チェックする言語を選ぶことができます。チェック用の辞書はアプリケーションの起動時に読み込まれ、これを使ってエディタの内容をチェックします。Zettlrは、各単語に対してすべての辞書をチェックします。そして、どの辞書にも載っていない単語が見つかった場合、小さな点線で誤りを表示します。
 
-To correct a word, simply right-click it and select a suggestion from the context menu, if there are any. You can also add a word to your user dictionary.
+単語を修正するには、右クリックしてコンテキストメニューの提案があれば、そこから選択してください。また、ユーザ辞書に単語を追加することもできます。
 
-Are you writing bilingual? No problem! Simply load all dictionaries that you potentially write text in to check against all languages at once. Just remember that dictionaries can use up a lot of memory, so if you load too many, it may slow down the application.
+複数の言語で書いている場合も、問題ありません。書く可能性のある言語の辞書をすべて読み込んでおけば、すべての言語のチェックを同時に行えます。辞書はメモリを多く消費する可能性があることに注意してください。多く読み込み過ぎると、アプリケーションの動作が遅くなるかもしれません。
 
-> **Tip**: To disable the spellchecker completely, simply uncheck all dictionaries in the preferences.
+> **ヒント**: 設定で、すべての辞書のチェックを外すと、スペルチェック機能を完全に無効化できます。
 
-## Working with footnotes
+## 脚注を使用する
 
-Footnotes are a notoriously difficult thing in Markdown, because they require some special characters to realise them, and also need you to work at two positions in the document at once: Where you want to put your footnote and at the bottom, where the reference text resides. Zettlr tries its best to ease your pain with these in the following ways:
+Markdownにおいて脚注は、難しいことで有名です。その理由は、この機能を使うためにいくつかの特殊文字が必要ということと、脚注を入れたい箇所と文書末の参照テキストを置く箇所の2か所を同時に編集する必要があるということです。Zettlrは、この困難を可能な限り解消するため、次のような方法を取りました:
 
-1. You can use a shortcut to place footnotes: `Cmd+Alt+R` (macOS only) or `Ctrl+Alt+F` (macOS/Windows/Linux).
-2. The reference text (that is, the content of the footnote) will be displayed at the bottom end of the editor window when you hover over a footnote.
-3. If you `Alt`- or `Ctrl`-Click a footnote anchor somewhere in your text, a popup will show up that lets you edit the footnote in place. After you are finished editing your footnote, simply press `Shift+Enter` to close the popup and replace the text of the footnote.
+1. 脚注を書くにはショートカット`Cmd+Alt+R`(macOSのみ)または、`Ctrl+Alt+F` (macOS/Windows/Linux)が使えます。
+2. 脚注にマウスカーソルを当てると、エディタの下部に参照テキスト(脚注の中身)が表示されます。
+3. `Alt`または`Ctrl`を押しながら文書中の脚注をクリックすると、脚注の内容を編集するためのポップアップが、その場に表示されます。編集が完了したら、`Shift+Enter`を押すと、ポップアップが閉じて、脚注のテキストが更新されます。

@@ -1,30 +1,30 @@
-# Exporting in Zettlr
+# Zettlrからのエクスポート
 
-Exporting files is an important interface between your notes and other people. With the export option, you can:
+ファイルのエクスポートは、あなたの文書を他の人に受け渡すために重要なインターフェースとなります。エクスポート機能を使うと:
 
-1. Preview a file, for instance as HTML, and also print it. (Printing a note using `Cmd/Ctrl+P` will internally export the note to HTML.)
-2. Export it to a format with which other people can work, such as Word or OpenDocument files.
-3. Export it to PDF to submit it (such as seminar papers) or, also, print it.
+1. HTML形式などでファイルをプレビューし、それを印刷することができます。(`Cmd/Ctrl+P`を押して印刷すると、内部的にHTMLにエクスポートします。)
+2. WordやOpenDocumentファイルのように、他の人たちが扱えるような形式でエクスポートすることができます。
+3. 例えば(セミナー論文などの)提出用にPDFにエクスポートし、それを印刷することができます。
 
-## Preparing exports
+## エクスポートの準備
 
-All exports in Zettlr, are done using the free software packages Pandoc and LaTeX. Pandoc is necessary for all exports, because everything will first be converted by it. LaTeX is only necessary for PDF export.
+Zettlrでのエクスポートは、すべて、フリーソフトウェアパッケージのPandocとLaTeXを使用して行われます。すべての形式のエクスポートで、変換を行うためにはPandocが必要です。LaTeXはPDFへのエクスポートにのみ必要です。
 
-> If Pandoc is not installed on your system, you will still be able to export to HTML. In that case, Zettlr will internally parse the file using `Showdown.js`, but this library does not support as many features as Pandoc. Please refer to the [setup guide](../install.md)  to install Pandoc and LaTeX on your computer.
+> Pandocをエクスポートしていなくても、HTMLへのエクスポートだけは可能です。この場合、Zettlrは、内部的に`Showdown.js`を使ってファイルを解析します。しかし、このライブラリは、Pandocほど多くの機能をサポートしていません。[セットアップガイド](../install.md)にしたがって、PandocとLaTeXをコンピュータにインストールしてください。
 
-Zettlr will make reasonable efforts to locate both packages. If the app could not locate the binaries, it will throw an error.
+Zettlrは、これらのパッケージを見つけるための合理的な努力をします。もし、アプリケーションがバイナリファイルを発見できなければ、エラーを吐きます。
 
-**In case you have installed both packages, but Zettlr still won't export**, take a look at your Preferences. In the "Advanced"-tab, there are two text fields that allow you to enter the paths to the Pandoc-executable and the "XeLaTeX"-executable. Simply put them in there, restart, and then it should work. If not, please let us know!
+**これらのパッケージをインストールしたにもかかわらずZettlrのエクスポート機能が使えない場合**は、設定を確認してください。高度な設定タブの入力欄に、Pandocの実行ファイルパスとXeLaTeXの実行ファイルパスを入力することができます。ここに入力して、再起動すると設定が有効になります。もし、ダメな場合は私たちにお知らせください。
 
-![The advanced settings tab](../img/settings_advanced.png)
+![高度な設定タブ](../img/settings_advanced.png)
 
-## Options for exporting
+## エクスポートの設定
 
-Starting from version `0.17`, Zettlr provides you with a plethora of options to export documents according to your needs. They are split in two different dialogs. The general options for exporting are located within the preferences window. Open it, and navigate to the "Export"-tab. There you have two sections letting you customise the exports. First, you can select in which directory the resulting files should be stored.
+バージョン`0.17`以降で、Zettlrは、必要に応じて文書のエクスポートに関する多くの設定項目を用意しました。これらは2つのダイアログに分かれています。エクスポートに関する一般的な設定は、設定ダイアログにあります。エクスポートタブを開いてください。そこには、エクスポートをカスタマイズための2つのセクションがあります。1つ目は、結果ファイルを格納するディレクトリの設定です。
 
-- Selecting the temporary directory will make Zettlr save your export documents to the temporary directory. The temporary directory is a special folder on every operating system that is used for temporary files and is expunged as soon as a file is not needed anymore. This is good if you don't want to store exported files anywhere on your system. If you export your files to the temporary directory, you will have to save them explicitly somewhere else to make it persistent.
-- Choosing the current working directory (cwd) makes Zettlr save your exported documents to the currently selected directory. This way, you don't have to explicitly save your documents out of the temporary directory to make them persistently accessible. **Please note that the exporting engine will not ask for your confirmation if it is about to overwrite a file!**
+- 一時ディレクトリを選択すると、Zettlrはエクスポートしたファイルを保存するための一時フォルダを作ります。一時フォルダは、どのOSでも一時的なファイルを保存するための特別なフォルダであり、ファイルが不要になり次第、抹消されるものです。エクスポートしたファイルをシステム上のどこにも保存したくない場合には、この設定が良いでしょう。一時フォルダにエクスポートする設定で、ファイルを永続的に保存したい場合は、どこか他のフォルダに明示的に保存する必要があります。
+- 現在の作業ディレクトリを選択すると、Zettlrはエクスポートしたファイルを、現在開いているディレクトリに保存します。この場合、エクスポートした文書を永続的に保存するために、一時フォルダ以外の場所に保存する必要はありません。**エクスポート機能は、確認することなくファイルを上書きすることにご注意ください。**
 
-The second section features options to tell Zettlr what to do with the Zettelkasten-elements it supports. If you want to know what these elements are for, please consult the [respective section of the docs](../academic/zkn-method.md). This section enables you to retain or remove those elements on export, because under most circumstances they are only useful and needed within the app itself, and should not appear in exported documents.
+2つ目のセクションは、ZettlrがサポートするZettelkasten要素をどのように処理するかを設定します。Zettelkasten要素とは何かを知りたい場合は、[該当のセクション](../academic/zkn-method.md)を参照してください。ここでは、エクスポート時に、これらの要素を残すか削除するかを設定します。何故なら、多くの状況下で、これらの要素はアプリケーション内だけで有効活用されるものであり、エクスポートした文書には残したくないからです。
 
-A second section that contains preferences for exports is located in the `PDF Preferences` dialog. You can open it using the menu (it is located directly under the regular preferences menu item) or using the shortcut `Cmd/Ctrl+Alt+,`. This dialog features options for PDF exports. You can choose a bunch of formatting options, such as the paper type, page margins, the font or font size, and whether or not you want page numbers, and if so, which ones. Most exporting options will be self-explanatory and resemble those given in standard word processors.
+もう一つの、エクスポートに関する設定は、`PDF設定`ダイアログにあります。メニューから開くか(メニュー項目の通常の設定の下にあります)、`Cmd/Ctrl+Alt+,`のショートカットを使ってください。このダイアログではPDFのエクスポートに関する設定を行います。用紙の種類、余白、フォント、フォントサイズ、ページ番号を出力するか、出力するならどの形式かなどの多くの設定を選択することができます。ほとんどのエクスポート設定は、自己説明的で、一般的なワードプロセッサーの設定項目と類似しています。

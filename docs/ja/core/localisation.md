@@ -1,15 +1,15 @@
-# Localisation
+# ローカライゼーション
 
-Zettlr is not only capable of importing and exporting a lot of different formats, it also provides you with the possibility to translate the GUI and use your preferred spellchecking dictionaries. You can easily import new dictionaries and translate the user interface to your likings.
+Zettlrは様々な形式でインポート/エクスポートできるだけでなく、GUIの言語を変更したり、好きな言語の辞書を使用したスペルチェック機能も提供しています。新たに辞書をインポートしたり、インターフェースを自分の好きなように翻訳したりすることも簡単にできます。
 
-Zettlr comes shipped with the following languages:
+Zettlrには、次の言語が付属しています:
 
 - English (United Kingdom)
 - English (United States)
 - German (Germany)
 - French (France)
 
-The app includes the following dictionaries:
+また、次の辞書が含まれます:
 
 - English (United Kingdom)
 - English (United States)
@@ -21,16 +21,16 @@ The app includes the following dictionaries:
 - Russian
 - Ukrainian
 
-## Install new dictionaries
+## 新しい辞書をインストールする
 
-Of course, you may want to install new dictionaries for languages you write in that are not shipped with the app. It is easy to do so. Zettlr uses the popular Hunspell dictionaries that are also used by well-known software such as LibreOffice or Mozilla apps.
+もちろん、アプリケーションに付属する以外に、自分の使う言語の辞書をインストールしたい場合があるでしょう。その場合も簡単です。ZettlrはLibreOfficeやMozillaアプリケーションでも使われている、Hunspell辞書を使用します。
 
-To enable spell-checking for a specific language, simply open the user dictionary folder by selecting `File`->`Import Dictionary …` from the menu. Zettlr will then open up the folder in which you need to place the dictionary files.
+特定の言語のスペルチェックを有効にするには、メニューから`ファイル`->`辞書をインポート...`を選択してください。そうすると、ユーザ辞書ファイルを配置するためのフォルダが開かれます。
 
-The dictionary consists of two files, one is a `.dic`-file, and the other is an `.aff`-file. They need to be placed inside a folder that is named after the language you want to import. Let us assume you want to import the dictionary for Portuguese. You need to grab it from some repository, for instance [the GitHub user wooorm has an extensive set](https://github.com/wooorm/dictionaries/tree/master/dictionaries). Then you simply need to make sure the folder is named `pt-PT` and the two files are named `pt-PT.dic` and `pt-PT.aff`. Other files inside the directory will be ignored by Zettlr. As soon as you have placed your files inside the `dict`-directory, open the preferences and Zettlr should list your newly imported dictionary!
+辞書は2つのファイルからなります。一つは`.dic`ファイルで、もう一つは`.aff`ファイルです。この2つをインポートしたい言語の名前を付けたフォルダの中に配置します。ポルトガル語の辞書をインポートする場合を考えます。まず、どこかのリポジトリから辞書を持ってきます。例えば、[GitHubユーザのwooormが、拡張セットを提供しています。](https://github.com/wooorm/dictionaries/tree/master/dictionaries)そうしたら、`pt-PT`という名前のフォルダに、`pt-PT.dic`と`pt-PT.aff`というファイルが入っていることを確認します。Zettlrは、フォルダに入っているその他のファイルは無視します。`dict`フォルダにファイルを配置してから、Zettlrの設定画面を開くと、新たに追加した辞書が一覧に表示されているでしょう。
 
-> **Hint:** Zettlr tries to translate the language strings automatically, but in some cases it may happen that Zettlr does not contain translations for specific languages. In this case, Zettlr will fallback to the language code and display it as, e.g., `pt-PT`.
+> **ヒント:** Zettlrは、言語名を自動的に変換しようとしますが、特定の言語名の変換ができない場合があります。その場合、Zettlrは言語コード(例えば`pt-PT`)を代わりに表示します。
 
-## Translate the App
+## アプリケーションの翻訳
 
-To help translate the app, please refer to the [Get Involved page](../get-involved.md).
+アプリケーションの翻訳については、[「ご協力ください」](../get-involved.md)のページを参照してください。

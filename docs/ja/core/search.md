@@ -1,53 +1,53 @@
-# Searching
+# 検索
 
-One of the huge benefits of switching to Markdown to write documents is, that the documents themselves are searchable through your operating system's built-in search (e.g. Cortana on Windows, Spotlight on macOS or Dash on Linux systems). But of course it helps a lot if you don't have to leave the program when you are searching for something. That's where the search comes in! There are basically three distinct search functions: A fast filtering function that you use every time you select another directory in the list on the left, a document-wide search and a global search.
+Markdownを使って文書を書くようにすることの大きな利点として、オペレーティングシステムシステムに内蔵された検索システム(Windowsのコルタナ、macOSのSpotlight、LinuxのDashなど)を使って検索可能であることが挙げられます。しかし、何かを探すのにプログラムを離れなくても、それは、もちろん大いに役立ちます。そこで、検索機能の出番です。Zettlrには、基本的に3つに区別される検索機能があります: 左側のリストで他のディレクトリを選択するたびに動作する高速なフィルタリング機能、文書内検索、それから、グローバル検索です。
 
-## Filtering files
+## ファイルのフィルタリング
 
-The first function has already been mentioned on multiple occasions. As the preview list only displays all files inside a given directory and all of its sub-directories, just select different directories to narrow down the list of all files to the ones you need to see. Or, select a root directory to get the full list.
+一つ目の機能については、すでに色々なところで述べています。プレビューリストには、現在のディレクトリと、そのサブディレクトリに含まれるファイルのみが表示されます。異なるディレクトリを選択して絞り込んでいくと、すべてのファイルが表示されている状態から、見たいファイルだけが表示された状態にすることができます。あるいは、ルートディレクトリを選択すれば、全ファイルを一覧することができます。
 
-## Searching in files
+## ファイル内検索
 
-If you are searching for specific phrases or words inside your currently opened file, just press `Cmd/Ctrl+F`. A small popup will open underneath the magnification symbol providing you with the common search and replace options. Just type something and hit `Enter` repeatedly to cycle through the matches. Press `ESC` or click outside the popup to close the search.
+現在開いているファイル内で、特定の語句や単語を検索したい場合は、`Cmd/Ctrl+F`を押します。虫メガネアイコンのすぐ下に、小さなポップアップが表示され、検索と置換を行うことができます。何かを入力してから、`Enter`を押すたびに見つけた箇所に移動します。`ESC`を押すか、ポップアップ外をクリックすると検索を終了します。
 
-> **Tip**: You can also make use of powerful regular expressions for searching. Zettlr by default performs a default search, but when a regular expression is detected (i.e. your search is encapsulated with slashes), it will perform a RegExp-search. Once Zettlr has detected a regular expression, the search field will change its font to monospace to help you write your regular expression. To search for all digits, for instance, you'd search for `/\d+/`. [Learn more about JavaScript regular expressions here](https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91).
+> **ヒント**: 強力な正規表現を使って検索することもできます。Zettlrはデフォルトでは、普通の検索を行いますが、正規表現を検出すると(検索文字列が半角スラッシュで囲まれていると)、正規表現検索を行います。Zettlrは正規表現を検出すると、入力しやすいように検索文字列の表示を等幅フォントに変更します。例えば、すべての数字を検索したい場合は、`/\d+/`を検索します。[JavaScriptの正規表現について、さらに知りたい場合はこちら。](https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91)
 
-If you press `Enter` while the replace input is focused, Zettlr will replace the current search result and automatically highlight the next occurrence of your search term. Hit `Enter` repeatedly to replace multiple occurrences. If you want to replace all occurrences at once, you can hit `Alt+Enter` while the replace input has focus.
+置換の入力欄で`Enter`を押すと、Zettlrは、現在の検索結果を置換し、次に検索結果が現れる場所を自動的にハイライトします。繰り返し`Enter`を押していくと、複数の個所を置換することができます。すべての検索結果を一度に置換したい場合は、置換の入力欄で`Alt+Enter`を押してください。
 
-> **Tip**: Just as in other editors, you can make use of variables while searching with a regular expression. If you search for something using a regular expression that contains at least one capturing group, you can use the variable `$1` inside your replacement text. Such variables will be replaced with the actual found content of the capturing groups. Multiple occurrences of the variable will be replaced as well. The number after the `\$` refers to the index of the capturing group (the second capturing group will be addressed using `\$2`, and so forth). [Learn more about JavaScript regular expressions here](https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91).
+> **ヒント**: 他のエディタと同じように、正規表現検索では変数を利用することができます。キャプチャグループを1つ以上含む正規表現で検索した場合、置換文字列で`$1`といった変数を使うことができます。このような変数は、実際にマッチしたキャプチャグループの文字列で置き換えられます。変数を複数使った場合も、同様に置換されます。`$`の後の数字は、キャプチャグループのインデックスに対応しています(2番目のキャプチャグループは`$2`、などとなります。)[JavaScriptの正規表現について、さらに知りたい場合はこちら。](https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91)
 
-Of course, you can also use the search in Quicklook windows. Therefore, just click into the content of the Quicklook you want to search (to give it focus and prevent that `Cmd/Ctrl+F` triggers the search on your main file) and press `Cmd/Ctrl+F` to begin searching.
+もちろん、Quicklookウィンドウでも検索を行うことができます。検索したいQuicklookをクリックしてから`Cmd/Ctrl+F`を押してください。(クリックしてフォーカスを移動しておかないと、メインウィンドウでの検索になってしまいます。)
 
-## Searching globally
+## グローバル検索
 
-The most important aspect of searching is, in fact, the global search which you can trigger by hitting `Cmd/Ctrl+Shift+F`. The search input in the toolbar will receive focus, letting you search a specific subset of files in your root directory: Only those currently visible in the pane. That means you can choose which files will be searched by selecting an appropriate directory in the list---use the filtering function to your benefit!
+実は、最も重要な検索はグローバル検索です。これは、`Cmd/Ctrl+Shift+F`で開始することができます。ツールバーの検索欄にフォーカスが移動し、ルートディレクトリ以下のファイルの内、現在のペインに表示されているファイルを対象に検索を行うことができます。つまり、適切なディレクトリを選択することで(フィルタリング機能を利用してください)、どのファイルを検索対象とするかを決定することができます。
 
-If you want to search _all_ files at once, select a root directory. If you only want to search in a specific directory, select that before searching. In most cases you have an idea where the text you need is located. For instance, if you are searching for a quote on a certain issue that can be cited in scientific research you may not want to search through all your thoughts and ideas, but limit your search to the directory where you store your excerpts of scientific texts and papers.
+_すべての_ファイルを同時に検索したい場合は、ルートディレクトリを選択してください。特定のディレクトリのみを検索したい場合は、検索前に選択しておいてください。ほとんどの場合は、探している文章がどこにあるかわかっていると思います。例えば、科学研究で引用されている可能性のある特定の問題について検索する場合、すべての考えやアイディアに対して検索するのではなく、科学関連のテキストの抜粋や論文を保存しているディレクトリに限定して検索することができます。
 
-The search itself is rather powerful. You can make use of several different operators to specify exactly what you are searching for:
+検索は非常に強力な機能です。検索したいものを正確に指し示すために、いくつかの演算子を使用することができます:
 
-* **AND-operator:** Type `Boat Ship` to only display the files that contain _both_ the term "boat" and the term "ship". Each space is interpreted as "AND".
-* **OR-operator:** Type `Boat | Ship` (| is the Pipe-operator, inserted by `Alt+7` on macOS or `AltGr+<` on other systems) to select all files that contain _either_ the word "boat" _or_ the word "ship"
-* **Exact-Match-operator:** Type `"Boat Ship"` to search your files for that exact phrase.
+* **AND演算子:** `Boat Ship`と検索すると、"boat"と"ship"の_両方を_含むファイルのみが表示されます。半角スペースが"AND"と解釈されます。
+* **OR演算子:** `Boat | Ship`と検索すると検索すると、"boat"と"ship"の_いずれか_を含むファイルが、すべて表示されます。
+* **完全一致演算子:** `"Boat Ship"`と検索すると、これに完全一致する文字列を含むファイルを検索します。
 
-Of course, you can chain all of these operators. So you could search for `"Boat Ship" | vessel captain` to display only files that either contain the exact phrase "Boat Ship" or the word "vessel", and which also include the word "captain".
+もちろん、これらの演算子を組み合わせて使うこともできます。`"Boat Ship" | vessel captain`と検索すると、"Boat Ship"または"vessel"を含み、加えて"captain"も含むファイルを検索します。
 
-Don't worry if you do not remember the complete word you are searching for: Zettlr will try to match your search terms also to partial words, so the word "trooper" would also match "Stromtrooper" as well as "Troopership" as would the phrase "Boat Ship" also match a "Steamboat Ship". **Searches are also case-insensitive**. So you don't have to worry about little typos you may have in some files.
+検索する単語が一部しか思い出せない場合でもご心配なく。Zettlrは、検索文字列を単語の一部に含むものも見つけようとします。つまり、"trooper"を検索すると、"Stormtrooper"や"Troopership"にもマッチします。"Boat Ship"は"Steamboat Ship"にもマッチします。また、**検索は大文字小文字を無視します。**そのため、一部のファイルで入力ミスがあったとしても心配ありません。
 
-While Zettlr is searching, it will display a search indicator to the right of the search box. Once it is done, it will colour all of your files. The more green-ish they are, the more relevant they are (i.e. the more high-quality matches have been found inside that file). This is kind of a **heat map for search results** letting you easily identify the relevant files for your search.
+Zettlrは検索中、検索欄の右に検索インジケーターを表示します。それが完了すると、すべてのファイルに色が付きます。より明るい緑色であるほど、より関連したファイル(つまり、より高品質の関連がファイルに存在する)となります。これは、一種の**検索結果のヒートマップ**であり、検索結果から関連したファイルを簡単に見分けることができます。
 
-> Please note that Zettlr will hide all files in which the search terms did never match, as well as all directories.
+> Zettlrは、検索文字列をまったく含まないファイルを非表示にします。ディレクトリも同様です。
 
-To achieve better results, Zettlr will weigh different types of matches differently. For instance, an exact match in the title can be a sign that the file is highly relevant to you. Therefore, Zettlr will weigh this heavier than other matches. Also, if a search term has matched case-sensitive, this match will receive a higher score than if the term has only matched case-insensitive (i.e. there was a difference in capitalisation).
+より良い結果を得るため、Zettlrは、それぞれの検索の種類ごとに重み付けをしています。例えば、タイトル中に完全一致する文字列を含んでいるなら、そのファイルは非常に関連性が高いことを示していると思われます。したがって、Zettlrは、これを他の一致よりも重視します。同様に、検索結果の大文字小文字が不一致のものよりも、一致しているものに高い点数を付けます。
 
-To find the exact place where your search matched, select a file and Zettlr will automatically highlight all matches in bright yellow easy to find. Also, the scrollbar to the very right of the window will be showing markers to indicate at which positions in the document your search terms occur.
+検索に一致した正確な場所を見つけるには、ファイルを選択してください。すると、自動的にすべての一致箇所が明るい黄色でハイライトされ、簡単に見つけることができます。また、ウィンドウの一番右のスクロールバーにも、文書中の検索結果の位置を示すマーカーが表示されます。
 
-## Exit the global search
+## グローバル検索を終了する
 
-The global search is in many ways persistent. This way you can stroll through your search results without having to fear that any action might accidentally exit the search. This is especially helpful in huge file lists, where searching can take its time. Nonetheless, there _are_ ways to exit a global search.
+グローバルサーチは多くの点で永続的です。これにより、意図せず検索が終了してしまうことを心配しないで、検索結果を見て回ることができます。これは特に、検索に時間がかかるような巨大なファイルリストの場合に役に立ちます。とはいえ、グローバル検索を終了する方法も存在します。
 
-Do one of the following to exit the search and display all files regularly again:
+以下のいずれかで、検索を終了し、元のようにすべてのファイルを表示します:
 
-* While the search input is focused, press `ESC`. (You can re-focus it with `Cmd/Ctrl+Shift+F`)
-* Click the `x` on the right hand side of the search box.
-* Select a different directory in the tree view.
+* 検索欄にフォーカスした状態で`ESC`を押す。(`Cmd/Ctrl+Shift+F`で、再度フォーカスできます。)
+* 検索欄の右端の`x`をクリックする。
+* ツリービューで他のディレクトリを選択する。

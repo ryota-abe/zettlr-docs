@@ -1,17 +1,17 @@
-# Tables in Zettlr
+# Zettlrのテーブル機能
 
-Markdown tables are a notoriously difficult thing. Due to the nature of Markdown to be as simple as possible, complexity is what suffers most. Markdown is the perfect choice for writing text and most of what we use during writing (e.g. links, images, headings, or quotes) is handled perfectly in Markdown. Yet, from time to time, we also want to include some data in our works, or tables are simply a better way of visualising ideas.
+Markdownの表組みは難しいことで知られています。可能な限りシンプルであろうとするMarkdownの性質のため、複雑さは大きな苦痛となります。文書を書くのにMarkdownは完璧な選択です。文書を書くのに使用するほとんどのもの(例えば、リンク、画像、見出し、引用)は、Markdownで完璧に扱うことができます。しかし、時々、何らかのデータを文章に含めたい場合があります。または、テーブルは単純にアイディアを可視化するより良い方法です。
 
-## Introduction to Tables
+## テーブルについて
 
-Tables in Markdown are written using a very basic syntax -- each line resembles one row and the table cells are encapsulated with pipe-characters:
+Markdownのテーブルは、非常に簡単な文法で書かれます。各行が、テーブルの一行に対応し、セルはパイプ（縦線）で囲まれます。
 
 ```
 | Cell A:A | Cell A:B |
 | Cell B:A | Cell B:B |
 ```
 
-Optionally, you can also add a heading row, which may also indicate the alignment using colons (left, right, or center):
+任意で、見出し行を追加することもできます。また、列の左揃え、右揃え、中央揃えをコロンにより指定することができます。
 
 ```
 | Left aligned | Centered content | Right aligned |
@@ -19,9 +19,9 @@ Optionally, you can also add a heading row, which may also indicate the alignmen
 | Lorem        | Ipsum            | Dolor         |
 ```
 
-Note that it doesn't matter how you align the table's contents in your documents, as long as the colons are placed accordingly. The table will be exported using the correct alignment later on.
+コロンが適切な位置に置かれている限り、実際の文書中のテーブルの左右揃えは問題にならないことに注意してください。後でエクスポートするときに、正しい位置に揃えられます。
 
-But as you can see, even with only two words per column, the Markdown table tends to get rather long. As you cannot use multiple rows for cells, here's where you tend to get into serious problems when you need to insert a whole sentence in each cell. Take for instance the following example:
+しかし、見てわかる通り、各列に2単語だけでも、Markdownのテーブルは幅を取ってしまいます。セルに複数行を使うことができないため、セル内に一文を丸ごと入れようとすると深刻な問題に陥ります。例えば次の例を見てみましょう:
 
 ```
 | # | Name              | Description                                                                                                                                                                     | Price     | Quantity |
@@ -32,68 +32,67 @@ But as you can see, even with only two words per column, the Markdown table tend
 | 4 | Your Mom          | Are you in an argument with a philosopher? Try this Freudian-tested kill-all-argument!                                                                                          | priceless | 1        |
 ```
 
-In Zettlr, it would look like the following:
+これが、Zettlrでは次のように見えます:
 
-![long_markdown_table.png](../img/long_markdown_table.png)
+![幅の広いテーブル](../img/long_markdown_table.png)
 
+セルの幅は各列の最大幅に揃えているにもかかわらず、行が折り返されてテーブル構造が見えなくなっているため、これが有効なMarkdownのテーブルであると認識することができません。1列目の番号がなければ、いったい何行あるのかさえ簡単にはわからないでしょう。
 
-Even though the table cells are each aligned to fit the total width of each column, you cannot make out the fact that this is indeed a valid Markdown table, as each line gets wrapped and the table structure is impossible to see. Without the counter in the first column, you would even have a hard time making out the number of rows in it.
+## テーブルエディタ
 
-## The Table Editor
+Markdownのテーブルを書かなければいけないことがあるのは明白ですが、それは常に苦痛を伴います。例えばワープロのように、簡単に表を編集することができれば嬉しいですよね。そこで、Zettlr組み込みの**テーブルエディタ**の出番です。
 
-Obviously, writing Markdown tables is sometimes unavoidable, but always painful. It would be great if you could simply edit the table like you are used to from, e.g., Word processors, right? That's where Zettlr's built-in **table editor** (available from `1.4`) comes into play!
+Zettlrは[WYSIWYG](https://ja.wikipedia.org/wiki/WYSIWYG)("What You See Is What You Get")のポリシーに則っているため、実際に書いているものに対する認識があいまいになりがちですが、テーブルは例外です。[WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) ("What You See Is What You Mean")のアプローチはWYSIWYGより優れていますが、これを単純に適用してもうまくいきません。
 
-While Zettlr maintains a strict policy on [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) ("What You See Is What You Get"), as it tends to blur your perception of what you are actually writing, tables are exempt from this policy. Because even though the [WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) ("What You See Is What You Mean") approach is superior to WYSIWYG, there's simply no use in applying this to tables.
+そこで、テーブルの記述を助けるために、Zettlrには強力なテーブルエディタが付属しています。これには、テーブルを作成する際に完全に気が散ってしまわないように必要な機能がそろっています。テーブルエディタを使うと、前述のテーブルが次のように見えます:
 
-Therefore, to aid you with writing tables, Zettlr is now shipping with a powerful table editor that brings to you everything you need to not completely lose your mind while creating tables in your documents. With the table editor, the above-mentioned table looks like this:
+![テーブルエディタで表示したテーブル](../img/zettlr_table.png)
 
-![A table as displayed by the table editor](../img/zettlr_table.png)
+はるかに良いですよね？Zettlrのテーブルエディタは、文書中に見つけたすべてのMarkdownの表を、セルが編集可能なHTML形式のテーブルに変換して、元のMarkdownの代わりに表示します。これだとMarkdownのソースは完全に隠れてしまいますが、この場合はこのアプローチの方がはるかに優れています。
 
-Much better, am I right? Zettlr's table editor takes all Markdown tables found in your document, converts them into an HTML representation with editable content cells, and displays these instead of the underlying Markdown. This completely hides the Markdown source, but as we said, in this case this approach is much more favourable.
+テーブル中のセルをクリックすると**編集モード**に移行し、セルの中身を編集することができます。アクティブなセルは色が付いて表示されます。さらに、よく使われるワードプロセッサーなどと同じキーボードナビゲーションも使えるようになっているので、`Tab`、`Enter`、矢印キーで表内を移動することができます。そして、テーブルエディタの**エッジボタン**を使うと、行と列の追加削除も行うことができます。これらのボタンはテーブルにマウスカーソルを合わせると表示され、テーブルに対する様々な操作を行うことができます。
 
-You can **enter the editing mode** simply by clicking into any of the cells inside the table and adding your content. The active cell will be highlighted for you. Additionally, the keyboard navigation that you know from famous word processors has also been implemented so that you can use `Tab`, `Return`, and the Arrow keys to navigate the table. Additionally, adding and removing columns and rows is also possible with the table editor's **edge buttons**. These are buttons that will appear when you hover over the table and let you perform various actions on the table.
+> テーブルのどこかのセルをクリックすると編集モードになります。そこで編集した内容を確定するには**テーブルの外をクリック**して、編集モードを抜ける必要があります。こうすることで初めて、編集した内容が元のMarkdownのテーブルに反映されます。
 
-> Attention! When you activate the table by clicking inside one of the cells, you are entering the edit mode. To save your changes, make sure to **click outside of the table once you are done**, to exit the editing mode! Only then will the changes you've made to the table be applied to the underlying Markdown table.
+## キーボードナビゲーション
 
-## Keyboard Navigation
+まずは、キーボードナビゲーションに移りましょう。以下のショートカットを使うことができます。
 
-But let us first turn to the keyboard navigation. You have the following shortcuts at your disposal:
+- `Tab`: 次のセルに移動します。最後の列を選択中の場合は、次の行の最初のセルに移動します。最終行の最後のセルを選択中の場合は、新しい行が自動的に追加されます。
+- `Shift-Tab`: 前のセルに移動します。最初の列を選択中の場合は、前の行の最後のセルに移動します。
+- `Enter`: 次の行の同じ列に移動します。最終行のセルを選択中の場合は、新しい行が自動的に追加されます。
+- `↑/↓`: 前後の行の同じ列に移動します。最初の行や最後の行の場合でも新しい行は追加されません。
+- `←/→`: 左右に移動します。最初(最後)の列の場合は、前の(次の)行に移動します。
 
-- `Tab`: Move to the next cell. If the last column is active, move to the first cell in the next row. If your cursor was in the last column of the last row, a new row will be added automatically.
-- `Shift-Tab`: Move to the previous cell. If your cursor was in the first column, move to the last cell in the previous column.
-- `Return`: Move to the same column in the next row. If your cursor was in the last row, a new row will be added automatically.
-- `Arrow Up/Arrow Down`: Move to the same column in the previous/next row. No new rows will be added if you are in the first or last row.
-- `Arrow Left/Arrow Right`: Move the cursor left/right. If the cursor is at the beginning/end of the cell's contents, move to the previous/next cell.
+これらのショートカットを使えば、テーブル内を自由に移動し、簡単に入力することができます。最初にテーブルの見出しを埋めてから、一行ごとにデータを入力していくなら`Tab`が便利に使えます。
 
-With these shortcuts, you can easily enter content into your tables using natural movements. You would first want to fill out the table header and afterwards you want to add one set of data per line. Therefore, `Tab` is your friend here:
+![キーボードナビゲーションについての視覚的な説明](../img/zettlr_table_movement.png)
 
-![A visual explainer how the keyboard navigation works](../img/zettlr_table_movement.png)
+## エッジボタン
 
-## The Edge Buttons
+テーブルエディタには、**エッジボタン**と呼ばれる便利な機能もあります。テーブルにマウスカーソルを合わせると、2つのグループのボタンと、4方向に対するボタンが表示されます。
 
-Another goodie of the table editor are its so-called **edge buttons**. These are two groups of buttons and four directional buttons that will appear once you hover over a table:
+![テーブルエディタのエッジボタン](../img/table_with_edge_buttons.png)
 
-![The table editor's edge buttons](../img/table_with_edge_buttons.png)
+これらは、テーブルの内容を隠してしまわないように、最初は透過して表示されます。エッジボタンにマウスカーソルを合わせると不透明になります。ボタンの機能は見ればわかるようになっています。各辺の中央に表示される`(+)`ボタンは、それぞれに対応した位置に**行や列を追加**します。左のボタンをクリックすると現在のセルの左側に列が追加され、下のボタンをクリックすると現在のセルの下に行が追加されます。
 
-They are transparent at the beginning to not cover up the content of your table. Move your cursor over an edge button to make it opaque. The buttons should be rather self-explanatory. The four `(+)`-buttons at the center of the edges of the table will **add a row or column respectively** at the indicated position. So click the left add button to prepend a column to the left side of the currently active cell, and click the bottom add button to append a row below the currently active cell.
+テーブルの上部には、さらにボタンのグループが表示されます。左のグループは、現在選択中の列の**左右揃えを指定**します。どれかをクリックすると左右揃えが適用されます。視覚的に確認できるよう、変更はすぐに反映されます。
 
-At the top of each table, there are two additional button groups. The left button group contains three buttons that **align the currently active table column** left, center or right. Click one of the buttons to apply the alignment. The change will be displayed immediately for your visual confirmation.
+右のグループは、現在の**行や列を削除**するボタンです。削除したい行や列に含まれるいずれかのセルを選択した状態で、いずれかのボタンを押してください。
 
-The right button group contains two buttons for **removing the currently active table row or column**. Simply place your cursor inside any cell inside the row or column you wish to remove and hit one of the buttons.
+> テーブル編集を抜けてから"元に戻す"コマンドを実行するという苦労を避けるため、行や列を削除する前に必ず正しいセルにカーソルを置いてください。
 
-> Always make sure to place your cursor in the correct cell before removing columns or rows to save you pain in having to exit table editing, and applying the "Undo" command.
+![アクティブな行と列](../img/table_active_cell.png)
 
-![How to determine the active row and column](../img/table_active_cell.png)
+## 複雑なテーブル
 
-## Complex tables
+ここまでで、基本的なテーブルについては述べました。しかし、より複雑なテーブルはどうすればよいでしょうか。テーブルエディタの出番はおしまいです。Markdownテーブルの限定的な文法では、複数行や列にわたるセルの結合は不可能です。もし必要ならば、生のHTMLやLaTeXコマンドを使用する必要があります。それらを使えば、好きなようにすることができます。
 
-Until now we've only covered basic tables. But what if you need to display more complex tables? Then, even the table editor is at its end. Cells spanning multiple rows or columns are simply impossible given the limited syntax of Markdown tables. To add these, you'll have to use native HTML or LaTeX commands. These give you the maximum amount of freedom to do whatever you like.
+Markdownのテーブルは、あなたの**文書**を**補助する**ためのものであることを忘れないでください。つまり、論文の出典セクションなどに載せるための複雑なデータセットを取り扱うなら、Stataのデータファイルや[RDatasetを変換](https://tex.stackexchange.com/questions/364225/export-tables-from-r-to-latex)してLaTeXやHTMLに出力する素晴らしいツールがすでにあります。
 
-Always remember: Tables in Markdown are used as an _aid_ to your _writing_. This means if you are dealing with complex datasets which you need to add to a paper, e.g. in the sources section, there are great tools out there to [transform your RDataset](https://tex.stackexchange.com/questions/364225/export-tables-from-r-to-latex) or Stata datafile into LaTeX or HTML.
+コピー＆ペーストするのではなく、Zettlrの機能を使ってデータセットを論文に含めるアイディアがあります。
 
-One idea to insert datasets into your papers without much copying and pasting would be to combine several features of Zettlr:
-
-- Create a project for your paper
-- Create the necessary files to structure your paper (e.g., `01 - Chapter 1.md`, `02 - Chapter 2.md`, `03 - Chapter 3.md`, `04 - Chapter 4.md`)
-- Inside your R-Project or Stata project, add a command that exports your data to a file `05 - Data.md` in your project directory whenever something changes.
-- As soon as you export your paper, the externally managed file `05 - Data.md` will be automatically appended, making sure your data is shipped with your document.
+- 論文用のプロジェクトを作ります
+- 論文の構成に必要なファイルを作ります。(例えば、`01 - Chapter 1.md`, `02 - Chapter 2.md`, `03 - Chapter 3.md`, `04 - Chapter 4.md`)
+- RプロジェクトやStataプロジェクトにコマンドを追加し、何か変更があるたびにデータをプロジェクトディレクトリ内に`05 - Data.md`として出力するようにします。
+- 論文をエクスポートすると、外部で管理されたファイル`05 - Data.md`が自動的に追加され、データを含んだ文書が出力されます。

@@ -1,28 +1,28 @@
-# Virtual Directories
+# 仮想ディレクトリ
 
-Virtual Directories are a powerful feature of Zettlr that let you sort and collect files arbitrarily. They work as some kind of a box in which you can put files manually.
+仮想ディレクトリはファイルを任意に並べたり集めたりできる、Zettlrの強力な機能です。これは、ファイルを手動で入れられる箱のようなものとして機能します。
 
-## Creating virtual directories
+## 仮想ディレクトリを作る
 
-Virtual directories represent subsets of a certain directory. You can create them by right-clicking any directory and select "New Virtual Directory…". You can then give them a name just as you would do with any other directory. The same rules apply for virtual directory names as do for regular directories; not only to maintain a consistent look throughout the app, but also to be sure that the name is "[JSON](https://en.wikipedia.org/wiki/JSON)-safe".
+仮想ディレクトリは特定のディレクトリのサブセットに相当するものです。作成するには、任意のディレクトリを右クリックして「新規仮想ディレクトリ...」を選択します。それから、他のディレクトリと同じように名前を付けます。仮想ディレクトリの名前も普通のディレクトリと同じルールに従い、一貫性を持った名前を付けます。加えて、その名前は[JSON](https://ja.wikipedia.org/wiki/JSON)-safeである必要があります。
 
-Virtual directories then appear as subdirectories of the directory, in which you have created them. They will remain above all other subdirectories, making it easier for you to find them. Also, they are indicated by a small box-icon and are coloured differently than normal directories, indicating their special status.
+仮想ディレクトリは、作成時に選択したディレクトリのサブディレクトリのように表示されます。他のすべてのサブディレクトリより上に表示されるので簡単に見つけることができます。また、小さな箱のアイコンが付き、他のディレクトリとは異なる色で表示されます。
 
-## Adding, removing and working with files
+## ファイルの追加、削除、編集
 
-After you have created a virtual directory, it acts mostly as a normal directory. You can drop files on them, rename and remove them. Yet, a noteworthy restriction applies:
+作成した仮想ディレクトリは、普通のディレクトリとほぼ同様に動作します。ファイルをドロップして追加したり、名前を変更したり、削除することができます。しかし、特筆すべき制限事項が一点あります。
 
-> You can only add files that reside _inside_ the directory in which you created the virtual directory. As virtual directories are supposed to represent subsets of a specific directory, that means that you cannot add files that are located _outside_ of the directory.
+> 仮想ディレクトリを作ったディレクトリの_内部_にあるファイルのみ追加することができます。仮想ディレクトリは、あるディレクトリのサブセットを表すものなので、そのディレクトリの_外部_にあるファイルを追加することはできません。
 
-To remove files, right-click them inside the virtual directory (i.e. right click their purple representation, **not** the file itself!) and then select the option "Delete from virtual directory."
+ファイルを削除するには、仮想ディレクトリ内のファイルを右クリックし「ファイルを削除」を選択します。(つまり、ファイルそのものではなく紫色で表示されているものを右クリックします。)
 
-Inside virtual directory, all operations of files are permitted, even moving them to different directories. If you rename a file inside a virtual directory, this change will be reflected both on disk (i.e. in their "actual" directory) and in the virtual directory. If you remove a file completely, it will also be removed from all virtual directories, in which it may have been.
+仮想ディレクトリ内では、すべてのファイル操作が許可されています。ファイルを他のディレクトリに移動することさえできます。仮想ディレクトリ内のファイルをリネームすれば、ディスク上の本当のディレクトリと仮想ディレクトリの両方に反映されます。ファイルの実体を削除すると、すべての仮想ディレクトリ上からも削除されます。
 
-## Other restrictions of virtual directories
+## 仮想ディレクトリのその他の制限事項
 
-Among not being able to hold files outside of their containing directory, a number of additional restrictions apply to working with virtual directories.
+ファイルが実際に属しているディレクトリの外部に保持することができないということに加えて、仮想ディレクトリにはいくつかの追加の制限事項があります。
 
-1. You cannot move them since they are bound to the directory, in which you create them.
-2. Virtual directories are persistent (i.e. stored on disk), but of course not as a kind of directory. They are stored in a so-called [Dot-file](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory), which bears some problems.
-  1. First of all: on Windows systems you will always see the `.ztr-virtual-directory`-file, because Windows does not hide such files as all other systems.
-  2. Secondly, many cloud services do not synchronise Dot-files out of security reasons (for instance, you have to explicitly tell Nextcloud-clients to sync Dot-files). This means that if you store your files using a cloud service to access them from multiple devices, chances are your virtual directories are not transferred.
+1. 仮想ディレクトリは作成されたディレクトリに結びついているので、移動することはできません。
+2. 仮想ディレクトリは永続的なものですが、もちろんディレクトリの一種ではありません。これらは、[ドットファイル](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory)と呼ばれるものであり、いくつかの問題を抱えています。
+  1. まず、Windowsでは、常に`.ztr-virtual-directory`というファイルが見えてしまいます。これは、Windowsが他のOSのようにドットファイルを隠そうとしないからです。
+  2. 次に、多くのクラウドサービスでは、セキュリティ上の理由からドットファイルを同期しません。(例えばNextcloudでは、ドットファイルを同期するようにクライアントに指定する必要があります。)つまり、クラウドサービスを使って複数のデバイスからファイルにアクセスする場合、仮想ディレクトリは転送されない可能性があります。

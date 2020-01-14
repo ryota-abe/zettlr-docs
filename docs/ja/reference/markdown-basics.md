@@ -1,107 +1,107 @@
-# Markdown basics
+# Markdownの基本
 
-Just like many other apps, Zettlr makes use of `Markdown`, originally invented by [John Gruber](https://daringfireball.net/). Of course, over such a long period of time, a huge amount of developments have taken place, that have created the possibilities of modern Markdown applications. In this document the following topics are covered:
+Zettlrは他の多くのアプリケーションと同様に、[John Gruber](https://daringfireball.net/)によって発明された`Markdown`を利用しています。もちろん、長い時間をかけて膨大な量の開発が行われ、それによって最新のMarkdownアプリケーションの可能性が生まれました。
 
-1. [A brief history of Markdown](#a-brief-history)
-2. [Dialects of Markdown](#markdown-dialects)
-3. [How Zettlr implements Markdown](#zettlr-and-markdown)
-4. [Markdown 101: Headings, block elements, inline elements, links, images and footnotes](#markdown-101-the-most-important-codes)
-5. [Further resources](#resources-on-markdown)
+1. [Markdownの簡単な歴史](#a-brief-history)
+2. [Markdownの方言](#markdown-dialects)
+3. [ZettlrにおけるMarkdownの実装](#zettlr-and-markdown)
+4. [Markdown入門: 見出し, ブロック要素, インライン要素, リンク, 画像, 脚注](#markdown-101-the-most-important-codes)
+5. [その他のリソース](#resources-on-markdown)
 
 ***
 
-## A brief history
+## 簡単な歴史
 
-Since the personal computer became widely available in the 1990s, there were two groups of formats existing side-by-side: word processor documents, such as `.doc`, or `.odt` and code documents, such as `.js`, `.cpp` or `.py`. Both groups of documents contain human-readable text, but there was one simple, yet huge difference: While JavaScript-files or C++-files contained plain text (i.e. only the text that you would see when you open such a file), word processor documents contained a _lot_ more stuff. Word processor documents always hold information about the page size (e.g., A4 or letter), how different blocks should be formatted (e.g., the font of headings or how much blockquotes are indented). If you open a Word/Office-document on your PC right now, you can see what I mean: You immediately see what is a heading based on the font-size font-weight of its text.
+1990年代にパソコンが普及して以来、2つのグループに分かれたファイルフォーマットが存在しています。一つは`.doc`や`.odt`のようなワードプロセッサードキュメント、もう一つは`.js`、`.cpp`、`.py`のようなコードドキュメントです。それぞれのグループのドキュメントは人間が読むためのテキストを含んでいますが、一つの大きな違いがあります。JavascriptファイルやC++ファイルがプレーンテキストのみを含む   (つまり、これらのファイルを開いたときに表示されるテキストのみを含んでいる)のに対し、ワードプロセッサードキュメントは、_もっと多くの_情報を含んでいます。ワードプロセッサードキュメントは、用紙サイズ(A4やレターサイズ)、ブロックごとの書式(見出しのフォントや引用のインデント幅)といった情報を必ず含んでいます。ワード/オフィスドキュメントをPCで開いてみるとその意味が分かりますが、フォントサイズや太さによって見出しがすぐわかるようになっています。
 
-For a long time, both these groups of documents stayed as distinct as would their users. Most office-workers only know how to use Microsoft Word or Excel, maybe also LibreOffice-implementations, while close to nobody coming from a STEM-background would voluntarily use Word or similar software. Those scientists have chosen a different path: they developed a programming language called LaTeX, which allows them to create neatly formatted PDF-files from a bunch of code---they follow the same workflow as researchers from the arts and humanities or regular administrative officers, but use different documents for that.
+長らく、これらの文書フォーマットの違いは、ユーザの違いと一致していました。ほとんどのオフィスワーカーはMicrosoft WordやExcel(もしかするとLibreOfficeによる実装も)の使い方しか知りません。一方で、STEM分野から来た人々が自発的にWordやExcelなどのソフトウェアを使うことはほとんどありません。科学者たちは他の道を選択してきました。LaTeXと呼ばれる言語が開発され、大量のコードから整ったPDFファイルを生成することが可能になりました。彼らは、芸術や人文科学の研究者や行政職員などと同じワークフローに従いますが、異なるドキュメント形式を用いるのです。
 
-When Markdown was inaugurated by John Gruber in 2004, it was basically like saying: "Why not both?" Markdown combines both the clear reading experience from word processor documents with the benefits of software code documents, which is both versatile and easy to use---even for people that only know how to operate Word or Writer. One small example: While in word processors you would create a heading by typing "some text" and then selecting the `Heading 1` format from some menu, in Markdown you would simply type `# some text`, where the hashtag-symbol tells you immediately: "This is a first level heading!"
+Markdownの開発がJohn Gruberによって2004年に開始されたとき、それは要するに「両方じゃだめなの？」というものでした。Markdownはワープロ文書の読みやすさと、ソフトウェアコード文書の多目的で使いやすいという利点をあわせ持っています。それは、WordやWriterしか使ったことのない人にも使いやすいものです。簡単な例として、ワープロソフトで見出しを作る場合、"some text"と入力してからそれを選択し、メニューから「見出し1」を選択して書式設定します。一方Markdownでは、`# some text`と入力するだけです。ハッシュ記号が「これは見出しレベル1です」ということを表しています。
 
-At first, Markdown was basically a small script John Gruber wrote for himself to yield these benefits, and it contained a lot of inconsistencies and didn't support many different elements. But over the years, progress was made. Two dates are notable:
+最初Markdownは、これらの利点を得るためにJohn Gruberによって書かれた小さなスクリプトでした。そして、それは多くの仕様上の矛盾を含んでおり、サポートしていない要素も多くありました。しかし、長年にわたり進歩を重ねてきました。次の2つの日付が注目に値します。
 
-- 2004: [John Gruber](https://daringfireball.net/projects/markdown/) initially launches Markdown
-- 2012: A group of developers form [CommonMark](https://spec.commonmark.org/) to standardise Markdown into an internationally accepted norm.
+- 2004: [John Gruber](https://daringfireball.net/projects/markdown/)が最初にMarkdownを公開した
+- 2012: [CommonMark](https://spec.commonmark.org/)の開発者たちがMarkdownを、国際的に受け入れられている方法で標準化した。
 
-## Markdown Dialects
+## Markdownの方言
 
-Today, several implementations of the Markdown syntax coexist. The most noteworthy are:
+今日では、Markdownの文法にはいくつかの実装が併存しています。特筆すべきものは、
 
-- **MultiMarkdown**: Extends the initial syntax with footnotes, tables and some metadata.
-- **Markdown Extra**: Again some additions to the initial syntax.
-- **GitHub Flavoured Markdown**: This is a variety of Markdown invented by the hosting platform GitHub (which Zettlr is also hosted on!) and is today one of the most common dialects.
-- **Pandoc Markdown**: Pandoc Markdown is a superset of GitHub flavoured Markdown and adds support for even more elements.
-- **CommonMark**: Tries to implement all possible elements, while being unambiguous. Notably, CommonMark not yet includes a specification for footnotes.
+- **MultiMarkdown**: 脚注、テーブル、いくつかのメタデータに関する拡張を行いました。
+- **Markdown Extra**: いくつかの文法を再び拡張しました。
+- **GitHub Flavoured Markdown**: ホスティングプラットフォームであるGitHub(Zettlrも、ここにホスティングされています)によって作られた方言であり、最もよく使われている方言の一つです。
+- **Pandoc Markdown**: Pandoc Markdownは、GitHub flavoured Markdownのスーパーセットであり、いくつかの要素が追加されています。
+- **CommonMark**: 可能な限り多くの要素を、あいまいさを回避して取り入れようとしています。注目すべきは、CommonMarkは未だに脚注の仕様を含んでいないことです。
 
-## Zettlr and Markdown
+## ZettlrとMarkdown
 
-Zettlr itself implements a mixture of different dialects. The editor itself highlights only GitHub flavoured Markdown (plus some extra-elements, which extends Markdown syntax with Zettelkasten elements. Those are described in the respective [chapter on the Zettelkasten method](../academic/zkn-method.md)). If you export your documents to HTML and don't have Pandoc installed, Zettlr will convert your documents using the _GitHub flavoured Markdown syntax_. If available, Zettlr uses Pandoc for exports, which itself reads your Markdown documents using its _Pandoc Markdown syntax_.
+Zettlr自体は複数の方言の混合で実装されています。エディタでハイライトされるのはGitHub flavoured Markdownのみです。加えて、Zettelkasten要素に関してMarkdownを拡張した、追加の要素があります。これについては、[Zettelkastenメソッドについての章](../academic/zkn-method.md)に記述してあります。Pandocがインストールされていない状態でHTMLへのエクスポートを行うと、Zettlrは_GitHub flavoured Markdownの文法_を使って変換を行います。可能であればPandocを使用し、その場合は_Pandoc Markdownの文法_を使ってMarkdown文書が読み込まれます。
 
-But Zettlr doesn't confine you to writing Markdown. If you wish, you can also add `LaTeX`-commands. These commands are correctly interpreted when you convert to PDF. These are omitted when you convert to DOCX or ODT. And they are retained when you convert to HTML. Of course, you can at any position use plain HTML-code as well.
+しかし、ZettlrはMarkdownしか書けないわけではありません。ご希望なら、`LaTeX`コマンドを使用することができます。これらのコマンドはPDFにエクスポートする際に正しく変換されますが、DOCXやODTに変換する場合には無視されます。HTMLに変換する場合には、そのまま残ります。もちろん、任意の個所でプレーンHTMLコードを使用することもできます。
 
-## Markdown 101: The most important codes
+## Markdown入門(重要な要素)
 
-Although Markdown can do a lot of things, in this section I want to describe to you the most important elements that you will use the most, and how you can use them in Zettlr.
+Markdownは数多くのことができますが、この章では最も重要でよく使う要素について説明し、Zettlrでの使い方を見ていきます。
 
-### Headings
+### 見出し
 
-Headings are straightforward. They must be put on their own line and have to be indicated using a hashtag symbol. There are six levels of headings at your disposal:
+見出しは単純です。見出し用の行を用意し、先頭にハッシュ記号を置きます。6階層までの見出しを作ることができます。
 
-- `# Heading text` — yields a heading of first order
-- `## Heading text` — yields a heading of second order
-- `### Heading text` — yields a heading of third order
-- `#### Heading text` — yields a heading of fourth order
-- `##### Heading text` — yields a heading of fifth order
-- `###### Heading text` — yields a heading of sixth order
+- `# Heading text` — 1段階目の見出しを作成します
+- `## Heading text` — 2段階目の見出しを作成します
+- `### Heading text` — 3段階目の見出しを作成します
+- `#### Heading text` — 4段階目の見出しを作成します
+- `##### Heading text` — 5段階目の見出しを作成します
+- `###### Heading text` — 6段階目の見出しを作成します
 
-### Inline-formatting
+### インライン書式
 
-Of course, just as in word processors you can use inline-formatting, such as **bold** or _italic_ text, or `monospaced` (code) text.
+もちろん、ワープロと同じようにインラインの書式設定を行うことができます。例えば、**太字**、_斜体_、`monospaced`(コード)などです。
 
-- `**your text**` — yields bold text
-- `_your text_` — yields italic text
-- \`your text\` — yields monospaced text
+- `**your text**` — 太字にします
+- `_your text_` — 斜体にします
+- \`your text\` — 等幅フォントにします
 
-### Block elements
+### ブロック要素
 
-Sometimes, you may want to emphasise a whole block of text (such as a longer quote), or create lists. This is also possible and extremely simple using Markdown.
+長い引用やリストなど、テキストブロック全体を強調したい場合があります。これもMarkdownではとても簡単にできます。
 
-- Create item lists by prepending each line with a `-`, a `*` or a `+` character. If you would like to, you can mix these symbols!
-- Sorted lists need numbers in the format `1.` in front of them.
+- 番号無しリストを作るには各行頭に`-`か`*`か`+`を置きます。これらの文字を混ぜて使うことも可能です。
+- 番号付きリストを作るには各行頭に`1.`などを置きます。
 
-> **Note**: The numbers do _not_ have to be in order. On each export, the converter will automatically correctly number them ascending, so a list containing the list numbers 1, 6, 14, 2 will be rendered as a list using the numbers 1, 2, 3, 4!
+> **注意**: 番号が順番通りになっている必要はありません。エクスポートする度に、コンバーターが自動的に正しい番号を振ってくれます。なので、1, 6, 14, 2という番号を持ったリストでも、1, 2, 3, 4の番号を持ったリストとして出力されます。
 
-### Links and images
+### リンクと画像
 
-Links are inline-elements and images are block elements, so they follow the same semantics as the elements discussed above. Yet they deserve a little bit more attention, because they offer you more options.
+リンクはインライン要素で、画像はブロック要素です。つまり、これらも上で説明した要素と同じセマンティクスにしたがいます。しかし、これらには追加の設定項目があるため注目に値します。
 
-Links are set using the following syntax: `[This text will appear in your final document](http://this-is-your-actual-link.tld)` Zettlr will automatically convert this syntax to a clickable link (follow the link target by clicking on it while holding down the `ALT`- or `Ctrl`-key) for the ease of access (and to shorten those rather long links).
+リンクの書き方は次の通りです。`[このテキストが最終的な文書に表示される](http://this-is-your-actual-link.tld)` Zettlrはこの文法で書かれたテキストを自動的にクリック可能なリンクに変換し、アクセスしやすくします。(そして、長いリンクを短くします) リンク先に移動するには`Alt`または`Ctrl`を押しながらクリックします。
 
-Images work exactly like links, except they start with an exclamation mark (!). Images of course also need a path, because you won't store them in a plain text document. Therefore you can use three different approaches to linking images in your document:
+画像もエクスクラメーションマーク(!)を頭につけることを除くと、リンクによく似ています。画像もプレーンテキストの文書に含めるわけではないので、もちろんパスが必要となります。文書に画像をリンクする方法は3種類あります。
 
-1. Use an absolute web-URL, such as https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1000px-Markdown-mark.svg.pngMarkdown.
-2. Use an absolute path to a file on your own computer, such as `C:\Users\user-name\Pictures\my-image.jpg`.
-3. Use a relative path to a file on your own computer, such as `../img/my-image.png`.
+1. ウェブURLを使用する。例えば、https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1000px-Markdown-mark.svg.pngMarkdown。
+2. コンピュータ内の絶対パスを使用する。例えば、`C:\Users\user-name\Pictures\my-image.jpg`。
+3. コンピュータ内の相対パスを使用する。例えば、`../img/my-image.png`。
 
-> **Tip**: You can provide a default image path in the "Editor" tab in the preferences, which Zettlr will always use when you paste an image into the editor.
+> **ヒント**: 設定ダイアログの「エディタ」タブで、画像のデフォルトパスを設定することができます。このパスは、エディタに画像を貼り付けた際に使用されます。
 
-The relative path is always relative to the document in which you place it. The directory `..` tells Zettlr to look for the image in the parent directory (i.e. to traverse up one directory). If you store your documents in a cloud and access them on different devices, you would naturally use relative image paths, because the absolute paths will definitely differ (especially if you work with two different operating systems).
+相対パスは、画像を貼り付けた文書からの相対パスとなります。`..`は親ディレクトリ(一つ上の階層のディレクトリ)から探すようにZettlrに指定します。文書をクラウドに保存していて複数のデバイスからアクセスする場合には、絶対パスがそれぞれ異なるはずなので(とくにOSが異なる場合)、必然的に相対パスを使用することになるでしょう。
 
-> **Tip**: Try to insert images and links always using their shortcuts, `Cmd/Ctrl+K` for links and `Cmd/Ctrl+Shift+I` for images. If you have a valid path in your clipboard, it will even automatically insert it for you, making your life easy. The best way to insert a link, for instance, would therefore be to first copy the link to your clipboard, then select the text you want to link and third press `Cmd/Ctrl+K`. Then the selected text will become the displayed link text and the link from your clipboard will be used as the link target.
+> **ヒント**: リンクは`Cmd/Ctrl+K`、画像は`Cmd/Ctrl+Shift+I`のショートカットを使って挿入してみてください。クリップボードに有効なパスが入っている場合には、それが自動的に挿入されます。例えばリンクを作るなら、まずURLをクリップボードにコピーして、リンクにしたいテキストを選択して、それから`Cmd/Ctrl+K`を押すのがベストな方法です。すると、選択していたテキストがリンクに変わり、クリップボードに入っていたリンク先にリンクされます。
 
-### Footnotes
+### 脚注
 
-Footnotes are what most researchers in arts and humanities are of course interested in. So here some general rules for inserting footnotes and how Zettlr interacts with them. According to standard Markdown syntax, footnotes require two elements: First the reference somewhere in the text in the format `[^x]`. The `x` stands for a unique identifier. Basically, you can use anything you want, as long as this identifier is not used by a second footnote as well. But normally, you will want to stick with ascending numbers. (Also: These numbers don't have to be in order—as long as you export your Markdown document, Pandoc will automatically re-number the footnotes correctly. So if you decide to delete a footnote later on, don't worry that the numbers won't neatly match up in your document anymore.)
+脚注は、芸術や人文科学の多くの研究者が関心を持っているものです。ここでは、脚注を挿入する基本的なルールと、Zettlrでそれらを取り扱う方法について学びましょう。標準的なMarkdown文法では、脚注は2つの要素を必要とします。一つ目はテキスト中に現れる参照`[^x]`です。`x`は一意な識別子です。基本的には、重複しない限り好きなものを使うことができます。しかし普通は連番を付けようとするはずです。(番号は順番通りになっている必要はありません。Markdown文書をエクスポートすれば、Pandocが自動的に脚注の番号を振りなおしてくれます。なので、後から脚注を削除することになっても番号がきちんとあっているかを気にする必要がありません。)
 
-The second element footnotes require is a block element, the footnote _reference text_. It is always in the following format: `[^x]: Your reference text.` As you can see, the identifier is a replica of your reference that appears in the text, only now it is followed by a colon. It is common sense that you put your references in a list at the very end of your document. Yet, this jumping back and forth between the reference text and your footnote reference is cumbersome, and therefore Zettlr tries to ease your life. Move your mouse over a footnote reference to see the footnote text. Click it while holding down `Alt` or `Ctrl` to edit the footnote. Press `Shift+Return` to save your changes.
+脚注の二つ目の要素はブロック要素である、脚注の_参照テキスト_です。これは、`[^x]: 参照テキスト。`のようなフォーマットです。見ての通り、テキスト中の参照と同じ識別子を使い、その後にコロンを置きます。常識的には、文書の一番最後のリストに参照テキストを書きます。しかし、参照テキストと脚注参照を行ったり来たりするのは面倒なので、Zettlrはその対策を用意しています。マウスカーソルを脚注参照に合わせると参照テキストが表示されます。`Alt`または`Ctrl`を押しながらそれをクリックすると、脚注を編集することができます。`Shift+Enter`で変更を保存します。
 
-### Fenced code blocks
+### フェンスコードブロック
 
-Zettlr also supports so-called "fenced code blocks." These are the block-version of the inline code element. To start a code block, type three backticks "\`" in a row on an empty line. Close the code block again with three back ticks on an empty line. Everything in between those two "fences" will be rendered using monospace font to indicate that this is indeed code.
+Zettlrは「フェンスコードブロック」と呼ばれるものもサポートしています。これは、インラインコード要素のブロック要素版です。空の行に三つのバックティック"\`"を書くとブロックを開始します。もう一度、空の行に三つのバックティックを書くとブロックを終了します。この2つの「フェンス」に囲まれた部分は、コードであることを示すために等幅フォントで表示されます。
 
-Zettlr supports syntax highlighting for several script and programming languages. You have to tell Zettlr explicitly which language to use by simply adding its identifier _directly after the introducing code fence_. So to direct Zettlr to highlight a code fence using a JavaScript interpreter, you would need to begin the code block with three backticks, directly followed by the word "javascript" on an empty line.
+Zettlrはいくつかのスクリプトとプログラム言語について、シンタックスハイライトを提供します。言語の種類を指定するには、それぞれの識別子を_開始フェンスのすぐ後に_書きます。つまり、コードフェンスでJavaScriptのハイライトを行うように指定するには、三つのバックティックのすぐ後に「javascript」の文字を書いて、コードブロックを開始します。
 
-Currently, the following languages are supported by the engine (the names in braces are the identifiers you would need to use in Zettlr, as they do not contain special characters, which might upset an engine):
+今のところ、以下の言語をサポートしています。（括弧の中はZettlrで使用する識別子です。混乱を防ぐため特殊文字を含まないようにしています。）
 
 - C (c)
 - C# (csharp)
@@ -122,8 +122,8 @@ Currently, the following languages are supported by the engine (the names in bra
 - Shell/Bash
 - YAML (yaml)
 
-More languages can be implemented on your request. If you need a specific language, please [refer to the available ones](https://codemirror.net/mode/) and open up an issue on GitHub, so that we know which one we should add!
+要望に応じて追加の言語を実装します。必要なものがあれば、[利用可能な言語かどうか確認して](https://codemirror.net/mode/)GitHubにイシューをあげて、追加すべきものを知らせてください。
 
-## Resources on Markdown
+## Markdownについてのリソース
 
-Do you want to learn _all_ about Markdown? That is great! A good resource that covers all elements is to be found on [Learn X in Y minutes](https://learnxinyminutes.com/docs/markdown/). If you want to get used to writing clean and unambiguous Markdown, [view the specifications by CommonMark](https://spec.commonmark.org/0.28/). Also, there's a "book" on the GitHub flavoured Markdown syntax. [View it here](https://gitbookio.gitbooks.io/markdown/content/).
+Markdownの_すべて_を学びたいですか？それは素晴らしい！すべての要素について書かれた資料が、[Learn X in Y minutes](https://learnxinyminutes.com/docs/markdown/)にあります。クリーンであいまいさのないMarkdownを書きたいなら、[CommonMarkの仕様](https://spec.commonmark.org/0.28/)を参照してください。また、GitHub Flavoured Markdownについての「本」を、[ここで読むことができます](https://gitbookio.gitbooks.io/markdown/content/)。

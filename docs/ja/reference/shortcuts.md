@@ -1,97 +1,97 @@
-# Shortcuts
+# ショートカット
 
-This page contains a list of all shortcuts available throughout the app.
+このページには、アプリケーション中で使用可能なすべてのショートカットの一覧があります。
 
-For remembering them easier, here are some thoughts we've put into assigning the shortcuts. In general, we try to follow these rules, but not all shortcuts follow them.
+これらを覚えやすくするため、ショートカットの割り当てに関するいくつかの思想があります。おおよそ、これらのルールに従っていますが、一部例外もあります。
 
-1. **Common shortcuts**: Some shortcuts are so common that they don't fit into our shortcut system, but everybody will recognise them. One example is the preferences shortcut (`Cmd/Ctrl+,`), another the shortcut to finish editing a footnote (`Shift+Enter`). We try to use as many of these shortcuts as possible to reduce friction.
-2. **High-priority shortcuts**: You will be using these shortcuts _a lot_ while using the app. These are generally `Cmd/Ctrl` and one single letter. While naming the shortcuts we try to stick to the English names of the command that it triggers (**N**ew, **R**emove, **F**ind, etc). Sometimes this is not possible (for instance the Distraction Free mode is triggered via `Cmd/Ctrl+J`, because `Cmd/Ctrl+D` is already taken by the editor).
-3. **Alternative actions**: We take the semantic meaning of the `Alt`-key serious. Therefore, take a high-priority shortcut, add an `Alt` to it and you normally tend to trigger an alternative action on the same target. Notable exceptions to this are the developer panel (opens with `Cmd/Ctrl+Alt+I`, while `Cmd/Ctrl+I` makes text Italic). **This is true for _all_ actions that you can trigger using mouse clicks. All alternative mouse actions are triggered with an `Alt+Click`. In case `Alt-Click`s don't yield the expected results, `Ctrl+Click`s also work**.
-4. **Alternative targets**: In case you want to perform the same _action_, but on a different target, try using a `Shift`-key. Throughout most of the app, `Shift`-commands will change the target from the currently selected file to the currently selected directory. The search also utilises this (`Cmd/Ctrl+F` searches the file, while `Cmd/Ctrl+Shift+F` searches the whole directory).
+1. **一般的なショートカット**: 一般によく知られたショートカットで、私たちの定めたショートカットシステムに沿っていませんが誰でも分かるようなものがあります。例えば、設定を開く`Cmd/Ctrl+,`や、脚注の編集を確定する`Shift+Enter`です。軋轢を減らすため、このようなショートカットは可能な限り取り入れるようにしています。
+2. **優先度の高いショートカット**: アプリケーション使用中の使用回数が多いショートカットです。これらは、一般に`Cmd/Ctrl`と1文字のショートカットになっています。ショートカットは、できるだけ実行されるコマンドの英語名から採るようにしています。(**N**ew, **R**emove, **F**ind などです。)これが不可能な場合もあります。例えば、`Cmd/Ctrl+D`は他に使用されているため、集中モード(Distraction Free mode)は`Cmd/Ctrl+J`となっています。
+3. **代替アクション**: `Alt`(Alternative)キーの文脈的な意味を重視しています。つまり、「優先度の高いショートカット」に`Alt`を付け加えると、同一の対象に代替のアクションを行うようになります。特筆すべき例外は、`Cmd/Ctrl+I`がテキストを斜体にするのに対し、`Cmd/Ctrl+Alt+I`が開発者ツールの表示に割り当てられていることです。**これは、マウスクリックによるすべての操作にも当てはまります。マウス操作の代替アクションは`Alt+クリック`で実行されます。`Alt+クリック`が効かない場合は、`Ctrl+クリック`も同様に動作します。**
+4. **代替ターゲット**: `Shift`キーを使用すると、同一のアクションを異なる対象に実行することができます。アプリケーション全般にわたって、`Shift`同時押しはコマンドの対象を「現在のファイル」から「現在のディレクトリ」へ変更します。検索でもこれを利用しています。`Cmd/Ctrl+F`がファイルの検索であるのに対し、`Cmd/Ctrl+Shift+F`はディレクトリ全体に対する検索になります。
 
-## App-wide shortcuts
+## アプリケーション共通のショートカット
 
-* `Cmd/Ctrl+,`: Open Preferences
-* `Cmd/Ctrl+Alt+,`: Open PDF export Preferences
-* `Cmd/Ctrl+Q`: Exit the app
-* `Cmd/Ctrl+N`: Create a new file inside the currently selected directory. If none is selected, the command is disabled.
-* `Cmd/Ctrl+Shift+N`: Create a new directory inside the currently selected directory. If none is selected, the command is disabled.
-* `Cmd/Ctrl+O`: Display the dialog to open another directory.
-* `Cmd/Ctrl+S`: Save the file. Zettlr automatically saves your files, but some people tend to feel better having the option to manually save.
-* `Cmd/Ctrl+E`: Open the export popup for exporting the current file. If none is selected, the command is disabled.
-* `Cmd/Ctrl+R`: Rename the opened file. If none is selected, the command is disabled.
-* `Cmd/Ctrl+Shift+R`: Rename the current directory. If none is selected, the command is disabled.
-* `Cmd/Ctrl+Delete`: Delete the current file. If none is selected, the command is disabled.
-* `Cmd/Ctrl+Shift+Delete`: Delete the current directory. If none is selected, the command is disabled.
-* `Cmd/Ctrl+Shift+F`: Gives focus to the global search field.
-* `Cmd/Ctrl+Alt+L`: Switches the theme between light and dark mode.
-* `Cmd/Ctrl+Alt+S`: Toggles display of the text snippets.
-* `Cmd/Ctrl+Shift+1`: Toggles the sidebar mode to either view the file list or the tree view. Disabled in extended sidebar mode.
-* `Cmd/Ctrl+?`: Toggles display of the attachment sidebar.
-* `Cmd/Ctrl+[0-9]`: Open recent document at position 0 to 9 in the recent documents list (File->Recent Documents).
-* `Cmd+Ctrl+F` (macOS) `F11` (windows/Linux): Toggle fullscreen
-* `Cmd/Ctrl+W`: Close the application window. On Windows and Linux this will also exit the app.
-* `Cmd/Ctrl+M`: Minimize the application window.
-* `F1`: Open this documentation. This will open the link in your default browser.
+* `Cmd/Ctrl+,`: 設定を開きます。
+* `Cmd/Ctrl+Alt+,`: PDF設定を開きます。
+* `Cmd/Ctrl+Q`: アプリケーションを終了します。
+* `Cmd/Ctrl+N`: 現在選択中のディレクトリ内に新規ファイルを作成します。ディレクトリが選択されていない場合、このコマンドは無効です。
+* `Cmd/Ctrl+Shift+N`: 現在選択中のディレクトリ内に新規ディレクトリを作成します。ディレクトリが選択されていない場合、このコマンドは無効です。
+* `Cmd/Ctrl+O`: 他のディレクトリを開くためのダイアログを表示します。
+* `Cmd/Ctrl+S`: ファイルを保存します。Zettlrはファイルを自動的に保存しますが、手動で保存できた方がいいという人もいるでしょう。
+* `Cmd/Ctrl+E`: 選択中のファイルをエクスポートするためのポップアップを開きます。ファイルが選択されていない場合、このコマンドは無効です。
+* `Cmd/Ctrl+R`: 選択中のファイルをリネームします。ファイルが選択されていない場合、このコマンドは無効です。
+* `Cmd/Ctrl+Shift+R`: 選択中のディレクトリをリネームします。ディレクトリが選択されていない場合、このコマンドは無効です。
+* `Cmd/Ctrl+Delete`: 選択中のファイルを削除します。ファイルが選択されていない場合、このコマンドは無効です。
+* `Cmd/Ctrl+Shift+Delete`: 選択中のディレクトリを削除します。ディレクトリが選択されていない場合、このコマンドは無効です。
+* `Cmd/Ctrl+Shift+F`: グローバル検索欄にフォーカスします。
+* `Cmd/Ctrl+Alt+L`: ライトモードとダークモードを切り替えます。
+* `Cmd/Ctrl+Alt+S`: ファイルメタデータの表示/非表示を切り替えます。
+* `Cmd/Ctrl+Shift+1`: サイドバーの表示をファイルリストとツリービューの間で切り替えます。サイドバーモードがextendedの場合は無効です。
+* `Cmd/Ctrl+?`: 添付ファイルサイドバーの表示/非表示を切り替えます。
+* `Cmd/Ctrl+[0-9]`: 最近使ったドキュメントを開きます。対応する番号の一覧は「ファイル -> 最近使ったドキュメント」にあります。
+* `Cmd+Ctrl+F` (macOS) `F11` (windows/Linux): フルスクリーンを切り替えます。
+* `Cmd/Ctrl+W`: アプリケーションのウィンドウを閉じます。WindowsとLinuxではアプリケーションを終了します。
+* `Cmd/Ctrl+M`: アプリケーションのウィンドウを最小化します。
+* `F1`: 子のドキュメンテーションを表示します。デフォルトブラウザーでリンクが開かれます。
 
-**If the debug mode is enabled**
+**デバッグモードが有効化されている場合**
 
-* `F5`: Reload the graphical user interface.
-* `Cmd+Alt+I` (macOs) `Ctrl+Shift+I` (Windows/Linux): Open the Chrome developer tools.
+* `F5`: GUIをリロードします。
+* `Cmd+Alt+I` (macOs) `Ctrl+Shift+I` (Windows/Linux): Chromeデベロッパーツールを開きます。
 
-## Textfield-related app-wide shortcuts
+## テキストフィールド関連のショートカット
 
-* `Cmd/Ctrl+Z`: Undo
-* `Cmd/Ctrl+Shift+Z`: Redo
-* `Cmd/Ctrl+X`: Cut
-* `Cmd/Ctrl+C`: Copy
-* `Cmd/Ctrl+V`: Paste
-* `Cmd/Ctrl+A`: Select all text
+* `Cmd/Ctrl+Z`: 元に戻す
+* `Cmd/Ctrl+Shift+Z`: やり直し
+* `Cmd/Ctrl+X`: 切り取り
+* `Cmd/Ctrl+C`: コピー
+* `Cmd/Ctrl+V`: 貼り付け
+* `Cmd/Ctrl+A`: すべて選択
 
-## Editor-related shortcuts
+## エディター関連のショートカット
 
-* `Cmd/Ctrl+Alt+C`: Copy as HTML. If there is a selection, it will be converted to HTML and not copied as plain text. This allows you to paste it, e.g., into word processors.
-* `Cmd/Ctrl+Shift+C`: (Un-)Comment the given text selection (or add a new HTML comment at cursor position).
-* `Cmd/Ctrl+X`: Cut. If the editor has focus, it will cut the selection. If nothing is selected, this will cut **the whole line**, in which the cursor is.
-* `Cmd/Ctrl+V`: Paste. If the editor has focus, and you have just cut a whole line, it will paste this whole line above the line, in which the cursor currently is. Formatting will be preserved if the clipboard contains formatted text.
-* `Cmd/Ctrl+Shift+V`: The same as the above, except it will not try to preserve the formatting of the pasted text.
-* `Cmd/Ctrl+B`: Make the selection bold or insert new bold formatting characters.
-* `Cmd/Ctrl+I`: Make the selection italic or insert new italics formatting characters.
-* `Cmd/Ctrl+K`: Insert a new link template or convert the selected text into the caption of a new link. If the clipboard contains a recognisable link, also fill in the braces for the target.
-* `Cmd/Ctrl+F`: Opens the search popup inside the editor that has currently focus (either the main editor or a Quicklook window).
-* `Ctrl+Alt+F` (Windows/Linux) `Cmd+Alt+R` (macOS): Insert a new footnote at the current cursor position.
-* `Cmd/Ctrl+L`: Generate a new ID using the generator pattern from the settings dialog and insert it at the current cursor position.
-* `Cmd/Ctrl+0`: Re-set the font-size of the editor to standard.
-* `Cmd+Plus` (macOS) `Ctrl+Shift+Plus` (Windows/Linux): Increase the editor font size.
-* `Cmd/Ctrl+Minus`: Decrease the editor font size.
-* `Tab`: Indent a list.
-* `Shift-Tab`: Outdent a list.
-* `Shift-Enter`: When editing a footnote, saves the reference text. Otherwise it will prevent auto-insertion of a new list item.
-* `Ctrl-Enter`: Insert a line below the one your cursor is currently in, and place the cursor at the beginning of it.
-* `Ctrl-Shift-Enter`: Insert a line above the one where your cursor is currently, and place the cursor at the beginning of it.
+* `Cmd/Ctrl+Alt+C`: HTMLとしてコピーします。選択範囲がある場合に、それをHTMLに変換してコピーします。コピーしたものはワードプロセッサーなどに貼り付けることができます。
+* `Cmd/Ctrl+Shift+C`: 選択したテキストをコメントに変換します。もう一度実行するとコメントを解除します。もしくは、カーソルの位置に新たなHTMLコメントを挿入します。
+* `Cmd/Ctrl+X`: 選択範囲を切り取ります。何も選択していない場合は、カーソルのある**行全体**を切り取ります。
+* `Cmd/Ctrl+V`: 貼り付けを行います。行全体を切り取った状態で貼り付けを行うと、現在行のすぐ上に貼り付けられます。クリップボードに書式付テキストが入っている場合は、その書式を保持したまま貼り付けます。
+* `Cmd/Ctrl+Shift+V`: 上記と同じですが、貼り付けるテキストの書式は保持されません。
+* `Cmd/Ctrl+B`: 選択中テキストを太字にするか、新たに太字に設定された文字列を挿入します。
+* `Cmd/Ctrl+I`: 選択中テキストを斜体にするか、新たに斜体に設定された文字列を挿入します。
+* `Cmd/Ctrl+K`: 新規のリンクテンプレートを挿入するか、選択中のテキストをキャプションとした新たなリンクを作成します。クリップボードにリンクと認識できるものが入っている場合は、それがリンク先として自動的に設定されます。
+* `Cmd/Ctrl+F`: 現在フォーカスの当たっているエディタ(メインエディタ、またはQuicklookウィンドウ)に、検索ポップアップを表示します
+* `Ctrl+Alt+F` (Windows/Linux) `Cmd+Alt+R` (macOS): 現在のカーソル位置に新規の脚注を挿入します。
+* `Cmd/Ctrl+L`: 設定した生成パターンを使用して新たなIDを生成し、現在のカーソル位置に挿入します。
+* `Cmd/Ctrl+0`: エディタのフォントサイズを標準にリセットします。
+* `Cmd+Plus` (macOS) `Ctrl+Shift+Plus` (Windows/Linux): エディタのフォントサイズを大きくします。
+* `Cmd/Ctrl+Minus`: エディタのフォントサイズを小さくします。
+* `Tab`: リストのインデントを深くします。
+* `Shift-Tab`: リストのインデントを浅くします。
+* `Shift-Enter`: 脚注を編集中の場合、参照テキストを確定します。もしくは、リストで新しい項目が自動で挿入されるのを防止します。
+* `Ctrl-Enter`: 現在行の下に行を追加し、カーソルを追加した行に移動します。
+* `Ctrl-Shift-Enter`: 現在行の上に行を追加し、カーソルを追加した行に移動します。
 
-## Table editor shortcuts
+## テーブルエディタのショートカット
 
-These shortcuts work in each table editor once you enter the edit mode by clicking into the table.
+これらのショートカットは、テーブルをクリックしてテーブルエディタの編集モードに入った時に有効です。
 
-* `Tab`: Move to the next cell. If the last column is active, move to the first cell in the next row. If your cursor was in the last column of the last row, a new row will be added automatically.
-* `Shift-Tab`: Move to the previous cell. If your cursor was in the first column, move to the last cell in the previous column.
-* `Return`: Move to the same column in the next row. If your cursor was in the last row, a new row will be added automatically.
-* `Arrow Up/Arrow Down`: Move to the same column in the previous/next row. No new rows will be added if you are in the first or last row.
-* `Arrow Left/Arrow Right`: Move the cursor left/right. If the cursor is at the beginning/end of the cell's contents, move to the previous/next cell.
+* `Tab`: 次のセルに移動します。最後の列がアクティブな場合は、次の行の最初のセルに移動します。最終行の最終列の場合は、自動的に新しい行が追加されます。
+* `Shift-Tab`: 前のセルに移動します。最初の列がアクティブな場合は、前の行の最後のセルに移動します。
+* `Return`: 同じ列の次の行のセルに移動します。最終行の場合は、自動的に新しい行が追加されます。
+* `Arrow Up/Arrow Down`: 同じ列の上下の行のセルに移動します。最初の行や最後の行の場合でも、新しい行は追加されません。
+* `Arrow Left/Arrow Right`: 左右のセルに移動します。左右の端のセルからは前後の行の次のセルへ移動します。
 
-## Preview-related shortcuts
+## プレビュー関連のショートカット
 
-* `Arrow Up`: Open the previous file.
-* `Arrow Down`: Open the next file.
-* `Cmd/Ctrl+Arrow Up`: Jump to the top of the list.
-* `Cmd/Ctrl+Arrow Down`: Jump to the bottom of the list.
+* `Arrow Up`: 前のファイルを開きます。
+* `Arrow Down`: 次のファイルを開きます。
+* `Cmd/Ctrl+Arrow Up`: 一覧の先頭へ移動します。
+* `Cmd/Ctrl+Arrow Down`: 一覧の末尾へ移動します。
 
-## Popup-related shortcuts
+## ポップアップ関連のショートカット
 
-* `ESC`: If any text field inside the popup has focus, pressing Escape will close the popup.
+* `ESC`: ポップアップ内のいずれかのテキストフィールドにフォーカスしている場合、そのポップアップを閉じます。
 
-**In the search popup of the main editor**
+**メインエディタの検索ポップアップの場合**
 
-* `Return`: While the _search_ textfield is focused, it will select the next occurrence of your search term. While the _replace_ textfield is focused, it will replace the next occurrence of your search term with the replacement text and automatically search for the next occurrence.
-* `Alt+Return`: While the _replace_ textfield is focused, this will replace all occurrences of your search term with the replacement text.
+* `Return`: 検索テキストフィールドがフォーカスされている場合、選択範囲を次の検索語句に移動します。置換テキストフィールドがフォーカスされている場合、次に一致する検索語句を置換し、さらに次の検索語句に移動します。
+* `Alt+Return`: 置換テキストフィールドがフォーカスされている場合、すべての一致を置換します。

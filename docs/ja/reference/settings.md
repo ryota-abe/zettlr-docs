@@ -1,217 +1,218 @@
-# Settings
+# 設定
 
-Zettlr offers you a plethora of options to customise your experience with the app. It comes with three different settings-dialogs that will be explained in detail here, so you know which option does what.
+Zettlrは、アプリケーションをカスタマイズするための多くの設定項目を持っています。設定は3つの設定ダイアログに分かれていて、ここではそれぞれについて、どの項目が何の設定であるかを説明します。
 
-## General Preferences
+## 一般設定
 
-You can display the general preference dialog using either the shortcut `Cmd/Ctrl+,`, the toolbar button (the cog) or the respective menu item. The dialog will then show up and present to you all configuration options you may customise. They are ordered in nine tabs that you can see at the top of the dialog.
+一般設定ダイアログは`Cmd/Ctrl+,`のショートカットか、ツールバーのボタン(歯車)、メニュー内の対応する項目から開くことができます。ダイアログが表示され、カスタマイズ可能な設定項目が表示されます。設定項目は上部に表示された9つのタブに分かれています。
 
-* General: These options affect Zettlr as a whole.
-* Editor: These settings concern only the editor itself.
-* Export: Control how your files are exported in this tab.
-* Zettelkasten: Adapt Zettlr to match your Zettelkasten system.
-* Display: Control how the editor displays certain elements, such as images or links.
-* Theme: Select the theme for the app here.
-* Spellchecking: Find both the installed dictionaries and your user dictionary here.
-* AutoCorrect: Choose text to be replaced and also determine the quotes you’d like to use.
-* Advanced: Options for experienced users.
+* 一般: Zettle全体に影響する設定です。
+* エディタ: エディタ自体にのみ関係する設定です。
+* エクスポート: ファイルをエクスポートする方法についての設定です。
+* Zettelkasten: ZettleをZettelkastenシステムに適用するための設定です。
+* 表示: 画像やリンクなどの要素をどのようにエディタに表示するかの設定です。
+* テーマ: アプリケーションのテーマを選択します。
+* スペルチェック: インストール済みの辞書およびユーザ辞書を選択します。
+* オートコレクト: 自動的に置換する文字列と、使用するクォーテーションの種類を選択します。
+* 高度な設定: 上級者向けの設定です。
 
-### General
+### 一般
 
 ![settings_general.png](../img/settings_general.png)
 
 
-In the general tab you find options that you might want to adjust if you begin using Zettlr to fit it to your needs. The application language is pretty self-explanatory.
+一般タブには、Zettlrを使い始めるときにニーズに合わせて設定する可能性のある項目が並んでいます。アプリケーションの言語は、見た通りの意味です。
 
-The “Night Mode” and “File information”-checkboxes control the display. The “Night Mode” is simply the dark theme Zettlr is capable of (and which you might want to control using the shortcut `Cmd/Ctrl+Alt+L` instead). Check the “File information”-checkbox to display meta information in the file list (although you can control this behaviour as well using its respective shortcut `Cmd/Ctrl+Alt+S`).
+「ナイトモード」と「ファイル情報を表示」のチェックボックスは表示に関する設定です。「ナイトモード」は、ただ単にZettlrにダークテーマを適用します。これは`Cmd/Ctrl+Alt+L`のショートカットでも切り替え可能です。「ファイル情報を表示」のチェックボックスは、ファイルリストにファイルのメタ情報を表示します。これは、`Cmd/Ctrl+Alt+S`のショートカットで切り替え可能です。
 
-If you check “Hide directories during global search,” Zettlr will not display directories while performing a search. by selecting “Always load remote changes to the current file”, Zettlr will not ask you whether you’d like to replace the file in the editor.
+「グローバル検索時にディレクトリを非表示」をオンにすると、検索実行中にディレクトリが非表示になります。「現在のファイルに対する外部での変更を常に読み込む」をオンにすると、Zettlrは確認メッセージを表示することなくエディタの内容を置き換えます。
 
-The sidebar mode controls how the sidebar is displayed to you. You have two options:
+サイドバーモードは、サイドバーの表示内容を設定します。3つの選択肢があります。
 
-* Thin: In thin mode, the sidebar only displays _either_ the list of files _or_ the tree view. You can switch between both using the shortcut `Cmd/Ctrl+Shift+1`.
-* Expanded: The expanded mode displays both the tree view and the file list side by side. In this mode, you have both lists always present.
-* Combined: This makes the Sidebar look more like a traditional file browser, because it does not divide folders and files.
+* Thin: サイドバーは、ファイルリストとツリービューのどちらかを表示します。`Cmd/Ctrl+Shift+1`のショートカットで、それぞれを切り替えることができます。
+* Expanded: ツリービューとファイルを横に並べて表示します。このモードでは、2つのリストを常に見ることができます。
+* Combined: このモードでは、サイドバーの見た目が昔ながらのファイルブラウザーのようになります。フォルダとファイルを分けずに表示します。
 
-If you want to hide the sidebar completely, please use the distraction-free mode (`Cmd/Ctrl+J`).
+サイドバーを完全に隠したい場合、集中モード(`Cmd/Ctrl+J`)を使ってください。
 
-The sorting order determines how Zettlr will sort your files internally. The natural order is recommended; ASCII ignores certain natural language implications.
+ファイルの並び順は、Zettlrが内部でファイルを並び替える方法を指定します。ASCII順だと自然言語的な意味を無視してしまうため、数値順をおすすめします。
 
-Last but not least Zettlr can automatically switch to light or dark mode depending on your operating system:
+Zettlrは、システムに応じて自動的にライトモードとダークモードを切り替えることができます。
 
-* **Off**: switch between the modes manually
-* **Schedule**: Zettlr will enter and leave dark mode between the given time span (24 hours format)
-* **Follow Operating System**: On macOS and Windows, Zettlr can listen to operating system events notifying the applications currently running that the overall mode has changed.
+* **オフ**: モードの切り替えは手動で行います。
+* **スケジュール**: 設定した時間の間のみダークモードに切り替えます。
+* **OSの設定に従う**: macOSとWindowsにおいて、モード切替を通知するシステムイベントを受信することができます。
 
-### Editor
+### エディタ
 
 ![settings_editor.png](../img/settings_editor.png)
 
-The editor tab controls most functionality of the editor. As Markdown allows both asterisks and underscores to make text bold and italic, you can choose your favourite flavour here. The **default image path** is a path you can use to tell Zettlr where it should put your images when you paste them from clipboard. It can be absolute or relative. If you provide the name `assets`, Zettlr would put images by default into the `assets` subdirectory of the directory where your file is. You can even tell it to use a directory relative to the parent directory, e.g. `../assets`. Remember that you can always select the directory for an image on a case-by-case basis.
+エディタタブはエディタの機能をコントロールします。Markdownではアスタリスクとアンダースコアのどちらを使っても、テキストを太字や斜体にすることができますが、どちらを使用するかをここで選択できます。「既定の画像パス」は、クリップボードから画像を貼り付けた際に保存するデフォルトのパスを設定します。絶対パスでも相対パスでも設定可能です。`assets`と設定したなら、ファイルの置かれたディレクトリ内の`assets`というサブディレクトリに画像が保存されます。例えば、`../assets`のように、親ディレクトリからの相対パスを設定することもできます。画像を保存するディレクトリは、そのたびに指定することも可能であることに注意してください。
 
-The indentation refers to the amount of spaces inserted when you, e.g., increase the level of lists.
+インデントに使用する空白の数は、例えばリストのレベルを増やす場合などに使用されます。
 
-The algorithm for the readability mode that Zettlr should use when you toggle the readability mode. For a short explanation of the different algorithms available, please head over to [our documentation on the readability mode](https://www.zettlr.com/readability).
+可読性モードで使用するアルゴリズムは、Zettlrの可読性モードをオンにした場合に使用されます。それぞれのアルゴリズムの違いに関する説明は、[可読性モードに関する資料](https://www.zettlr.com/readability)をご覧ください。
 
-Further, you can **mute non-focused lines** while you are in the distraction free mode. This means that Zettlr dims all lines except the one where your cursor is. The next option allows you to **automatically close certain character pairs**.
+「集中モード時にフォーカスされていない行の表示を薄くする」をオンにすると、現在カーソルの置かれた行以外が暗くなります。「対応する括弧を自動的に入力する」は、そのままの意味です。
 
-The third option only applies to users using a keyboard that features the `Home` and `End` keys. If you press them, the default CodeMirror behaviour is to move the cursor to the beginning or end respectively of a whole paragraph (i.e.: the beginning and end of a _logical_ line). If you want CodeMirror to only move to the beginning and end of the _visible_ line, make sure to turn off this option. If you make use of the hard-wrap feature of Markdown, and always manually wrap a paragraph, this setting won't have any effect for you.
+次の設定は、キーボードに`Home`と`End`のキーがある場合にのみ適用されます。これらを押したときに、CodeMirrorのデフォルト動作では段落の最初と最後(つまり、論理的な行頭/行末)に移動します。この設定をオフにすると、表示上の行頭/行末に移動するようになります。Markdownのhard-wrap機能を使って常に手動で段落を折り返している場合、この設定は何の意味もありません。
 
-### Export
+### エクスポート
 
 ![settings_export.png](../img/settings_export.png)
 
 
-The export tab allows you to tweak all preferences concerning how your files are exported. To the left you have options concerning the Zettelkasten functionality.
+エクスポートタブでは、ファイルをエクスポートする方法について設定します。左側にはZettelkastenについての設定があります。
 
-Selecting "Remove ZKN IDs from files" makes Zettlr remove all IDs that it finds in your files prior to export. "Remove tags from files" does the same but with tags.
+「ファイルからZKN IDを取り除く」を選択すると、Zettlrはエクスポート前にすべてのIDを見つけてファイルから取り除きます。「ファイルからタグを取り除く」は同様にタグを取り除きます。
 
-> We recommend leaving the option to remove Zettelkasten IDs from your files off unless you know what you are doing. Some websites produce links that contain 14 consecutive digits, and Zettlr will only stroll through the files removing everything your ID regular expression will detect, so it may break links!
+> 意図的にIDを消したいのでなければ、ファイルからZKN IDを取り除く設定をオフのままにしておくことを推奨します。14桁の連続した数字を含むリンクを生成するウェブサイトが存在しますが、ZettlrはIDの正規表現に一致するものをファイルからすべて検索して削除します。つまり、リンクが壊れてしまう可能性があるのです。
 
-Below these options you can choose what to do with internal links (by default they are encapsulated in `[[` and `]]`). The first option completely removes them, the second only removes the link formatting, while the last option leaves them alone.
+次に、内部リンク(デフォルトでは`[[`と`]]`に囲まれています)の扱いに関する設定です。1つ目の選択肢は、すべて取り除いてしまいます。2つ目はリンクの書式を解除します。3つ目はそのまま残します。
 
-On the right side you have more general options for exporting. You can choose to export your files to the temporary directory. This is recommended, as it allows you to leave the files alone, because they will be deleted automatically. The second option stores the rendered files in the current directory, overwriting existing files without asking. Use this option if you need the files be present in the attachment sidebar.
+右側にはエクスポートについての一般的な設定項目があります。ファイルのエクスポート先として「一時ディレクトリ」を選択できます。ファイルを出力しっぱなしにしても自動的に削除されるため、こちらの設定を推奨します。2つ目の選択肢は、現在のディレクトリに保存します。既にファイルが存在する場合には、確認することなく上書きします。出力結果を添付ファイルサイドバーに表示したい場合は、こちらを選択してください。
 
-The CSL JSON database field can be used to open a literature database. Zettlr will read in the file and enable citation rendering in your files. The CSL Style lets you overwrite the default citation style (APA). You can use any file present in the [Zotero style repository](https://www.zotero.org/styles).
+参考文献データベースの欄では、使用するデータベースを開くことができます。ファイルが読み込まれ、ファイル中に引用を表示することができるようになります。CSLスタイルを選択すると、デフォルトのスタイル(APA)を上書きすることができます。[Zoteroスタイルリポジトリ](https://www.zotero.org/styles)にある任意のファイルを使用することができます。
 
-> The citation options can be overwritten on a per-project basis in the corresponding project's settings.
+> 参考文献の設定はプロジェクトごとの設定で上書きすることができます。
 
 ### Zettelkasten
 
 ![settings_zettelkasten.png](../img/settings_zettelkasten.png)
 
 
-In this tab you can customise the way Zettlr works with your existing Zettelkasten system. In most cases you won't need to touch these options, except you want to use a custom system.
+このタブではZettelkastenシステムを取り扱う方法について設定することができます。カスタムシステムを使用したい場合を除き、ほとんどの場合これらの設定をいじる必要はありません。
 
-You have four options that are important for Zettelkästen: The ID regular expression, the link start and ending, and the generator pattern.
+Zettelkastenにとって重要な4つの設定項目があります。IDの正規表現、リンクの開始と終了、生成用のパターンです。
 
-#### The ID RegEx
+#### IDの正規表現
 
-Zettlr uses regular expressions internally to filter out the ID of a file. It looks for that pattern, and if it finds a string that matches this pattern, it assumes that as the ID of the file. **Please note that the first match in a file will be assumed the ID, never the last!** This means: If you choose to use only four digits as your ID, the regular expression would also match years inside your file. As Zettlr simply takes the first ID, make sure that the very first thing in your file is the ID of that file.
+Zettlrはファイル中のIDを探すために正規表現を内部で利用しています。このパターンを検索してマッチする文字列が見つかった場合、それがファイルのIDであるとみなします。**ファイルの中で最初に見つかったものをIDとみなします。**もし、IDとして4桁の数字を使うように設定したなら、正規表現はファイル中の年の表記にも一致してしまいます。Zettlrでは最初に見つかったIDを採用するので、ファイルの一番最初にそのファイルのIDを記述するようにしてください。
 
-The default regular expression (which you can restore by pressing the reset button next to the text field) is `(\d{14})`. This means Zettlr will look for 14 consecutive digits — exactly the number of digits that you get when you concatenate a year, a month, a day, an hour, a minute and a second; like this: 20181012143724. It is extremely unlikely that a file contains a second string that includes fourteen (!) digits, therefore it's a great method to use as an ID. Another great thing is that the ID is unique to the second. So each second you can create a new, fully unique ID.
+デフォルトの正規表現は`(\d{14})`です。(入力欄の右側のリセットボタンを押すと、デフォルトに戻すことができます。)つまり、Zettlrはちょうど年月日時分秒を合わせた桁数である14桁の数字(例えば、20181012143724)を探します。ファイル中に他にも14桁の数字が含まれていることは非常にまれなので、これはIDとしては優れた方法と言えます。さらに素晴らしいことに、IDは毎秒ごとに異なるため、毎秒新しいファイルを作っても一意なIDが割り振られます。
 
-The braces around the `\d{14}` create a so-called "capturing group". A capturing group's purpose is that the regular expression not only matches a certain string, but also extracts a part of it — in this case the full match. This way you can use almost any structure of IDs you want.
+`\d{14}`の前後にある括弧は「キャプチャグループ」と呼ばれるものです。キャプチャグループは、正規表現を特定の文字列にマッチさせるだけでなく、その中から一部分のみを取り出すためのものです。ここでは、マッチした全体を取り出します。このようにして、ほとんどどのような構造のIDでも使用することができます。
 
-> Note that you can omit the capturing group's braces. Zettlr will encapsulate your RegEx internally, if there is no capturing group.
+> キャプチャグループのIDを省略することも可能であることに注意してください。キャプチャグループがない場合は、Zettlrが内部的に入力された正規表現を括弧で囲みます。
 
-#### The Internal Links
+#### 内部リンク
 
-The internal links are explained pretty quick: Simply choose how you'd like to write internal links. The default are Wiki-Style-Links: [[your-link]]. You could also use curly brackets: {{your-link}}. Or you could use exclamation marks: !your-link!. Whatever suits you!
+内部リンクの設定は、内部リンクをどのように記述するかを選択します。デフォルトはWikiスタイルのリンク`[[your-link]]`です。代わりに波括弧`{{your-link}}`や、エクスクラメーションマーク`!your-link!`を使うこともできます。お好きなように設定してください。
 
-The internal links are used for two things: First, if they either contain an existing file name or an existing ID, clicking them will directly open the respective file (identified either by its name without the extension, or by its ID). Second, if they don't contain any of that, they won't open any file, but they will work as a search function, so `ALT`-clicking them will start a search — this is great for saving searches you do often!
+内部リンクは2つの使い方があります。一つは、既存のファイル名かIDを使用して、それらをクリックすることで対応するファイルを直接開くことができます。(それぞれのファイルは、拡張子を除くファイル名かIDにより識別されます。)二つ目は、ファイル名やIDを含まない場合で、それらは検索機能の働きをします。つまり、内部リンクを`ALT`を押しながらクリックすることで、検索を開始することができます。これで、何度も行うような検索を保存しておくことができます。
 
-> Note that files will not assume any link as an ID. If a file finds an ID that is surrounded by the internal link formatting, it will not use this ID.
+> リンクはファイルのIDとはみなされないことに注意してください。もし、内部リンクの開始終了の間にIDが見つかったとしても、それはファイルのIDとしては使用されません。
 
-#### The ID Generator
 
-The last field in the Zettelkasten tab in the preferences window concerns the way the IDs are generated. It is a simple string that may contain variables that are replaced when an ID is generated. Currently, you have the current year, month, day, hour, minute, and second available. The default ID generator pattern is: `%Y%M%D%h%m%s`, which means it will replace `%Y` with the current year (4 digits), `%M` with the current month (with leading zeroes), and so forth. You could also include some static part in your IDs, if you wish. So with the ID pattern set to `%Y-%M-%D_%h:%m:%s` Zettlr would generate an ID like this: `2018-10-12_12:03:56`. You can also reuse the variables in your pattern, e.g. to use only seconds as your ID. You could use something like this: `%s%s%s` and would get `565656`.
+#### ID生成
 
-Always remember to adapt your regular expression so that it matches what the ID generator spits out. To successfully identify the ID with the pattern, `%Y-%M-%D_%h:%m:%s`, Zettlr would need the following regular expression: `(\d{4}-\d{2}-\d{2}_\d{2}:\d{2}:\d{2})`.
+設定ダイアログのZettelkastenタブの最後の項目は、IDを生成する方法を設定します。それは、変数を含む文字列で、変数はIDの生成時に置換されます。今のところ、年、月、日、時、分、秒の変数が利用可能です。デフォルトのID生成パターンは`%Y%M%D%h%m%s`です。`%Y`は現在の年(4桁)に、`%M`は現在の月(先頭ゼロ埋め)に、以下同様に置換されます。IDに固定の文字列を含めることもできます。例えば、`%Y-%M-%D_%h:%m:%s`というパターンを設定すると、`2018-10-12_12:03:56`のようなIDが生成されます。同じ変数を複数回使用することもできます。例えば、秒だけを使用して`%s%s%s`とすると、`565656`のようなIDが生成されます。
 
-You can test both the generation of IDs and the detection of them by clicking the Test-button below the text fields. Zettlr will then generate an ID and immediately tries to match it using your custom regular expression. Whether or not Zettlr was able to detect the ID will be indicated.
+生成されたIDが、必ず「IDの正規表現」にマッチするように設定してください。`%Y-%M-%D_%h:%m:%s`というパターンで生成されたパターンを認識するには、`(\d{4}-\d{2}-\d{2}_\d{2}:\d{2}:\d{2})`という正規表現を設定する必要があります。
 
-### Display
+入力欄の下のボタンを使って、IDの生成と認識をテストすることができます。ボタンを押すとIDが生成され、設定した正規表現にマッチするかどうかが確認されます。ZettlrがIDを認識できたかどうかが表示されます。
+
+### 表示
 
 ![settings_display.png](../img/settings_display.png)
 
 
-This tab controls how the editor displays certain elements. Zettlr uses a semi-preview approach to Markdown and only renders some elements. On this tab you can control which elements will be rendered.
+このタブでは、特定の要素のエディタ内での表示方法を制御します。ZettlrはMarkdownに対してセミプレビュー方式を採っているため、一部の要素のみを描画します。このタブでは、どの要素を表示するかを選択します。
 
-> The iFrame-setting controls whether or not to render iFrames (for instance, YouTube-videos are embedded iFrames).
+> iframeの設定は、例えばYouTubeの動画などをiframeとして埋め込んだものを表示するかどうかを設定します。
 
-Additionally you can constrain the size of images, which is especially beneficial if you use a lot of portrait oriented images. The horizontal slider controls the maximum amount of width images are allowed to occupy. Setting this to 50 %, for instance, will keep images at half the width of the text body. 100 % disables this (images will never be wider than 100 % of the text body width).
+さらに、画像のサイズ性芸も設定できます。これは特に、縦長の画像を多く使用する場合に有効です。横方向のスライダーは画像の占有する最大幅の設定です。例えば50%に設定すると、画像の幅はテキスト領域の半分に制限されます。100%にすると制限がなくなります。(画像の最大幅はテキスト領域の幅となります。)
 
-The vertical slider controls the maximum height of the images relative to the window size. 50 percent would mean that images will never be higher than half of the window's total size. 100 percent disables this behaviour. Unlike the width, images may very well exceed 100 percent of the viewport if they are large and thin.
+縦方向のスライダーはウィンドウサイズに対する画像の最大高さを設定します。50%にすると画像は、ウィンドウの高さの半分までに制限されます。100%にすると制限がなくなります。幅の場合とは異なり、非常に縦に細長い画像は画面のビューポートを大きく超えることがあります。
 
-Last but not least you can determine which date you would like to see in the file metadata in the file list. This does not affect the sorting, if you’d like to sort by date. To change the time after which Zettlr should sort your files, please refer to the general tab.
+最後になりましたが、ファイルリストのメタデータとして表示する日付の選択があります。これは、ファイルを日付順に並べる際の並び順には影響を及ぼしません。ファイル並べ替えに使用する日付は、一般タブを参照してください。
 
-### Theme
+### テーマ
 
 ![settings_theme.png](../img/settings_theme.png)
 
-This tab should explain itself: Click on any of the previews to switch your application to that theme.
+このタブは説明不要だと思います。プレビューのいずれかをクリックすると、そのテーマがアプリケーションに適用されます。
 
-### Spellchecking
+### スペルチェック
 
 ![settings_spellchecking.png](../img/settings_spellchecking.png)
 
-With the introduction of the user dictionary, the spellchecking functionality has moved to its dedicated tab. The list to the left contains all available dictionaries that can be used for spell checking. Simply select the ones you want to use. You can use multiple dictionaries to check bilingual texts. Filter the list using the search box on top of the list.
+ユーザ辞書の導入に合わせて、スペルチェック機能は専用のタブに移動しました。左側は利用できるスペルチェック用辞書の一覧です。使いたいものを選択してください。複数選択すれば複数言語のチェックを行うことができます。一覧の上にある検索ボックスでリストを絞り込むことができます。
 
-> **Tip**: To disable spell checking, uncheck all dictionaries. To install additional dictionaries, refer to the [localisation manual](../core/localisation.md).
+> **ヒント**: スペルチェック機能を無効化するには、すべての辞書をオフにしてください。辞書の追加方法は[ローカライゼーションの説明](../core/localisation.md)を参照してください。
 
-Finally, the list on the right hand side of the tab displays all the words you've added to your custom dictionary. Click them to remove them from your user dictionary.
+最後に、タブの右側のリストにはカスタム辞書に追加した単語の一覧が表示されます。単語をクリックすると辞書から削除することができます。
 
-### AutoCorrect
+### オートコレクト
 
 ![settings_autocorrect.png](../img/settings_autocorrect.png)
 
-This tab controls the AutoCorrect features you can use from version 1.5 onward that you might already know from LibreOffice or Word. You can choose to turn it off completely and choose the flavour you’d like. The main difference between the two styles is that Word is much quicker in replacing; it will replace when you type the last character, whereas LibreOffice only replaces when you hit Space or Return. LibreOffice is less harassing, but if you’re perfectly used to Word, you might find this mode easier.
+このタブでは、バージョン1.5以降で使えるようになったオートコレクト機能の設定を行います。LibreOfficeやWordで知っている機能かもしれません。有効化のチェックを外すと、機能を完全に無効化することができます。また、スタイルを選択することができます。2つのスタイルの主な違いは、Wordの方が置換のタイミングが早いということです。Wordスタイルでは最後の文字を入力した瞬間に置換されますが、LibreOfficeスタイルではスペースまたはEnterを押してから置換が行われます。LibreOfficeスタイルの方がお節介と感じることは少ないですが、Wordに慣れている人にとってはWordスタイルの方が簡単かもしれません。
 
-The “Magic Quotes” refer to exactly that: the primary and secondary quotes that you would like to use instead of the generic ASCII-quotes (`"` and `'`). We’ve included a lot of pairs used all around the world. If you would like to deactivate this feature, choose the **first** option (the ASCII-quotes) in both dropdowns.
+「マジッククォート」とは、普通のASCIIのクォート(`"`と`'`)の代わりに使用する、一次クォートと二次クォートの設定です。世界中で使われている多くの種類の記号を用意してあります。この機能を無効化したい場合は、いずれのドロップダウンも1番目の設定(ASCIIのクォート)を選択してください。
 
-The last thing you can tweak is the replacement table to the right: These are simply characters you would like to replace with different ones. We’ve included a comprehensive list with most commonly needed tokens, so feel free to have a look around and also add or remove some!
+右側のテーブルは置換の表です。これは、単純に置換したい文字列と置換後の文字列を設定します。よく使われるトークンの包括的なリストを用意していますので、一覧を眺めて、自由に追加削除を行ってください。
 
-### Advanced
+### 高度な設定
 
 ![settings_advanced.png](../img/settings_advanced.png)
 
-The advanced tab contains options that are helpful for advanced users.
+高度な設定タブには上級者向けの設定項目があります。
 
-The “pattern for new filenames” is what the textfield will look like when you create a new file. It will be prepopulated by whatever you type here. You can make use of the variables below (the ID following the pattern you have selected in the Zettelkasten-tab, year, month, day, hour, minute and second). If you tick the checkbox, Zettlr will not even ask you for a filename when you create a new file, which might speed up your workflow.
+「新規ファイル名のパターン」は、新規のファイルを作成時にテキスト欄に表示される値です。ここに入力した値が自動入力されます。下に書かれた変数を使用することもできます(IDはZettelkastenタブの設定に従います。それから、年月日時分秒が使用可能です。)「新規ファイル作成時にファイル名を確認しない」設定も可能です。これによりワークフローを高速化できるかもしれません。
 
-The **pandoc- and xelatex-text fields** are used in case Zettlr is unable to locate any of these two programs. As you know, Zettlr uses both to export your files. In rare cases it may be that Zettlr is unable to find them, although you installed them properly. If that happens, simply enter the **full, absolute path** to both programs in the textfields to help Zettlr find them.
+pandocとxelatexの入力欄は、Zettlrがこれらのプログラムの場所を特定できない場合に使用します。ご存じのようにZettlrはファイルをエクスポートするためにこれらを使用します。まれに、正しくインストールしているにもかかわらず、Zettlrがプログラムを発見できない場合があります。その場合、2つのプログラムの**絶対パス**を入力すれば、Zettlrがプログラムを見つけられるようになります。
 
-The **debug option** is used to control whether or not you are able to "reload" the graphical user interface (GUI) by pressing `F5` and display the Chrome developer tools to inspect what the app is doing. Naturally, you would want to do this as a developer.
+**デバッグ モード**をオンにすると、F5でGUIをリロードできるようになり、アプリケーションの動作を調べるためにChrome developper toolsを表示できるようになります。当然ながら、開発者としてはこれが必要となります。
 
-You can also help Zettlr by **subscribing to beta releases**. When you tick this option, Zettlr will notify you about new beta releases as well. You can then decide whether to use the beta version, or not. Activate **RMarkdown file support** to enable the detection of `.rmd`-files used for R-Markdown. It is inactive by default, as some other programs (for instance, by Adobe) also use this extension to store binary data, which would cause problems.
+また、**ベータ版のリリースを通知する**ことで、Zettlrを支援することもできます。この設定をオンにすると、Zettlrはベータ版のリリースも通知するようになります。その後、ベータ版を使用するかどうかを決めることができます。**RMarkdownファイルを有効化**すると、`.rmd`ファイルをR-Markdownとして認識するようになります。他のプログラム(例えばAdobeなど)がバイナリデータを保存するために、これと同じ拡張子を使用しており、問題を避けるためにデフォルトではこの機能はオフになっています。
 
-The text area to the right controls what files will be displayed in the **attachment** sidebar. It is simply a comma-separated list of all file extensions you would like to have at your disposal. The initial list should contain most extensions you might be using.
+右側のテキストエリアは**添付ファイル**サイドバーに表示するファイルの種類を設定します。使いたいファイル拡張子をカンマ区切りで設定します。よく使われるであろう拡張子の一覧が初期状態で設定されています。
 
-The **Pandoc command** gives you full control over the export engine. The command in there will be run on export. You have a few variables at your disposal to customise your export:
+**pandocコマンド**を設定すると、エクスポートエンジンに対するあらゆる制御を行うことができます。ここで設定したコマンドがエクスポート時に実行されます。エクスポートをカスタマイズするためにいくつかの変数を使用することができます。
 
-- `$infile$`: The full, absolute path to the file that is going to be exported.
-- `$outfile$`: The full, absolute path to the resulting file (including the correct extension).
-- `$citeproc$`: Contains directives for the `pandoc-citeproc` engine.
-- `$format$`: Contains the format (e.g. `html` or `docx`).
-- `$outflag$`: The formatting flag for pandoc (e.g. `-t docx`).
-- `$standalone$`: Will be `-s` in case the file needs to be exported standalone.
-- `$toc$`: Whether or not a table of contents will be generated.
-- `$tocdepth$`: A flag indicating the level up to which a table of contents should be generated.
-- `$tpl$`: A template directive for pandoc.
+- `$infile$`: エクスポートしようとするファイルの絶対パス。
+- `$outfile$`: エクスポートされるファイルの絶対パス(正しい拡張子を含む)
+- `$citeproc$`: `pandoc-citeproc`エンジンのディレクティブ。
+- `$format$`: 形式(例えば`html`や`docx`).
+- `$outflag$`: pandocの出力形式フラグ(例えば`-t docx`).
+- `$standalone$`: ファイルがスタンドアローンモードで出力される場合に`-s`が設定されます。
+- `$toc$`: 目次を生成するかどうか。
+- `$tocdepth$`: 目次に含める項目レベルを表すフラグ。
+- `$tpl$`: pandocのテンプレートディレクティブ。
 
-> **Attention**: Many of these variables are tailored to the needs of pandoc. Of course, you can completely switch the program by replacing `pandoc` with the name of your desired exporting engine, but please beware that it will need to know how to parse pandoc flags.
+> **注意**: 多くの変数がpandocに合わせたものになっています。もちろん、`pandoc`を他のエクスポートエンジンの名前に置き換えることで、まったく他のプログラムに乗り換えることも可能ですが、そのプログラムはpandocのフラグの扱い方を知っている必要があるということに注意してください。
 
-## PDF Preferences
+## PDF設定
 
 ![The Font tab of the PDF Settings dialog](../img/pdf_settings_font.png)
 
-We've moved the PDF Preferences to another dialog because there are many you can use. These options control how the LaTeX-engine will render your files on PDF-exporting. They do not have any effect on all other export formats. You can bring up the dialog using either its shortcut `Cmd/Ctrl+Alt+,` or using the respective menu entry. The PDF options are also divided by tabs. Currently, there are three:
+PDF設定は多くの項目があるため、別のダイアログに移動しました。これらの項目は、LaTeXエンジンがファイルをPDFにエクスポートする際の描画方法に関する設定です。他の形式のエクスポートには何の影響も及ぼしません。`Cmd/Ctrl+Alt+,`のショートカットか、メニュー内の項目からダイアログを開くことができます。PDF設定も複数のタブに分かれています。次の3つのタブがあります。
 
-* Metadata: This controls the metadata field of PDF files.
-* Page: Adjust the layout of pages using this tab.
-* Font: All options regarding the font used in your exports are collected in this tab.
+* メタデータ: PDFファイルのメタデータフィールドを制御します。
+* ページ: ページレイアウトを調整します。
+* フォント: エクスポートで使用するフォントに関する設定項目です。
 
-### Metadata
+### メタデータ
 
-This data can be shown in your PDF readers using a dedicated menu item. Normally they are hidden from view, but in some circumstances they are used. The only thing that should be of concern really is the author field, which is prefilled by the information "Generated by Zettlr". You can change this to your own name (or the name of your company). Keywords and the "topic" field are rarely used.
+このデータはPDFリーダーのメニュー項目から表示することができます。普通は見えないように隠されていますが、いくつかの状況では使用されます。たった一つ、本当に気を付ける必要があるのは作成者の欄だけです。"Generated by Zettlr"という情報が事前に入力されています。これは、自分の名前(または会社の名前)に変更することができます。キーワードの項目はめったに使われることはありません。
 
-### Page
+### ページ
 
-In this tab you can control the layout of the page. These options work just as you would expect them from the similar dialogs that are used in LibreOffice or Microsoft Office. You can change the size of the paper, adjust the margins around the content and tell Zettlr whether or not you want to use page numbers (and which numbering system you want to use).
+このタブではページレイアウトを設定します。各項目は、LibreOfficeやMicrosoft Officeの同様のダイアログの項目と同じような働きをします。用紙サイズ、コンテンツ周りの余白、ページ番号を振るかどうか(そして使用する番号体系)を設定します。
 
-### Font
+### フォント
 
-Here you can control how the font is displayed. The main font is the font used for all text. The LaTeX-engine will fetch this directly, so the name you type here must match exactly a font installed on your computer. **If the LaTeX-engine is unable to locate the font, it will spit out an error. To know whether you've encountered such an error or another error that does not relate to the font, simply search for the font name you typed here in the error message. If your font name appears, there is a high chance that the font is called differently. Then please open your operating system's font preferences and check the name.**
+ここではフォントの見た目を設定することができます。メインフォントはすべてのテキストに使用されるフォントです。LaTeXエンジンが、この設定を直接使用するため、コンピューターにインストールされているフォント名に完全に一致する名前を入力する必要があります。**LeTeXエンジンがフォントを見つけられなかった場合はエラーを吐きます。エラー発生時にエラーメッセージを検索してみて、ここで設定した名前が見つかったなら、非常に高い確率でフォント名の設定が間違っています。OSのフォント設定を開いて名前を確認してください。**
 
-The font-size should be rather obvious. The line height specifies the spacing between lines (this only applies to paragraphs). For instance a line height of 150 percent would create a space of half a line between the lines (i.e. each line is followed by a space 50 percent of a normal line height before the next line begins).
+フォントサイズはそのままの意味です。行の高さは行間のスペースの設定です。(これは段落に対してのみ適用されます。)例えば、行の高さを150パーセントと指定すると、行間に行の高さの半分のスペースが空きます。(つまり、各行の下に普通の行の高さの50%の空白があり、その下に次の行が来ます。)
 
-## Manage Tags
+## タグの管理
 
 ![The Tags settings dialog](../img/tags_settings.png)
 
-The tags dialog does not have a shortcut associated, so you'll need to call it using the respective menu item. Here you can assign colours and descriptions to tags.
+タグの管理ダイアログにはショートカットが設定されていないので、メニューの対応する項目から開く必要があります。ここでは、タグの色と説明文を設定できます。
 
-To add a new tag-colour-relationship, simply press the `+`-button at the bottom of the dialog. In the first field, enter your tag without the preceding hashtag symbol (e.g. if you wanted to assign a colour to the hashtag `#todo`, simply enter `todo`). Next, choose a colour to be assigned to that tag. If you click the second bar after the tag name field, a color picker should appear that lets you choose a colour. In the third field, you can enter a short description for that tag. This description will be shown if you hover over the tag symbols in the file list.
+タグの色設定を新規に作成するには、ダイアログ下部の`+`ボタンを押します。最初の欄にはタグ名からハッシュタグ記号を除いたものを入力します。(例えば`#todo`に色を設定する場合、単に`todo`と入力します。)次に、タグに割り当てる色を選択します。タグ名欄の隣のボタンをクリックすると、カラーピッカーが表示されて色を選択することができます。3つ目の欄にはタグに対する短い説明を入力することができます。この説明はファイルリストのタグマークにマウスカーソルを合わせたときに表示されます。
 
-If you want to remove a tag-colour-association, simply click the `-`-button at the end of such a tagline (pun intended).
+タグの色設定を削除するには、各行の最後にある`-`ボタンをクリックします。

@@ -1,38 +1,38 @@
-# Dictionaries & Spell Checking
+# 辞書とスペルチェック
 
-As with all modern writing app, Zettlr features a powerful spell checking engine at its heart. It is deactivated by default, as many users still would like to separate spell checking from the actual writing process, but you can activate it with ease. Additionally, Zettlr allows you to check against multiple languages at once, making it the ideal tool for writing bilingual texts (for instance, an English journal paper with some German quotations).
+他のモダンなライティングアプリケーションと同様にZettlrは、強力なスペルチェックエンジンを内蔵しています。実際に書いていくプロセスとスペルチェックとを分けておきたいと考える人も多いため、この機能はデフォルトで無効化されています。しかし、有効化するのは簡単です。さらに、Zettlrでは複数の言語を同時にチェックすることも可能です。これはバイリンガルな文章を書いている場合に便利です。(例えば、英語のジャーナル論文にドイツ語の引用を含んでいる場合など。)
 
-## Activate spell checking
+## スペルチェックを有効化する
 
-To activate spell checking, open the preferences using either the menu item, the toolbar button or pressing `Cmd/Ctrl+,`. In the Editor tab, you can then select all dictionaries you would like to activate. To the left there is a list displaying all available dictionaries. Click one to move it to the right, where green ribbons indicate all active dictionaries. Click one of these green ribbons to deactivate the dictionary again.
+スペルチェックを有効化するには、メニュー項目かツールバーのボタンを押すか、`Cmd+Ctrl+,`のショートカットで設定ダイアログを開きます。そして、エディタタブに移動し、有効にしたい辞書をすべて選択します。左側は選択可能な辞書の一覧です。クリックしたものは右側に移動し、有効化された辞書は緑色の帯で示されます。緑色の帯をクリックすると辞書を無効化することができます。
 
-You can filter the list of available dictionaries by typing a search key into the upper text field. Zettlr will automatically hide all dictionaries whose name does not contain your search string. Remove any letters from the search field to display all dictionaries again.
+上部のテキスト欄に検索語句を入力することで、選択可能な辞書の一覧を絞り込むこともできます。入力した検索語句をその名前に含まない辞書は、自動的に非表示になります。検索欄の文字をすべて削除すると、再びすべての辞書が表示されます。
 
-After saving the settings with your new spell checking configuration, Zettlr will automatically begin to load all dictionaries. You may experience some lag while Zettlr boots up the dictionaries; especially with huge dictionaries such as the Italian or German languages this may take some time. After you quit the app, Zettlr will load the dictionaries on each start after a short delay.
+スペルチェックの設定を保存すると、すべての辞書の読み込みが自動的に開始されます。辞書の準備が完了するまでに少し時間が掛かる可能性があります。特に、イタリア語やドイツ語などのような巨大な辞書の場合は少し時間が掛かります。アプリケーションを終了して次回以降のZettlrの起動には、辞書の読み込みのために少し時間が掛かります。
 
-## Deactivate spell checking
+## スペルチェックを無効化する
 
-To deactivate spell checking again, simply remove all active dictionaries by clicking all green ribbons on the right side of the Editor tab in the preferences window. If there are none activated, Zettlr won't attempt to perform spell checking on your texts.
+スペルチェックを再び無効化するには、設定ダイアログのエディタタブの右側にある緑の帯をクリックし、すべての辞書を無効化します。一つも有効化されていなければ、文書に対するスペルチェックは行われなくなります。
 
-## Custom Dictionary
+## カスタム辞書
 
-From version `1.3.0` onward, Zettlr supports adding certain words to your user defined dictionary. Especially for names this is useful, as you can then mark them as correct to remove the small red line underneath those names. To add a word to the user dictionary, simply right-click a marked word or name, and select "Add to Dictionary". Zettlr will then never mark this word as wrong again.
+バージョン`1.3.0`以降では、ユーザ定義辞書に単語を追加する機能がサポートされました。特に人名などについて、それらを正しいものとしてマークし、名前の下に表示される赤い下線を取り除くことができるので便利です。単語をユーザ辞書に追加するには、マークされている単語を右クリックし「辞書に追加」を選択します。それ以降は、その単語がスペルミスとマークされることはなくなります。
 
-## Add new Dictionaries
+## 新しい辞書を追加する
 
-While Zettlr ships with several dictionaries on install, you may want to add new dictionaries for languages that you write in. To add such dictionaries, you'll need to search for hunspell-compatible dictionaries. Basically, these consist of folders containing two files -- a `.dic`-file and an `.aff`-file. The `.dic`-file contains all words in a language with so-called affixes, e.g. small flags that tell the algorithm that a certain word, for instance, may also feature a different ending (take for instance the word ending -- while the stem is "end", there may be both the words "ends",  and "ending" available in the language -- the affix flag would then indicate "this word can also have the `-ing`-ending!"). The `.aff`-file contains the definitions of these flags.
+Zettlrにはいくつかの辞書が内蔵されていますが、自分が使用する言語の辞書を追加したい場合があるかもしれません。辞書を追加するには、hunspell形式の辞書を用意する必要があります。一般的には、フォルダ内に2つのファイル(`.dic`形式と`.aff`形式)が含まれた形をしています。`.dic`ファイルには、すべての単語と接辞(例えば"end"という語幹に対して"ends"や"ending"などのように、異なる活用語尾を取り得る単語が存在することを、アルゴリズムに伝えるためのフラグ)を含みます。接辞フラグは「この単語は活用語尾が`-ing`になることがある」ということを表すものです。そして、`.aff`ファイルには、接辞フラグの定義が書かれています。
 
-So to add these dictionaries, go online to search for some. A good starting point is [this repository by the GitHub user wooorm](https://github.com/wooorm/dictionaries), which features a lot of languages. Simply download one of the folders to your computer. Then, in Zettlr, click File -> "Import Dictionary …". This will open up your computer's file browser with the `dict`-folder in Zettlr open. Copy the whole dictionary folder that you just downloaded into the `dict`-folder. Then you can select this dictionary from the settings.
+これらの辞書を追加するには、オンラインで検索を行ってください。まずは、多くの言語を揃えている[GitHubユーザーwooormのリポジトリ](https://github.com/wooorm/dictionaries)を見てみると良いでしょう。いずれかのフォルダーをダウンロードします。それから、Zettlrで ファイル -> 「辞書をインポート...」の順にクリックすると、Zettlrの`dict`フォルダーが、コンピュータのファイルブラウザで表示されます。ダウンロードした辞書フォルダを丸ごと`dict`フォルダ内にコピーしてください。これで、設定画面で辞書が選択できるようになります。
 
-Bear in mind that Zettlr will perform some basic tests to determine whether or not a dictionary is valid. To have Zettlr display the dictionary and being able to select it, the dictionary must follow the following rules:
+Zettlrは辞書が有効なものであるかどうかを確認する簡単なテストを行います。辞書が設定画面に表示されて選択可能になるためには以下のルールに従っている必要があります。
 
-1. The folder containing the  `.dic`- and `.aff`-files must be named using the corresponding [BCP-47 tag](https://tools.ietf.org/html/bcp47) of the language the dictionary contains. Although you may not be aware of the term "BCP-47", it's simply the common language tag, so for instance a German dictionary would be named `de-DE` (for German German) or `de-CH` (for Swiss German), or simply `it` (for Italian). A complete [list of all available languages can be found here](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
-2. Inside this folder, at least two files must be present: a `.dic`-file and a `.aff`-file. These must be named either using the BCP-47 tag of the folder, or `index.dic`/`index.aff`.
-3. The dictionary folder may contain other files (such as a list of authors, or a LICENSE). These will be ignored.
+1. `.dic`ファイルと`.aff`ファイルを格納したフォルダの名前は、その辞書に含まれる言語に対応する[BCP-47タグ](https://tools.ietf.org/html/bcp47)になっている必要があります。「BCP-47」というのは聞き覚えがないかもしれませんが、単なる一般的な言語タグのことです。例えば、ドイツ語の辞書なら`de-DE`(ドイツのドイツ語)や`de-CH`(スイスのドイツ語)、または単にイタリア語の辞書として`it`などです。[利用可能なすべての言語の一覧はこちらです](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)。
+2. フォルダ内には少なくとも`.dic`ファイルと`.aff`ファイルの2つが必要です。ファイル名はフォルダと同じBCP-47タグ名を付けるか、もしくは`index.dic`/`index.aff`とします。
+3. 辞書フォルダには、他にも作成者リストやライセンスなどのファイルを含むことができますが、これらは無視されます。
 
-To sum up, Zettlr will make sure a dictionary is valid by checking that the following paths exist:
+まとめると、Zettlrでは辞書が有効かどうかを調べるために、次のようなパスの存在をチェックします。
 
-- `bcp-47/bcp-47.dic` and `bcp-47/bcp-47.aff` _or_
-- `bcp-47/index.dic` and `bcp-47/index.aff`
+- `bcp-47/bcp-47.dic` と `bcp-47/bcp-47.aff` _もしくは_
+- `bcp-47/index.dic` と `bcp-47/index.aff`
 
-> Attention: The hunspell algorithms implemented in JavaScript are still not as powerful as the main algorithm used by LibreOffice, so it may very well be that some dictionaries simply prove to be too large to be loaded. If Zettlr hangs after loading a dictionary, simply force-quit the app and make sure the dictionary is deselected.
+> 注意: JavaScriptで実装されたhunspellのアルゴリズムは、現時点ではLibreOfficeで使われているメインのアルゴリズムほど強力ではないので、大きすぎる辞書は読み込めない可能性があります。辞書の読み込み後、Zettlrが固まってしまった場合は、アプリケーションを強制終了してから辞書の選択を解除してください。

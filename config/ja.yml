@@ -27,7 +27,7 @@ nav:
     - 仮想ディレクトリ: core/virtual-directories.md
     - カスタムCSS: core/custom-css.md
     - ローカライゼーション: core/localisation.md
-    - 添付サイドバー: core/attachments.md
+    - 添付ファイルサイドバー: core/attachments.md
   - 学術ツール:
     - 参考文献: academic/citations.md
     - プロジェクト: academic/projects.md

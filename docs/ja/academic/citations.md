@@ -1,88 +1,88 @@
-# Citing with Zettlr
+# Zettlrにおける引用
 
-Starting with version `1.0.0`, it's possible to cite sources directly using Zettlr. This feature makes writing academic papers a lot easier than in the past, because you don't need to circumvent the Zettlr export function to actually cite academic papers anymore!
+バージョン`1.0.0`以降では、Zettlrで引用ソースを直接使用することができるようになりました。この機能により学術論文を実際に引用するためにZettlrのエクスポート機能を迂回する必要がなくなり、学術論文を書くのが以前よりも簡単になりました。
 
-Citing in Zettlr is done using `citeproc-js`, a library that works exactly like, for instance, pandoc's citeproc-engine, or Zotero. So what you will be seeing in Zettlr matches what Zotero's Word or LibreOffice plugins generate. Zettlr's citation engine is composed of three components: A CSL JSON or BibTex library which contains all items that can be cited, optionally a CSL Stylesheet which can alter Zettlr's default citation style (which is the [American Psychological Association's 6th edition](https://www.apastyle.org/manual/index), short: APA), and a preview engine. This guide will help you enable citations and produce beautifully looking files (not just PDF!) that contain correct and consistent citations.
+Zettlrの引用機能は`citeproc-js`を使用しています。これは、pandocのciteproc-engineやZoteroと同じように機能するライブラリです。つまり、ZoteroのワードプラグインやLibreOfficeプラグインが生成するのと同等のものがZettlrに表示されます。Zettlrの引用エンジンは3つの部品からなっています。一つは、引用されるすべての項目を含んだCSL JSONもしくはBibTexライブラリ、そしてZettlrのデフォルト引用スタイル([American Psychological Association's 6th edition](https://www.apastyle.org/manual/index))を置き換えるCSLスタイルシート、最後に、プレビューエンジンです。以下のガイドでは引用を使えるようにし、正しく一貫性のある引用を含んだ、美しい見た目のファイル(PDFに限りません)を生成できるように解説します。
 
-> Beginning from `1.3.0`, you can also use BibTex libraries to cite.
+> バージョン`1.3.0`以降では、BibTexライブラリも引用に使用できるようになりました。
 
-## Enabling Citations in Zettlr
+## Zettlrの引用機能を有効化する
 
-There are two different engines that belong to the realm of citing: the previews (citations can be previewed just as images or links) and the actual process of generating citations (which happens only on export). Both of these functions are triggered by selecting a citation library that contains references. Without such a library, Zettlr will still "preview" citations (so that you can see what will trigger pandoc's citeproc), but Zettlr won't replace the citation's contents with a generated citation. Also, if you do not specify such a library, Zettlr will _not_ run Pandoc with its citeproc-engine, and therefore will not parse the citations.
+引用には2つのエンジンがあり、それぞれ異なる引用の体系に属しています。プレビュー(引用は画像として、もしくはリンクとしてプレビュー可能です)と、実際の引用を生成するプロセス(これはエクスポート時のみ実行されます)です。いずれの機能も、参照先を含んだ引用ライブラリを選択することで実行されます。このようなライブラリがなくても、Zettlrでは引用のプレビューは行えます(何がpandocのciteprocのトリガーとなるかを確認することができます)。しかし、引用の中身が実際に生成されて引用で置換されることはありません。また、ライブラリを指定しないと、Pandocのciteprocエンジンが実行されず、引用の解析が行われなくなります。
 
-So the first step is to create such a file. Zotero is the recommended application for managing your library, so this tutorial will assume you use Zotero. If you use another program, please check out how to export from your software to the CSL JSON format.
+そこで、まず最初のステップとしてファイルを作成します。ライブラリを管理するアプリケーションはZoteroを推奨します。以下のチュートリアルではZoteroを使うものとして説明します。その他のプログラムを使用する場合は、そのアプリケーションでCSL JSON形式でエクスポートする方法を確認してください。
 
-> If you use Mendeley, Citavi, or any other references management software that does not export to CSL JSON, you can simply use BibTex-files. They will work the same way as CSL JSON files.
+> Mendeley、Citavi、その他のCSL JSON形式でシュツ良くする機能を持たない管理ソフトウェアを使用する場合は、BibTexファイルを使用することができます。BibTexファイルはCSL JSONファイルと同じように使えます。
 
-### Step 1: Install BetterBibTex
+### ステップ1: BetterBibTexをインストールする
 
-The first step is to install [the BetterBibTex-plugin for Zotero](https://github.com/retorquere/zotero-better-bibtex/releases/latest). This plugin's main benefit is that it keeps your citation IDs unique throughout your entire library. Each citation item has its own unique ID. This is necessary so that when you, for instance, realise that the publication date has been saved wrong, you can easily change it in Zotero and afterwards citeproc will use the corrected information. If you do not use BetterBibTex, it may always happen that an ID is issued multiple times, which would either generate errors (the good way, because you know there's something wrong) or simply use the first item that matches this ID (the bad way, because this way you'd have to be lucky to spot the wrong citation after export).
+最初のステップは[ZoteroのBetterBibTexプラグイン](https://github.com/retorquere/zotero-better-bibtex/releases/latest)のインストールです。このプラグインの主な利点は、ライブラリ全体で引用IDを一意にしてくれることです。各引用項目には、それぞれ一意のIDが振られます。これは、例えば発行日が間違って保存されていたことに気づいた時に、Zoteroで修正するだけで、その後citeprocが正しい情報を使用できるようにするために必要です。BetterBibTexを使わない場合、同じIDが複数回発行される可能性があります。この場合、エラーを発生させるか(これは何か悪いことが起きていると分かるので良い方法です)、もしくは最初にIDに一致したものを採用します(これはエクスポート後に間違った引用を発見できるかどうか運任せになってしまうので悪い方法です)。
 
-After you've installed BetterBibTex, you may want to play around a little bit with the settings (for instance in how the IDs are generated).
+BetterBibTexをインストールしたら、IDの生成方法などの設定項目を触ってみても良いでしょう。
 
-> **Tip**: BetterBibTex automatically generates unique keys using an algorithm that you can customise. For most part, it makes use of the established [JabRef Patterns](http://help.jabref.org/en/BibtexKeyPatterns) but extends them significantly. It will even make sure that each entry is unique by optionally adding a suffix to puplications which yield the same keys (e.g. you'll have something like `Harvey2005a`, `Harvey2005b`, `Harvey2005c`, and so forth). You can find [all abilities of BetterBibTex in the plugin's extensive documentation](https://retorque.re/zotero-better-bibtex/citation-keys/).
+> **ヒント**: BetterBibTexが一意なIDを自動生成するアルゴリズムはカスタマイズすることができます。ほとんどの場合、良く知られた[JabRefパターン](http://help.jabref.org/en/BibtexKeyPatterns)が使われますが、このパターンが大きく拡張されています。同じキーを生成する各エントリーが一意となるように接尾辞を追加します(例えば、`Harvey2005a`, `Harvey2005b`, `Harvey2005c`のようなIDが得られます。)[BetterBibTexの全機能についてはプラグインのドキュメンテーション](https://retorque.re/zotero-better-bibtex/citation-keys/)に書かれています。
 
-### Step 2: Export your library
+### ステップ2: ライブラリをエクスポートする
 
-The next step is to actually export your library. Zotero's task is to manage your references, but to cite them is another task, which is done by citeproc. And citeproc needs a separate file for that.
+次のステップでは実際にライブラリをエクスポートします。Zoteroの役割は引用先の管理を行うことであり、引用を作成するのはciteprocの役割です。そして、citeprocを使うには別のファイルが必要となります。
 
-To export such a library that both Zettlr and pandoc's citeproc can use, first select the collection you want to export in the left sidebar. To always have all your items at your disposal and to prevent having to export multiple different libraries, you can select your entire library. (_As a measure: We've run tests with a library containing about 700 items, and we have not experienced any performance issues._)
+Zettlrとpandocのciteprocで使えるライブラリファイルをエクスポートするには、まず左側のサイドバーでエクスポートしたいコレクションを選択します。ライブラリ全体を選択することもでき、そうすれば、すべての項目が自由に使えて複数のライブラリを作る必要もありません。(参考までに：700項目を含むライブラリで確認しましたが、パフォーマンス上の問題はありませんでした。)
 
 ![Export your Library as Better CSL JSON](../img/export-to-csl-json.png)
 
-Next, click on `File` and select `Export library …`. As the format, select `Better CSL JSON` (if you opted against installing BetterBibTex you may choose `CSL JSON`). If you check the checkbox labeled "Keep updated", BetterBibTex will make sure that every change in Zotero will automatically be exported to the file, keeping it in sync with Zotero (and, therefore, transmit your changes automatically to Zettlr, which in turn will always cite correctly).
+次に、`File`をクリックし`Export library...`を選択します。フォーマットとして`Better CSL JSON`を選択します。(BetterBibTexをインストールしない場合は、ここで`CSL JSON`を選択してもかまいません。)"Keep updated"というチェックボックスをオンにすると、BetterBibTexはZoteroで変更があるたびに自動的にファイルのエクスポートを行い、Zoteroと同期を行います。(そうすれば、変更点が自動的にZettlrに連携され、常に正しい引用を行うことができるようになります。)
 
-If you ticked the checkbox, you can check the status of the library file by opening the Zotero Preferences, selecting the `BetterBibTex`-tab, and selecting `Automatic Export`, which allows you to further finetune what is exported, and when.
+そのチェックボックスをオンにした場合、Zoteroの設定画面の`BetterBibTex`タブで`Automatic Export`を選択すると、ライブラリファイルの状態を確認することができます。また、エクスポートの内容とタイミングの細かい設定を行うこともできます。
 
-### Step 3: Open your library in Zettlr
+### ステップ3: ライブラリをZettlrで開く
 
-Now it is time to import your library to Zettlr. To do so, simply open Zettlr's preferences, go to the `Export`-tab and click the small folder-icon right to the `Citation Database`-input field. A dialog will appear that lets you navigate to your database file. Select it, save the preferences and Zettlr will automatically load the database. Now you are ready to cite!
+ここで、Zettlrにライブラリをインポートします。そのためには、Zettlrの設定ダイアログで`エクスポート`タブを選択し、`参考文献データベース`入力欄の右側にある小さなフォルダアイコンをクリックします。データベースファイルを選択するためのダイアログが表示されます。ファイルを選択し、設定を保存すると、自動的にデータベースが読み込まれます。これで、引用を行う準備ができました。
 
 ![Point Zettlr to your database file](../img/settings_export.png)
 
-## Citing in Zettlr
+## Zettlrにおける引用
 
-Citing in Zettlr is very easy. Zettlr supports pandoc's citeproc-syntax for writing citations, so you'll have two options on how to write citations. First, you can simply throw a single identifier somewhere in your text to simply render a citation for this key. It should look like this: `@Harvey2005a`. All citation keys begin with an `@` followed by the citation key.
+Zettlrで引用を使用する方法は簡単です。Zettlrではpandocのciteproc-syntaxをサポートして、引用を書く方法は2種類あります。一つ目は文章中に識別子を一つ置き、このキーに対応した引用を出力する方法です。この場合、`@Harvey2005a`のような形式になります。引用キーの前には必ず`@`が付きます。
 
-> Zettlr has an autocomplete-feature that will prompt you with a selection of all available citation keys as soon as you type an `@`-character. This is a first check if you're using the correct ID: If Zettlr doesn't offer you anything, the ID has probably not been found in the library file.
+> Zettlrには補完機能があるので、`@`を入力すると利用可能な引用キーを表示してくれます。これで、正しいIDを使用できているか最初に確認することができます。何も補完候補が表示されない場合は、そのIDはおそらくライブラリファイル中に存在しません。
 
-But normally you'll want to be somewhat more specific, add a certain page range or something like that to your citation. That is what the more extended square-bracket citation is for. To cite in this way simply use square brackets. A citation with a so-called prefix and a page-range would look like this:
+しかし通常は引用に対して、ページ範囲などを加えていくらか限定した形にしたいと思います。そのためには、角括弧を使った拡張形式を使用します。この方法では、角括弧の中にプレフィックス、引用キー、ページ範囲を書きます。
 
 `[See @Harvey2005a, 45-51]`
 
-To cite multiple authors, simply divide the blocks with semicolons:
+著者が複数の場合、それぞれのブロックをセミコロンで区切ります。
 
 `[See @Harvey2005a, 45-51; also @Ciepley2007, 8-9]`
 
-For more information on how to use citations in line with pandoc's citeproc engine, [please refer to the guide](http://pandoc.org/demo/example19/Extension-citations.html).
+pandocのciteprocエンジンにおける引用についての詳しい説明は、[ガイドを参照](http://pandoc.org/demo/example19/Extension-citations.html)してください。
 
-> **Please note** that Zettlr's citeproc-engine is **only for preview purposes**. For simplicity reasons, Zettlr does not perfectly parse all citations and will therefore lack some precision. You can be sure that pandoc's citeproc will do the job correctly on export. Therefore, the preview citations are **only to check that your citations are detected correctly so you won't have missing citations on export**.
+> **注意** Zettlrのciteprocエンジンは、**プレビューのみを目的としています**。簡潔さのため、Zettlrはすべての引用を完全に解析することはせず、正確性をいくらか犠牲にしています。エクスポート時にpandocのciteprocが完全に正確に動作することは、疑う余地もありませんが、引用のプレビューについては、**引用が正しく認識されていて、エクスポートする引用に漏れがないかを確認すること**にとどめてください。
 
-## Checking the references
+## 参考文献を確認する
 
-After you're done citing and want to check that you've cited everything you planned to, you can open the `Attachment Sidebar` (Shortcut: `Ctrl/Cmd+3`). Beneath all files that are in your currently selected directory, Zettlr will display a list of all references it has found in your current file. If something's missing from there, it's probably not been cited in your file.
+引用を作成終わって、引用するつもりのものがすべて入っているかどうかをするには、`添付ファイルサイドバー`(`Ctrl/Cmd+3`のショートカット)を開きます。選択中ディレクトリにあるファイル一覧の下に、ファイル中に見つかったすべての参考文献の一覧が表示されます。ここで足りていないものがある場合は、おそらくファイル中で引用していないはずです。
 
 ![References in the Attachment Pane](../img/attachment-pane-references.png)
 
-## Changing the citation style
+## 引用のスタイルを変更する
 
-Internally, Zettlr will always only use the APA-style to generate citations. Therefore, your previewed citations will always be "in-text," and never in footnote-style. This is meant as a convenience for you to simply see that everything works out.
+Zettlrは内部的には常にAPAスタイルを使って引用を作成します。つまり、プレビューで表示される引用は、脚注スタイルではなく文書中に表示されるスタイルとなります。Zettlrでは、すべてが正しく動作していることを確認しやすくするために、このようにしています。
 
-But of course you can also use different citation styles, depending on either the journal requirements for which you are writing, or your personal preferences. To change the style in which pandoc's citeproc will render your citations, you'll need to download the respective CSL-file. A very good starting point is the [Zotero style repository](https://www.zotero.org/styles). There you can search for specific citation styles, preview them and download them.
+しかし、もちろんこれ以外にも、投稿先のジャーナルの要求や、個人的な好みに合わせた引用スタイルを使うこともできます。pandocのciteprocが引用を出力するスタイルを変更するには、それに応じたCSLファイルをダウンロードする必要があります。まずは、[Zotero style repository](https://www.zotero.org/styles)を見てみてください。特定のスタイルを検索し、プレビューしダウンロードすることができます。
 
-You can point Zettlr to such CSL-files at two obvious points. First in the general preferences. In the `Export`-tab, beneath the field for your citation database file, you can select your preferred CSL-style which will then be used for all single-page exports that you export using the toolbar button.
+Zettlrが使用するCSLファイルの設定は2か所あります。一つは、設定ダイアログです。`エクスポート`タブの参考文献データベース欄の下に、使いたいCSLスタイルを選択する設定があります。ツールバーのボタンからファイルを個別にエクスポートする際に、ここで選択したスタイルが使用されます。
 
-But obviously, for projects you may want to use a different CSL-style. Therefore, if you open any project's preferences, you can select a CSL-file as well. The project will then use this on export.
+しかし当然プロジェクトごとに異なるCSLスタイルを使いたいと思います。そこで、それぞれのプロジェクトの設定でもCSLファイルを選択することができます。そのプロジェクト内では設定したスタイルでエクスポートを行うようになります。
 
-## Formatting the List of References
+## 参考文献一覧のフォーマット
 
-Of course, as soon as you cite reference works in your files, you'll want the references to be formatted neatly. If you export to Word or LibreOffice, you can change the respective formatting styles as you edit your file before sending it out. But as soon as you export to PDF, this won't be possible. And as `pandoc-citeproc` simply glues all your references to the end of the document with no formatting whatsoever, you'll need to perform a little trick to make the references list look nicely.
+もちろん、ファイル中に引用を書いたら、きちんとフォーマットされた参考文献一覧も必要だと思います。WordまたはLibreOfficeにエクスポートする場合は、ファイルを送る前にそれぞれのファイルを編集してスタイルを設定することができます。しかし、PDFにエクスポートしてしまうと、それも不可能です。`pandoc-citeproc`では、単に参考文献をまとめて、何の書式も設定しないで文書の最後に出力します。参考文献一覧の見た目をよくするには、ちょっとしたトリックが必要となります。
 
-LaTeX uses lengths to determine the overall measurements of the exported PDF. These lengths are normally set globally, but can be transformed during the course of the source file. One of these lengths is `parindent`, which controls the hanging indent of all paragraphs. There are additional lengths for when paragraphs follow a heading, for example, but we won't be concerned with these for now.
+LaTeXでは長さを基準にして、エクスポートするPDF全体にわたる位置を決定しています。普通、この長さの設定はグローバルなものですが、ソースファイルによって変更できます。設定項目の一つに`parindent`があり、これは段落のぶらさがりインデントをコントロールします。見出しに続く段落では長さが追加されますが、それはここでは考えないことにします。
 
-The `parindent`-variable can be set using Zettlr's PDF-options, but it will only be set globally for all paragraphs. As the references are also formatted using general paragraph styles, they will be indented in the same manner as all other paragraphs. But there's a small trick you can use to make the bibliography look nice: simply overwrite the paragraph lengths _after_ your document, that is: after the heading `## References` (or however you call it in your file).
+`parindent`変数はZettlrのPDF設定で変更することができます。しかしそれでは、すべての段落に対するグローバルな設定となってしまいます。参考文献も普通の段落のスタイルでフォーマットされるので、インデントも他の段落と同じようになってしまいます。しかし、参考文献の見た目を良くするちょっとしたトリックがあります。文書の後に`## References`(他の名前でも構いません)の見出しを書き、その後で段落の長さを上書きしてしまいましょう。
 
-Simply re-set them to what looks nicely to you. The following code snippet gives you an example:
+見た目が良くなるように再設定するだけです。たとえば次のコードスニペットのようにします。
 
 ```latex
 \setlength{\parindent}{-1cm} % Negative hanging indent
@@ -90,6 +90,6 @@ Simply re-set them to what looks nicely to you. The following code snippet gives
 \setlength{\parskip}{0.1cm} % Spacing between paragraphs
 ```
 
-The above example would render the bibliography with a negative indentation of minus one centimetre. Additionally it'll apply an overall indentation of half a centimetre (relative to the page margins, so if your left page margin is set to 3 centimetres, the bibliography paragraphs will be offset 3.5 centimetres as opposed to the normal paragraphs, which are offset only 3 centimetres). The last value (`parskip`) controls the spacing _between_ paragraphs, so each one will be 10 millimetres away from each other.
+上の例だと、参考文献は負のインデント(-1cm)で出力されます。加えて、0.5cmの全体のインデントが適用されます(ページ余白からの相対値なので、左余白を3cmに設定したなら、普通の段落のオフセットが3.0cmに対して参考文献の段落は3.5cmのオフセットとなります)。最後の値(`parskip`)は段落間の間隔をコントロールします。つまり、各項目の間が0.1cm空くことになります。
 
-Simply start from there, maybe search for more lengths to tweak and adjust these lengths to your liking.
+この設定から始めて、他の長さの設定も検索して、好みに合うように調整してみてください。

@@ -1,10 +1,13 @@
-# Readability
+# 可読性
 
 Good writing encompasses many aspects. Apart from concise content, your texts need a balanced mixture of long and short sentences. Furthermore you should refrain from too many complex and difficult words. Additionally, it is always good to make sure your paragraphs are not too long, use active voice, and structure your paragraphs accordingly.
+良い文章というものには様々な側面があります。簡潔な内容だけでなく、長い文と短い文がバランスよく含まれていることも必要です。さらに、複雑で難しい単語を使いすぎないようにする必要もあります。そして、段落が長くなりすぎないこと、能動態を使うこと、各段落を状況に応じて構成することも大切です。
 
 Since the development of text, humanity's creativity has brought forth many tips to good writing. While Zettlr provides you with the perfect environment to write in, thereby making sure the _legibility_ of your text is great, the _readability_ is something you need to take care of as well. Luckily, beginning with `1.4`, Zettlr has a tool for you: The **readability mode**.
+文書というものが開発されて以来、人類の創造力により、良い文章を書くコツが生み出されてきました。Zettlrが完璧なライティング環境を提供してくれるので、文章の判別性(legibility)は非常に良いですが、可読性(readability)についても注意を向ける必要があります。幸いにも、Zettlr `1.4`で**可読性モード**が利用できるようになりました。
 
 > Please note that the readability score is only one out of several measurables that can help you determine the ease of reading, but should not be taken to serious. If the readability algorithm highlights a sentence in deep red, this does not necessarily mean that you should rewrite the sentence. Rather, look at the context of the sentence, which the algorithm does not take into account, to determine the quality of a sentence. **We recommend to first write your text without the mode, and then only switching it on for some passages where you have a feeling they might be difficult to understand.**
+> 可読性スコアは読みやすさを判断するための指標の一つに過ぎないので、あまり真剣に受け止めないでください。可読性アルゴリズムにより文章が真っ赤にハイライトされたとしても、その文章を書き直す必要はありません。むしろ、アルゴリズムでは考慮されない文のコンテキストを見て、良し悪しを判断してください。**最初は可読性モードをオフにして文章を書くことを推奨します。後から、読みにくいかもしれないと思った部分を確認するときだけオンにしてください。**
 
 ## What the Readability Mode does
 

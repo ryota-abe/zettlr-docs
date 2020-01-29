@@ -4,7 +4,7 @@ repo_url: https://github.com/Zettlr/zettlr-docs
 site_description: >-
     Zettlrを最大限活用するために必要となる、あらゆる情報を提供するドキュメンテーションです。
 site_author: Hendrik Erz
-copyright: "&copy; 2017-2019 by Zettlr"
+copyright: "&copy; 2017-2020 by Zettlr"
 docs_dir: ../docs/ja
 site_dir: ../build/ja
 edit_uri: edit/master/docs/ja

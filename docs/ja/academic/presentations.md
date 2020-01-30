@@ -1,28 +1,28 @@
-# Presentations
+# プレゼンテーション
 
-Since version `0.19.0`, Zettlr is able to export your Markdown files directly as presentation files using the [reveal.js](https://revealjs.com/#/)-framework. `reveal.js` is a lightweight solution for creating super compatible presentations using plain `HTML` and `JavaScript`. Therefore, these presentations can be shown on _all_ computers that run a browser — nowadays this means: they run on _every_ computer.
+バージョン`0.19.0`以降、ZettlrではMarkdownファイルを[reveal.js](https://revealjs.com/#/)を使って直接プレゼンテーションファイルにエクスポートできるようになりました。`reveal.js`は、プレーン`HTML`と`JavaScript`を使って、非常に互換性の高いプレゼンテーションを作るための軽量ソリューションです。作られたプレゼンテーションはブラウザを起動できるすべてのコンピューターで見ることができます。今日においては、すべてのコンピューターが該当します。
 
-For exporting Markdown files to `reveal.js`, you have to make sure Pandoc is installed on your computer. Head over to the [section on exporting](../core/export.md) to see how to install pandoc.
+`reveal.js`でMarkdownファイルをエクスポートするには、コンピューターにpandocをインストールしてください。pandocのインストール方法については[エクスポートの説明](../core/export.md)をご覧ください。
 
-If you first want to be impressed by an actual export from Zettlr into `reveal.js`, please have a look [at the demonstration presentation](https://zettlr.com/slides.revealjs.htm)! You can also read [the source file](https://www.zettlr.com/themes/zettlr/assets/slides.md) while following the instructions on this page.
+まずは、実際に`reveal.js`を使ってエクスポートしたものを見てみたいなら、[プレゼンテーションのデモ](https://zettlr.com/slides.revealjs.htm)をご覧ください。ページ内の説明にしたがえば、[ソースファイル](https://www.zettlr.com/themes/zettlr/assets/slides.md)を見ることもできます。
 
-## Pre-considerations
+## 事前の考慮事項
 
-Of course, a Markdown document that should be compiled into a presentation has a slightly different structure than other Markdown documents.
+プレゼンテーションに変換するためのMarkdownは、その他のMarkdown文書とは少し異なる構造となります。
 
-### Creating slides
+### スライドを作る
 
-You can create new slides in two ways. First, each heading level 1 will begin a new slide and also act as the title of the slide. But in case the heading level 1 is too big for your taste, or you simply don't want a title on that slide, you can also delimit slides by using Markdown dividers (either `***` or `---`).
+新しいスライドを挿入するには2つの方法があります。一つは、レベル1の見出しを使う方法で、それがそのままページのタイトルになります。しかし、レベル1の見出しでは大きすぎると感じたり、そのスライドでタイトルを使いたくない場合は、Markdownの区切り線(`***`または`---`)を使って各スライドを区切ることができます。
 
-Everything that follows the heading or the divider will end up being the content of the slides. You do not have to explicitly "end" the last slide with a divider.
+見出しや区切り線に続くものがスライドの内容となります。最後のスライドを区切り線を使って明示的に終了させる必要はありません。
 
-### Using Markdown elements
+### Markdown要素を使う
 
-Inside the slides, you can use all Markdown elements. They will be rendered as you would expect them. You can even use footnotes which will then be placed on their own, respective slide at the end!
+スライド内でもすべてのMarkdown要素を使うことができ、それらは予想通りに出力されるでしょう。また各スライドに脚注を配置することもできます。
 
-### Advanced Tools
+### 上級者向け機能
 
-Of course, `reveal.js` presentations also have the same versatility as PowerPoint or Impress when it comes to controlling your presentation. For instance, you can use CSS-classes to tell the presentation that certain elements should be triggered before forwarding the presentation. These are called "fragments". Due to limitations in Pandoc's engine, you'll have to use plain HTML to achieve this. Consider, for instance, the HTML code from the demo presentation:
+もちろん、`reveal.js`はプレゼンテーションの制御に関してPowerPointやImpressと同等の汎用性を持っています。たとえば、CSSクラスを使って、プレゼンテーションのページを進める前に特定の要素を変化させることができます。これは"fragment"と呼ばれるものです。Pandocエンジンの制限により、この機能を使うには生のHTMLを書く必要があります。
 
 ```html
 <ul>
@@ -32,13 +32,13 @@ Of course, `reveal.js` presentations also have the same versatility as PowerPoin
 </ul>
 ```
 
-This will create a list with three items. All items are "fragments", which means that by pressing the shortcut for the next slide, the first will `fade-in`, as the class says. On the next press of the right arrow key, the second item will be highlighted in blue color. The third press of the right arrow key will highlight the last item red. And on the fourth press of the arrow key the next slide will be shown.
+これは3項目のリストとなります。すべての項目は"fragment"になっていて、次のスライドに移動するショートカット(右矢印キー)を押すと、1番目の項目がフェードイン(`fade-in`)します。もう一度押すと、2番目の項目が青色にハイライトされます。3回目は最後の項目が赤色にハイライトされます。さらにもう一回右矢印キーを押すと、次のスライドが表示されます。
 
-### Presentation settings
+### プレゼンテーションの設定
 
 ![presentations_scripts.png](../img/presentations_scripts.png)
 
-Of course, the presentation itself also has settings that you can make use of. These are simple JavaScript directives that you can manipulate by inserting a `<script>`-tag as shown in the screenshot. You can override them by setting the attributes on the `zettlrRevealOptions`-object. These are the options you can set:
+もちろん、プレゼンテーションに関する設定項目もあります。スクリーンショットのように`<script>`タグを挿入して操作できる、簡単なJavaScript命令があります。`zettlrRevealOptions`オブジェクトの属性を設定して変更することができます。設定できる項目を以下に示します。
 
 ```javascript
 const zettlrRevealOptions = {
@@ -104,22 +104,22 @@ const zettlrRevealOptions = {
 };
 ```
 
-### Presentation Styling
+### プレゼンテーションのスタイル
 
-If none of the available themes appeal to you, or if you need to provide some extra CSS, you can do so simply by dropping in a `<style>`-tag somewhere in your presentation.
+用意されたテーマが気に入らない場合や、追加のCSSが必要な場合は、プレゼンテーションのどこかに`<style>`タグを追加してください。
 
-You'll need some knowledge of CSS to finegrain the styling, but the appearance of the presentation itself should be satisfying on its own.
+スタイルをきめ細かく制御するにはCSSの知識が必要ですが、プレゼンテーションの見た目自体は満足できるものになるはずです。
 
 ![presentations_styles.png](../img/presentations_styles.png)
 
-### Images
+### 画像
 
-One of the big drawbacks of such HTML presentations is that images cannot be contained in the resulting file. (To be correct, they _can_ be included, but that would increase the file size by the size of all images multiplied by the factor 1.3.)
+HTMLプレゼンテーションの大きな欠点は出力されたファイルに画像を含めることができないということです。(正確に言うと含めることは可能ですが、すべての画像の容量を合わせて1.3倍した分だけファイルサイズが増加してしまいます。)
 
-So you need to decide where to put the images. There are basically three feasible methods.
+なので、どこに画像を置くかを決める必要があります。基本的には3つの選択肢があります。
 
-1. Create a dedicated directory for the images, e.g. `img`, inside the directory with your markdown file. Then link to all images using relative paths (`img/my-image.jpg`). When you export your file, make sure the presentation is in the same place relative to the image directory as your source file.
-2. Simply put all images inside the same directory as your presentation file. Then linking to them using their file name should suffice.
-3. Upload them to the web, for instance unto an image hosting service, and link their URLs. Only drawback: You would need to rely on a working internet connection at the place where you hold your presentation.
+1. Markdownファイルと同じディレクトリ内に、画像用のディレクトリ(例えば`img`)を作ります。そして、すべての画像を相対パス(`img/my-image.jpg`)を使ってリンクします。ファイルのエクスポート時に、プレゼンテーションファイルからの画像ディレクトリの相対パスが、ソースファイルと同じになるように注意してください。
+2. すべての画像ファイルをプレゼンテーションファイルと同じディレクトリに置きます。この場合、ファイル名を使って画像をリンクするようにします。
+3. 画像をWeb上にアップロードします。例えば画像ホスティングサービスを使い、そのURLを使ってリンクします。プレゼンテーションを置く場所で有効なインターネット接続が必要になるというのが唯一の欠点となります。
 
-A rule of thumb is: If Zettlr correctly displays your images, so will your presentation, as long as you make sure the presentation is in _exactly_ the same directory as your source file relative to the images.
+経験則: プレゼンテーションファイルから見た画像の相対パスがソースファイルの時とまったく同じなら、Zettlrで画像が正しく見えていれば、プレゼンテーションでも正しく見えるはずです。

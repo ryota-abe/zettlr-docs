@@ -1,12 +1,14 @@
-# The Zettelkasten method
+# Zettelkastenメソッド
 
 The idea to write Zettlr came to my mind several years ago, when we were trying to elaborate on good workflows for academic writing. We tested a lot of different styles and workflow ideas, and one that stuck was the Zettelkasten method. The problem back then was that most of the software did not really succeed in implementing it, but since there has been a lot of effort put into integrating the method, so that nowadays there are more and more applications that support some functions of this method.
+Zettlrを作るアイデアが浮かんだのは、数年前にアカデミックな文書を書くワークフローを改善しようとしていた時のことです。様々なスタイルやワークフローのアイデアをテストし、その中から選ばれたのがZettelkastenメソッドでした。その当時は、Zettelkastenをうまく実装したソフトウェアはほとんどありませんでしたが、それから多くの実装の努力が続けられ、現在ではZettelkastenの機能をサポートするアプリケーションが増えてきています。
 
 Originally, the method stems from the German sociologist Niklas Luhmann, who, in an effort to remember everything he's ever read or thought, designed his own (back then analogue) Zettelkasten containing cards with some information and numbers on them. The numbers could be used to locate other cards with other information that was in some way related to the content of the card. This was a way for Luhmann to reference back and forth between a set of cards and, as the box filled up with more and more cards, allowed it to somehow get "alive", showing him connections between certain concepts that he himself had not thought about.
+もともと、このメソッドはドイツの社会学者ニクラス・ルーマン(Niklas Luhmann)によって生み出されました。彼は、自分が読んだり考えたことをすべて思い出せるように、情報と番号を書いたカードを使った(当時はアナログでした)Zettelkastenをデザインしました。番号は、カードの情報に関連した情報が書かれた他のカードを探すために使えました。
 
 The basic idea, therefore, is to let you create relationships between small notes (or, for that matter, also long files) that enable you not only to move back and forth between files, but also to identify relationships that emerge in your files.
 
-## Manage a Zettelkasten with Zettlr
+## ZettlrでZettelkastenを管理する
 
 Three functions are currently available in Zettlr to kickstart your Zettelkasten:
 

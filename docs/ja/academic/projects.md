@@ -1,50 +1,50 @@
-# Projects
+# プロジェクト
 
-Projects are a way to simplify the concatenation and export of more than a single file. They allow you to split up one single project into several different files to work on. You can portion your work into several files and only in the end glue them together and export them as one single PDF file. Also, Zettlr projects allow you to better finegrain your PDF exports. With projects you can, for instance, command Zettlr to create a title page or a table of contents as well.
+プロジェクトは複数ファイルの結合とエクスポートを簡単に行うための機能です。これにより、一つのプロジェクトを複数のファイルに分けて作業することが可能になります。複数のファイルに分けて作業し、最後に結合して一つのPDFファイルにエクスポートします。また、Zettlrのプロジェクト機能はPDFエクスポートを細かく制御することを可能にします。プロジェクトを使用すると、例えば、タイトルページを作ったり目次を生成したりするように設定することができます。
 
 ![project_directory.png](../img/project_directory.png)
 
-## Creating a project
+## プロジェクトを作成する
 
-Zettlr Projects are basically just a bunch of additional features for directories. Therefore you can "convert" any directory into a project. Simply right-click the directory you want to make a project of and choose "Create project". Then the directory itself will be coloured red and a pencil-icon will appear to the left of its name, indicating that this directory has project features enabled. If you now right-click a directory, you have three additional context menu options at your disposal: "Project Settings", "Build Project" and "Remove Project".
+Zettlrのプロジェクトは、基本的にはディレクトリに対する追加の設定項目です。つまり、任意のディレクトリをプロジェクトに「変換」することができます。プロジェクトにしたいディレクトリを右クリックして「プロジェクトを作成」を選択します。するとディレクトリが赤色に変わって、名前の左にプロジェクト機能が有効になっていることを表す鉛筆のアイコンが表示されます。次にディレクトリを右クリックすると、コンテキストメニューに「プロジェクト設定」、「プロジェクトをエクスポート」、「プロジェクトを取り除く」の3つの項目が追加されています。
 
-## Working with Projects
+## プロジェクトでの作業
 
-Choose "Project Settings" from the context menu of a project directory to open the settings. In general, these are just a copy of the PDF preferences you have globally available for quickly exporting single Markdown files. The two differences are that projects enable you to fine grain the generation of a PDF document, and that these PDF settings only apply for exporting this specific directory. Therefore you can leave your global PDF options intact and use different settings for your project.
+プロジェクトディレクトリにのコンテキストメニューで「プロジェクト設定」を選択すると設定画面が表示されます。これはほとんど、単一のMarkdownファイルをエクスポートするためのPDF設定のコピーです。2つの違いは、プロジェクトではPDFドキュメントの生成を細かく制御できることと、これらのPDF設定は対象のディレクトリのエクスポートときにのみ適用されるということです。つまり、グローバルなPDF設定には手を付けることなく、プロジェクトに特異の設定をすることが可能です。
 
 ![settings_project.png](../img/settings_project.png)
 
-Now let us briefly explore the settings you got for projects. First the metadata tab:
+プロジェクトの設定を簡単に見ていきます。まずは、メタデータタブです。
 
-- **Project Title**: This title will be used as the file name, the title (if you decide to create a title page) and the PDF title of your document. Default is the directory name.
-- **Project Author**: This will be written into the PDF metadata field for authors.
-- **Project Keywords**: These are keywords you may or may not use when exporting PDF documents.
-- **Generate Title Page**: If this checkbox is selected, Zettlr will direct the LaTeX-engine to generate a title page. It'll use the project title and the current date as well as your author name and write them to the first page of your document.
-- **Generate Table of Contents**: If this checkbox is selected, Zettlr will direct Pandoc to generate a Table of Contents on the second page (or on the first, if you do not want a title page).
-- **Evaluate until Level …**: With this dropdown list you can choose which headings will be part of your Table of Contents. The default "2" directs Pandoc to generate a table of contents using both first and second degree headers (i.e. `##` and `#`-headers). A 4 would include 1st, 2nd, 3d and 4th grade headers (i.e. `#`, `##`,`###`, and`####`). All other headings will still be present in the file, but they will not appear in the Table of Contents.
+- **プロジェクトタイトル**: ファイル名、タイトル（タイトルページを作る設定の場合）、PDFタイトルに使用されます。デフォルトはディレクトリ名です。
+- **PDF作成者**: 著者を示すPDFメタデータフィールドに書き込まれます。
+- **PDFキーワード**: PDFドキュメントのエクスポート時に任意で設定できるキーワードです。
+- **タイトルページを生成する**: このチェックボックスがオンの場合、タイトルページを生成するようにLaTeXエンジンに命令します。タイトルページには、プロジェクトタイトルと現在日付と作成者名が書かれ、ドキュメントの最初のページに出力されます。
+- **目次を生成**: このチェックボックスがオンの場合、pandocに対し2ページ目に目次を生成するように命令します。（タイトルページを生成しない場合は、1ページ目になります。）
+- **次のレベルまで解析する**: このドロップダウンリストでは、どの見出しを目次に使用するかを選択します。デフォルトは「2」で、pandocに2段階目までの見出し（`##`と`#`の見出し）を使って目次を作るように命令します。4を設定すると1、2、3、4段階目の見出し（`#`、`##`、`###`、`####`）が使われます。これ以外の見出しはファイル中には存在したままですが、目次には現れなくなります。
 
-Additionally, you can choose a custom `TeX`-template to be used for this project (that is, e.g., a template provided by the journal you‘d like to submit your paper to, or a custom one). Furthermore, you can override the default CSL-Style from the general export settings to use a custom one.
+さらに、プロジェクトでカスタム`TeX`テンプレートを使用することもできます（これは例えば、投稿するジャーナルで指定のものなどです）。そして、通常の設定ダイアログのエクスポートタブで指定したデフォルトのCSLスタイルを上書きしてカスタムテンプレートを使用することもできます。
 
-Currently, both the page and the font tabs are exactly the same for projects and for your general export options, so please refer to the [settings page](../reference/settings.md#pdf-preferences) to get to know what they do.
+現在のところ、ページタブとフォントタブは、プロジェクト設定と通常のPDF設定で共通の物となっています。これらについては、[PDF設定のページ](../reference/settings.md#pdf-preferences)を参照してください。
 
-## Building Projects
+## プロジェクトをビルドする
 
-To build a project, Zettlr will follow the steps described below to generate your final PDF, so please read them carefully to know what to expect once you decide to export your project!
+プロジェクトをビルドすると、Zettlrは以下で説明するステップに従って最終的なPDFを生成します。プロジェクトのエクスポート時の動作について知るには、これらを注意して読んでください。
 
-First, Zettlr will take the project directory and crunch the whole contents into a one-dimensional array. This means that **all subfolders and all files in it will be flattened down into a simple list.** What does that mean? Simply have a look at the file list. Internally, before exporting your files, Zettlr will arrange the files _exactly_ as in the preview pane. Therefore, if you check out your preview list, you will know exactly which file will come after which. This is by design so you don't have a nightmarish discovery once you've handed in a paper and realise a full folder with three chapters has been left out.
+最初に、プロジェクトディレクトリを走査して、すべての内容を1次元の配列にします。つまり、**すべてのサブフォルダと、そこに含まれるファイルを、平坦化して単なるリストにします。**それは何のためでしょうか？ファイルリストを見てみてください。内部的には、ファイルをエクスポートする前に、Zettlrはファイルをプレビューペインのように正確に並べます。なので、プレビューリストを確認すれば、ファイルの順番を正確に把握することができます。意図的にこのようにしてあるので、論文の提出後に3つの章が抜けていることに気づくという悪夢のようなことは発生しません。
 
-> Please note that Zettlr will use _all_ subdirectories! This is meant as a convenience for people writing huge projects that they can use as many subdirectories as they want. Therefore, the preview list will be exactly exported as is (all directories will simply be omitted). So please do not create a second level subdirectory, crunch your notes in it and then wonder how your notes got into the final manuscript. If you want to use additional files that shouldn't be exported, simply create two more folders inside your project directory. In one you can then put all your working files, while you can convert the other into the project that can be exported.
+> Zettlrは_すべての_サブディレクトリを使用することに注意してください。これは、巨大なプロジェクトで好きなだけ多くのサブディレクトリを使える利便性のためです。そして、プレビューリストがそのまま出力されます。（すべてのディレクトリ構造は単に無視されます。）そのため、2階層目のサブディレクトリにメモを詰め込んで、それらを最終原稿にどうやって取り込むか考えるような使い方はしないでください。エクスポート対象外のファイルを追加したい場合は、単にプロジェクトディレクトリ内に2つフォルダを作って、片方に作業用ファイルを入れてください。そして、もう一方をエクスポートするためのプロジェクトに変換します。
 
-After your files have been read, a small number of modifications to them is being made (all paths are normalised so that Pandoc and LaTeX may find all your images) before they are concatenated together. Then this huge file is written to disk into a temporary file.
+ファイルが読み込まれると、それらを結合する前に小さな変更が加えられます（pandocとLaTeXが画像を見つけられるようにパスが正規化されます。）。それから、結合された巨大なファイルが一時フォルダに保存されます。
 
-Next, Zettlr will read the settings you have given the project itself and basically follow the same process as generating single-document-PDFs: Start up the exporter, provide it with your settings, point it to the temporary file and let Pandoc and LaTeX do their work.
+次に、Zettlrはプロジェクトの設定を読み込み、単一ファイルからPDFを生成するときと同様のプロセスに従います。エクスポート処理を起動し、設定と一時ファイルを受け渡し、pandocとLaTeXが動作できるようにします。
 
-Once your project has been exported, it is automatically opened with your default PDF previewer and it is saved into the project directory.
+エクスポートが完了すると、自動的にデフォルトのPDFプレビューアプリで開かれます。また、ファイルは自動的にプロジェクトディレクトリ内に保存されます。
 
-> Please note that especially the generation of a table of contents from huge projects may take an extraordinary amount of time. If you wish to generate a table of contents, LaTeX has to actually build the PDF twice — first to detect on which pages your headings end up after the conversion to PDF, and then a second time to actually include the table of contents. In a test I did, on a new Windows 10 computer the generation of a whole directory of excerpts that rendered to about 150 pages took approximately five minutes in which it seems as if it didn't work. So please be patient — as long as Pandoc or LaTeX don't complain about anything, they are still working.
+> 特に巨大なプロジェクトでの目次の生成は、非常に時間が掛かる可能性があることに注意してください。目次を生成する場合、実際にはLaTeXは2回PDFをビルドします。1回目はPDFに変換後、どのページに見出しが現れるかを調べるため、そして2回目は実際に目次を含めてビルドが行われます。私が行ったテストでは、新しいWindows 10のコンピュータで、約150ページを出力するのにおよそ5分を要し、その間何も動作していないように見えました。したがって、pandocやLaTeXが文句を言わない間は動作し続けていますので、辛抱強くお待ちください。
 
-> **Pro-Tip**: As you may know from the FAQ-section, Zettlr and Pandoc will not attempt to filter out TeX-commands you have written into your markdown documents. Remember this while working on your projects: You can add additional pages or do other funky stuff with your files that will actually be present in the final document! You can also create `.tex`-documents by providing the extension when creating new files. These `.tex`-documents support LaTeX syntax highlighting and will be included in the export of your project! Make sure they have a file name that places the file exactly where you need it.
+> **上級者向けヒント**: FAQなどで知っているかもしれませんが、ZettlrとpandocはMarkdownドキュメント中のTeXコマンドを取り除きません。プロジェクトで作業する間、このことを覚えておいてください。追加のページを作ったり、その他の面白いことをファイルに対して実行して最終出力に残すことができます。また、新しいファイルを作成するときに拡張子を指定することで、`.tex`ファイルを作ることもできあます。`.tex`ドキュメントはLaTeXのシンタックスハイライトがサポートされ、プロジェクトのエクスポート時にも含まれます。ファイル名を付ける際には、ファイルを出力したい位置に並ぶように注意してください。
 
-## Removing Projects
+## プロジェクトを取り除く
 
-To remove a project, simply right click it and choose to remove the project. What will be removed is plain and simple the settings file that indicates that your directory should be treated as a project (called `.ztr-project`). Therefore, if you remove a project, you actually only remove the settings of the project. If you re-create the project, the file will be present once again, but with the default settings. So remember, removing projects will finally delete your settings and you have to set them anew.
+プロジェクトを取り除くには、対象のプロジェクトを右クリックして「プロジェクトを取り除く」を選択します。そうすると、ディレクトリがプロジェクトであることを示すための小さな設定ファイル（`.ztr-project`）が削除されます。したがって、プロジェクトを取り除くと、実際にはプロジェクトの設定を削除することになります。再びプロジェクトを作成すると、設定ファイルが再び作られますが、デフォルト設定となります。プロジェクトを取り除くと設定が削除され、再び設定しなおす必要があることを覚えておいてください。

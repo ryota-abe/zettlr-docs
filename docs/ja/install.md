@@ -1,8 +1,8 @@
 # インストール
 
-Zettlrのインストールは簡単で、どのオペレーションシステムでも、たったの1ステップで完了します。Zettlrはクロスプラットフォームのため、お使いのシステムの種類にかかわらず動作するでしょう。Zettlrは、macOS、Windows、DebianベースとRedHatベースのLinuxシステム(Ubuntu, Gnome, Xubuntu, Kubuntu, Fedora, RedHat and the like)向けに、ビルド済みモジュールを用意しています。
+Zettlrのインストールは簡単で、どのオペレーションシステムでも、たったの1ステップで完了します。Zettlrはクロスプラットフォームのため、お使いのシステムの種類にかかわらず動作するでしょう。Zettlrは、macOS、Windows、DebianベースとRedHatベースのLinuxシステム(Ubuntu, Gnome, Xubuntu, Kubuntu, Fedora, RedHat等)向けに、ビルド済みモジュールを用意しています。
 
-もし、その他のLinuxシステム(例えばArch Linux)やARMデバイス(例えばRaspberry)でZettlrを使いたい場合には、自分でパッケージを作る必要があります。electronアプリの作り方については、web上に簡単なチュートリアルがいくらでもあります。サポートされているプラットフォームについては[supported platforms for electron apps](https://github.com/electron/electron/blob/master/docs/tutorial/support.md)を参照してください。
+もし、その他のLinuxシステム(例えばArch Linux)やARMデバイス(例えばRaspberry)でZettlrを使いたい場合には、自分でパッケージを作る必要があります。Electronアプリの作り方については、web上に簡単なチュートリアルがいくらでもあります。サポートされているプラットフォームについては[supported platforms for electron apps](https://github.com/electron/electron/blob/master/docs/tutorial/support.md)を参照してください。
 
 > コミュニティにより管理されているArch Linux向けパッケージがあります。[公式のAURリポジトリにて利用可能です](https://aur.archlinux.org/packages/zettlr-bin/)。このパッケージは、コミュニティにより管理されており、安定性、安全性、提供されるバージョンについて、我々は何の責任も持たないことにご注意ください。
 
@@ -16,7 +16,7 @@ Zettlrのアンインストールは、ディレクトリに置かれているUn
 
 ZettlrをmacOSにインストールするには、最新リリースからdmgファイルをダウンロードし、マウントします。その後、Zettlrのアイコンをアプリケーションディレクトリにドラッグしてください。
 
-Zettlrをアンインストールするには、Zettlr.zppをアプリケーションディレクトリから削除するだけです。アプリケーションに関連するすべての情報を削除したい場合は、次のディレクトリの削除も行ってください。`/Users/<your-user-name>/Library/Application Support/Zettlr`
+Zettlrをアンインストールするには、Zettlr.appをアプリケーションディレクトリから削除するだけです。アプリケーションに関連するすべての情報を削除したい場合は、次のディレクトリの削除も行ってください。`/Users/<your-user-name>/Library/Application Support/Zettlr`
 
 > [Homebrew](https://formulae.brew.sh/cask/zettlr)を使ってインストールすることもできます: `$ brew cask install zettlr`
 
@@ -32,33 +32,33 @@ Linuxシステム向けにビルドされた`deb`パッケージと`rpm`パッ�
 
 > もし、最先端のリリースに興味があるのなら、設定ダイアログの高度な設定タブにある「ベータ版のリリースを通知する」にチェックを入れてください。
 
-## Pandocのインストール
+## pandocのインストール
 
-Zettlrを他のソフトウェア、例えばMicrosoft Word、Wikiシステム、OpenOfficeと連携させるは、`Pandoc`という追加のソフトウェアパッケージを使用します。`Pandoc`はフリーでオープンソースであり、Zettlrのすべてのエクスポート/インポート機能を有効にしてくれます。それにより、Markdownを使っていない協力者とのやり取りが可能になります。
+Zettlrを他のソフトウェア、例えばMicrosoft Word、Wikiシステム、OpenOfficeと連携させるは、`pandoc`という追加のソフトウェアパッケージを使用します。`pandoc`はフリーでオープンソースであり、Zettlrのすべてのエクスポート/インポート機能を有効にしてくれます。それにより、Markdownを使っていない協力者とのやり取りが可能になります。
 
-どのプラットフォームでもPandocのインストールは簡単です。
+どのプラットフォームでもpandocのインストールは簡単です。
 
-> Pandocはいつでもインストールできます。ヘルプメニュー内の項目からインストールの説明を開くことができます。
+> pandocはいつでもインストールできます。ヘルプメニュー内の項目からインストールの説明を開くことができます。
 
 ### Windows
 
 Windowsの場合、[ダウンロードページ](https://github.com/jgm/pandoc/releases/latest)からWindows用インストーラーをダウンロードし、実行します。それだけで、正常にインストールされるはずです。何かをエクスポートしてみて動作するなら、それで完了です。
 
-> PandocはCLIプログラム(コマンドラインインターフェース)のため、アップデートが利用可能かどうか通知することができません。時々、ダウンロードページを開いて、自分でアップデートの有無を確認してください。
+> pandocはCLIプログラム(コマンドラインインターフェース)のため、アップデートが利用可能かどうか通知することができません。時々、ダウンロードページを開いて、自分でアップデートの有無を確認してください。
 
 ### macOS
 
-macOSの場合、様々な方法でPandocをインストールできます。
+macOSの場合、様々な方法でpandocをインストールできます。
 
 #### おすすめの方法: Homebrew
 
-おすすめの方法は、[Homebrew](https://brew.sh/)です。HomebrewはPandocのようなコマンドラインプログラムを簡単にインストールし、メンテナンスするためのパッケージマネージャです。[Homebrewをインストール](https://brew.sh/)してあることを確認し、ターミナルで次のコマンドを実行してください:
+おすすめの方法は、[Homebrew](https://brew.sh/)です。Homebrewはpandocのようなコマンドラインプログラムを簡単にインストールし、メンテナンスするためのパッケージマネージャです。[Homebrewをインストール](https://brew.sh/)してあることを確認し、ターミナルで次のコマンドを実行してください:
 
 ```bash
 $ brew install pandoc
 ```
 
-Pandocをアップデートために、時々次のコマンドを実行してください:
+pandocをアップデートために、時々次のコマンドを実行してください:
 
 ```bash
 $ brew upgrade
@@ -68,7 +68,7 @@ $ brew upgrade
 
 > 早くて便利なので、Homebrewでのインストールを推奨します。
 
-Pandocのセットアップが終わったら、`citeproc`もインストールしたくなるかもしれません。`citeproc`は、Zettlrの[参考文献](academic/citations.md)機能を利用するために必要です。Windowsでは、Citeprocは自動的にインストールされます。macOSの場合は、Pandoc Citeprocを追加でインストールします。Homebrewで次のコマンドを実行してください:
+pandocのセットアップが終わったら、`citeproc`もインストールしたくなるかもしれません。`citeproc`は、Zettlrの[参考文献](academic/citations.md)機能を利用するために必要です。Windowsでは、citeprocは自動的にインストールされます。macOSの場合は、pandoc-citeprocを追加でインストールします。Homebrewで次のコマンドを実行してください:
 
 ```bash
 $ brew install pandoc-citeproc
@@ -76,11 +76,11 @@ $ brew install pandoc-citeproc
 
 #### 公式インストーラーを使ったインストール
 
-Pandocをインストールする従来からの方法は、[ダウンロードページ](https://github.com/jgm/pandoc/releases/latest)に行って、macOS用のインストーラをダウンロードし実行することです。完了すれば、Pandocが使えるようになっているはずです。何かをエクスポートしてみて動作するなら、それで完了です。
+pandocをインストールする昔ながらの方法は、[ダウンロードページ](https://github.com/jgm/pandoc/releases/latest)に行って、macOS用のインストーラをダウンロードし実行することです。完了すれば、pandocが使えるようになっているはずです。何かをエクスポートしてみて動作するなら、それで完了です。
 
 ### Linux
 
-Linuxでのインストールは笑えるほど簡単です。パッケージマネージャでPandocを検索してインストールするだけです。提供されるパッケージは、常に最新とは限りませんが、適切なバージョンのものです。最新バージョンを使用したい場合は、[Linux用インストーラー](https://github.com/jgm/pandoc/releases/latest)を使用して、Pandocのサイトの[インストール手順](https://pandoc.org/installing.html)に従ってください。
+Linuxでのインストールは笑えるほど簡単です。パッケージマネージャでpandocを検索してインストールするだけです。提供されるパッケージは、常に最新とは限りませんが、適切なバージョンのものです。最新バージョンを使用したい場合は、[Linux用インストーラー](https://github.com/jgm/pandoc/releases/latest)を使用して、pandocのサイトの[インストール手順](https://pandoc.org/installing.html)に従ってください。
 
 > `pandoc-citeproc`の手動インストールが必要な場合があります。お使いのオペレーティングシステムで適切な方法でインストールを行ってください。
 

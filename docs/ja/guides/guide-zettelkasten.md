@@ -31,4 +31,4 @@ Zettlrに新しいディレクトリを追加するには、`Cmd/Ctrl+O`を押�
 
 ## ステップ3: 書く
 
-これで、ZettlrをZettelkasten管理システムとして使う準備ができました。Zettelkastenの機能や見え方について深く掘り下げたい場合は、ウェブ上でZettelkästenに関する膨大なリソースが入手可能です。手始めに、[Zettelkasten.de](https://www.zettelkasten.de/)を見るのが良いでしょう。この作者は、Zettelkastenを使ってライティングを後押しする方法について、大量の（英語の）ブログを投稿しています。
+これで、ZettlrをZettelkasten管理システムとして使う準備ができました。Zettelkastenの機能や見え方について深く掘り下げたい場合は、ウェブ上でZettelkastenに関する膨大なリソースが入手可能です。手始めに、[Zettelkasten.de](https://www.zettelkasten.de/)を見るのが良いでしょう。この作者は、Zettelkastenを使った効率的なライティング方法について、大量の（英語の）ブログを投稿しています。

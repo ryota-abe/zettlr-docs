@@ -38,7 +38,7 @@ nav:
     - カスタムテンプレート: academic/custom-templates.md
   - 参考資料:
     - ショートカット: reference/shortcuts.md
-    - マークダウンの基本: reference/markdown-basics.md
+    - Markdownの基本: reference/markdown-basics.md
     - 設定: reference/settings.md
     - スペルチェック: reference/spell-checking.md
   - ご協力ください: get-involved.md
